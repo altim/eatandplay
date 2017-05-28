@@ -3,7 +3,7 @@ body {
   font-family: 'Montserrat', sans-serif;
   background: #fff; }
 
-.btn-class, header .header-inner nav ul li.btn a, #cards .cards-inner .card a.btn, #how-it-works .how-it-works-inner .btn, #testimonials .testimonials-inner .btn, #blog .blog-inner .post-item .post-content .post-content-inner .btn {
+.btn-class, header .header-inner nav ul li.btn a, #cards .cards-inner .card a.btn, #how-it-works .how-it-works-inner .btn, #testimonials .testimonials-inner .btn, #blog .blog-inner .post-item .post-content .post-content-inner .btn, footer .footer-inner .newsletter .btn {
   -webkit-border-radius: 28px;
   -moz-border-radius: 28px;
   border-radius: 28px;
@@ -16,7 +16,7 @@ body {
   -o-transition: all 0.4s;
   transition: all 0.4s;
   text-decoration: none; }
-  .btn-class:hover, header .header-inner nav ul li.btn a:hover, #cards .cards-inner .card a.btn:hover, #how-it-works .how-it-works-inner .btn:hover, #testimonials .testimonials-inner .btn:hover, #blog .blog-inner .post-item .post-content .post-content-inner .btn:hover {
+  .btn-class:hover, header .header-inner nav ul li.btn a:hover, #cards .cards-inner .card a.btn:hover, #how-it-works .how-it-works-inner .btn:hover, #testimonials .testimonials-inner .btn:hover, #blog .blog-inner .post-item .post-content .post-content-inner .btn:hover, footer .footer-inner .newsletter .btn:hover {
     background: #509cfd; }
 
 header {
@@ -417,43 +417,104 @@ header {
 #blog {
   width: 100%;
   background: #fff; }
-  #blog .blog-inner .post-item {
-    width: 100%;
-    clear: both; }
-    #blog .blog-inner .post-item .post-image {
-      width: 50%; }
-      #blog .blog-inner .post-item .post-image img {
-        display: block;
-        width: 100%; }
-    #blog .blog-inner .post-item .post-content {
-      width: 50%;
-      overflow: hidden; }
-      #blog .blog-inner .post-item .post-content .post-content-inner {
-        padding: 82px 90px 0 90px;
-        max-width: 565px; }
-        #blog .blog-inner .post-item .post-content .post-content-inner h2 {
-          font-size: 32px;
-          font-weight: 200;
-          margin-bottom: 20px; }
-        #blog .blog-inner .post-item .post-content .post-content-inner p {
-          font-size: 15px;
-          font-weight: 300;
-          line-height: 24px;
-          margin-bottom: 25px; }
-        #blog .blog-inner .post-item .post-content .post-content-inner .btn {
-          display: inline-block; }
-    #blog .blog-inner .post-item.post-image-left .post-image {
-      float: left; }
-    #blog .blog-inner .post-item.post-image-left .post-content {
-      float: right; }
-      #blog .blog-inner .post-item.post-image-left .post-content .post-content-inner {
+  #blog .blog-inner {
+    overflow: hidden; }
+    #blog .blog-inner .post-item {
+      width: 100%;
+      clear: both; }
+      #blog .blog-inner .post-item .post-image {
+        width: 50%; }
+        #blog .blog-inner .post-item .post-image img {
+          display: block;
+          width: 100%; }
+      #blog .blog-inner .post-item .post-content {
+        width: 50%;
+        overflow: hidden; }
+        #blog .blog-inner .post-item .post-content .post-content-inner {
+          padding: 82px 90px 0 90px;
+          max-width: 565px; }
+          #blog .blog-inner .post-item .post-content .post-content-inner h2 {
+            font-size: 32px;
+            font-weight: 200;
+            margin-bottom: 20px; }
+          #blog .blog-inner .post-item .post-content .post-content-inner p {
+            font-size: 15px;
+            font-weight: 300;
+            line-height: 24px;
+            margin-bottom: 25px; }
+          #blog .blog-inner .post-item .post-content .post-content-inner .btn {
+            display: inline-block; }
+      #blog .blog-inner .post-item.post-image-left .post-image {
         float: left; }
-    #blog .blog-inner .post-item.post-image-right .post-image {
-      float: right; }
-    #blog .blog-inner .post-item.post-image-right .post-content {
-      float: left;
-      text-align: right; }
-      #blog .blog-inner .post-item.post-image-right .post-content .post-content-inner {
+      #blog .blog-inner .post-item.post-image-left .post-content {
         float: right; }
+        #blog .blog-inner .post-item.post-image-left .post-content .post-content-inner {
+          float: left; }
+      #blog .blog-inner .post-item.post-image-right .post-image {
+        float: right; }
+      #blog .blog-inner .post-item.post-image-right .post-content {
+        float: left;
+        text-align: right; }
+        #blog .blog-inner .post-item.post-image-right .post-content .post-content-inner {
+          float: right; }
+
+footer {
+  width: 100%;
+  background: #4b99fd;
+  padding: 80px 0 78px 0; }
+  footer .footer-inner {
+    max-width: 1120px;
+    width: 100%;
+    margin: auto;
+    overflow: hidden; }
+    footer .footer-inner h3 {
+      font-size: 24px;
+      font-weight: 200;
+      color: #000;
+      margin-bottom: 35px; }
+    footer .footer-inner ul li a {
+      font-size: 15px;
+      font-weight: 300;
+      line-height: 24px;
+      color: #fff;
+      -webkit-transition: all 0.4s;
+      -moz-transition: all 0.4s;
+      -o-transition: all 0.4s;
+      transition: all 0.4s;
+      text-decoration: none; }
+      footer .footer-inner ul li a:hover {
+        color: #000; }
+    footer .footer-inner .navigation-menu, footer .footer-inner .stuff-menu, footer .footer-inner .connect-menu, footer .footer-inner .newsletter {
+      float: left; }
+    footer .footer-inner .navigation-menu {
+      width: 268px; }
+    footer .footer-inner .stuff-menu {
+      width: 268px; }
+    footer .footer-inner .connect-menu {
+      width: 234px; }
+    footer .footer-inner .newsletter {
+      width: 350px; }
+      footer .footer-inner .newsletter input[type=email] {
+        -webkit-border-radius: 28px;
+        -moz-border-radius: 28px;
+        border-radius: 28px;
+        border: none;
+        padding: 21px 35px;
+        background: #fff;
+        color: #000;
+        display: block;
+        -webkit-transition: all 0.4s;
+        -moz-transition: all 0.4s;
+        -o-transition: all 0.4s;
+        transition: all 0.4s;
+        text-decoration: none;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        width: 350px;
+        outline: none; }
+      footer .footer-inner .newsletter .btn {
+        display: inline-block;
+        margin-top: 19px; }
 
 /*# sourceMappingURL=style.css.map */
