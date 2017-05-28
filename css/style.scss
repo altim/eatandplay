@@ -791,9 +791,68 @@ footer {
 
 
 
+// ============= COPYRIGHT SECTION =============
 
 
+#copyright {
+  width:100%;
+  background:#fff;
+  padding:32px 0;
 
+  .copyright-inner {
+    max-width:1120px;
+    width:100%;
+    margin:auto;
+    overflow:hidden;
+
+    .copyright-info {
+      max-width: 395px;
+      float: left;
+
+
+      p {
+        font-size: 13px;
+        font-weight: 300;
+        line-height: 24px;
+        color: #000;
+        margin-top: 2px;
+
+        a {
+          font-size: 13px;
+          font-weight: 300;
+          line-height: 24px;
+          color: #6775ff;
+          @include transition(all .4s);
+          display: inline-block;
+
+          &:hover {
+            color: #000;
+          }
+        }
+      }
+
+    }
+
+    .payment-menu {
+      float:right;
+
+      ul {
+        li {
+          height:50px;
+          display:table-cell;
+          vertical-align: middle;
+
+
+          a {
+            text-decoration: none;
+            margin-left:10px;
+          }
+        }
+      }
+    }
+
+  }
+}
 
 
 
