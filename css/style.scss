@@ -574,7 +574,7 @@ header {
   padding:88px 0 100px 0;
 
   .testimonials-inner {
-    max-width:1120px;
+    max-width:112v0px;
     margin:auto;
     font-size:0;
     vertical-align: top;
@@ -611,10 +611,109 @@ header {
       font-size:15px;
       @extend .btn-class;
       display:inline-block;
-      //margin-top:88px;
     }
 
   }
 }
+
+
+
+// ============= TESTIMONIALS SECTION =============
+
+#blog {
+  width:100%;
+  background:#fff;
+
+  .blog-inner {
+
+    .post-item {
+      width:100%;
+      clear: both;
+
+      .post-image {
+        width:50%;
+        img {
+          display:block;
+          width:100%;
+        }
+      }
+
+      .post-content {
+        width:50%;
+        overflow:hidden;
+
+
+        .post-content-inner {
+          padding:82px 90px 0 90px;
+          max-width:565px;
+
+          h2 {
+            font-size: 32px;
+            font-weight: 200;
+            margin-bottom: 20px;
+          }
+
+          p {
+            font-size: 15px;
+            font-weight: 300;
+            line-height: 24px;
+            margin-bottom: 25px;
+          }
+
+          .btn {
+            @extend .btn-class;
+            display: inline-block;
+          }
+        }
+      }
+
+      &.post-image-left {
+        .post-image {
+          float:left;
+        }
+
+        .post-content {
+          float:right;
+
+          .post-content-inner {
+            float:left;
+          }
+        }
+      }
+
+      &.post-image-right {
+        .post-image {
+          float:right;
+        }
+
+        .post-content {
+          float:left;
+          text-align:right;
+
+          .post-content-inner {
+            float:right;
+          }
+        }
+      }
+
+
+    }
+
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
