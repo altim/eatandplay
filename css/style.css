@@ -3,7 +3,7 @@ body {
   font-family: 'Montserrat', sans-serif;
   background: #fff; }
 
-.btn-class, header .header-inner nav ul li.btn a, #cards .cards-inner .card a.btn {
+.btn-class, header .header-inner nav ul li.btn a, #cards .cards-inner .card a.btn, #how-it-works .how-it-works-inner .btn {
   -webkit-border-radius: 28px;
   -moz-border-radius: 28px;
   border-radius: 28px;
@@ -16,7 +16,7 @@ body {
   -o-transition: all 0.4s;
   transition: all 0.4s;
   text-decoration: none; }
-  .btn-class:hover, header .header-inner nav ul li.btn a:hover, #cards .cards-inner .card a.btn:hover {
+  .btn-class:hover, header .header-inner nav ul li.btn a:hover, #cards .cards-inner .card a.btn:hover, #how-it-works .how-it-works-inner .btn:hover {
     background: #509cfd; }
 
 header {
@@ -327,5 +327,61 @@ header {
       font-size: 40px;
       font-weight: 200;
       color: #fff; }
+
+#how-it-works {
+  width: 100%;
+  background: #f2faf2;
+  padding: 78px 0 78px 0; }
+  #how-it-works .how-it-works-inner {
+    max-width: 1120px;
+    width: 100%;
+    margin: auto;
+    text-align: center; }
+    #how-it-works .how-it-works-inner h2 {
+      font-size: 40px;
+      font-weight: 200;
+      text-align: center; }
+    #how-it-works .how-it-works-inner .hiw-wrapper {
+      padding-top: 80px;
+      text-align: center;
+      margin-top: 76px; }
+      #how-it-works .how-it-works-inner .hiw-wrapper .hiw-item {
+        width: 326px;
+        height: 326px;
+        background: #fff;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
+        text-align: center;
+        position: relative;
+        display: inline-block;
+        margin-right: 55px; }
+        #how-it-works .how-it-works-inner .hiw-wrapper .hiw-item:last-child {
+          margin-right: 0; }
+        #how-it-works .how-it-works-inner .hiw-wrapper .hiw-item img {
+          border: 10px solid #fff;
+          -webkit-border-radius: 50%;
+          -moz-border-radius: 50%;
+          border-radius: 50%;
+          left: 50%;
+          top: -80px;
+          -webkit-transform: translateX(-50%);
+          -moz-transform: translateX(-50%);
+          -o-transform: translateX(-50%);
+          transform: translateX(-50%);
+          position: absolute; }
+        #how-it-works .how-it-works-inner .hiw-wrapper .hiw-item h3 {
+          font-size: 26px;
+          line-height: 48px;
+          text-transform: uppercase;
+          font-weight: 300;
+          padding: 130px 0 10px 0; }
+        #how-it-works .how-it-works-inner .hiw-wrapper .hiw-item ul li {
+          font-size: 15px;
+          line-height: 22px;
+          font-weight: 300; }
+    #how-it-works .how-it-works-inner .btn {
+      display: inline-block;
+      margin-top: 88px; }
 
 /*# sourceMappingURL=style.css.map */

@@ -488,8 +488,82 @@ header {
 }
 
 
+// ============= HOW IT WORKS SECTION =============
+
+#how-it-works {
+  width:100%;
+  background:#f2faf2;
+  padding:78px 0 78px 0;
+
+  .how-it-works-inner {
+    max-width:1120px;
+    width:100%;
+    margin:auto;
+    text-align:center;
+
+    h2 {
+      font-size:40px;
+      font-weight: 200;
+      text-align:center;
+    }
+
+    .hiw-wrapper {
+      padding-top:80px;
+      text-align:center;
+      margin-top:76px;
+
+      .hiw-item {
+        width:326px;
+        height:326px;
+        background:#fff;
+        @include border-radius(50%);
+        text-align:center;
+        position:relative;
+        display:inline-block;
+        margin-right:55px;
+
+        &:last-child {
+          margin-right:0;
+        }
+
+        img {
+          border:10px solid #fff;
+          @include border-radius(50%);
+          left:50%;
+          top:-80px;
+          @include transform(translateX(-50%));
+          position:absolute;
+        }
+
+        h3 {
+          font-size: 26px;
+          line-height:48px;
+          text-transform: uppercase;
+          font-weight: 300;
+          padding:130px 0 10px 0;
+        }
+
+        ul {
+          li {
+            font-size:15px;
+            line-height:22px;
+            font-weight: 300;
+          }
+        }
+      }
 
 
+
+    }
+
+    .btn {
+      @extend .btn-class;
+      display:inline-block;
+      margin-top:88px;
+    }
+
+  }
+}
 
 
 
