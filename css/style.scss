@@ -40,6 +40,11 @@
 
 // =================== COMMON ========================
 
+body {
+  @include font1();
+  background:#fff;
+}
+
 .btn-class {
   @include border-radius(28px);
   padding:21px 35px;
@@ -52,6 +57,9 @@
     background:#509cfd;
   }
 }
+
+
+// ================== HEADER ============================
 
 header {
   width:100%;
@@ -205,7 +213,7 @@ header {
           margin-right:7px;
 
           &:last-child {
-            margin-rigth:0px;
+            margin-right:0px;
           }
         }
 
@@ -245,6 +253,72 @@ header {
 
 
       }
+
+    }
+
+  }
+}
+
+
+// ============= HERO IMAGE SECTION ============
+
+#hero-image {
+  background:url('../img/hero-image.jpg') no-repeat;
+  background-size:cover;
+  height:759px;
+  width:100%;
+  display:block;
+
+  .hero-image-inner {
+    .hero-image-content {
+      max-width:1200px;
+      width:100%;
+      margin:auto;
+      text-align:center;
+      color:#fff;
+      padding-top:140px;
+
+      h1 {
+        font-size:108px;
+        font-weight:500;
+        line-height:108px;
+        text-shadow:7px 7px 21px rgba(0,0,0,0.29);
+
+      }
+
+      h2 {
+        font-size:50px;
+        font-weight:200;
+        line-height:60px;
+        text-shadow:7px 7px 21px rgba(0,0,0,0.69);
+      }
+
+      .btn-scroll-down {
+        font-size: 14px;
+        color: #fff;
+        position:relative;
+        text-decoration:none;
+        margin-top:190px;
+        display:block;
+
+        &:after {
+          content: "";
+          position:absolute;
+          left:50%;
+          top:30px;
+          @include transform(translateX(-50%));
+          width:20px;
+          height:10px;
+          background:url('../img/arrow-down.png') no-repeat;
+          @include transition(all .4s);
+          pointer-events: none;
+        }
+
+        &:hover:after {
+          top: 38px;
+        }
+      }
+
 
     }
 

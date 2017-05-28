@@ -1,4 +1,8 @@
 @import url(reset.css);
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: #fff; }
+
 .btn-class, header .header-inner nav ul li.btn a {
   -webkit-border-radius: 28px;
   -moz-border-radius: 28px;
@@ -127,7 +131,7 @@ header {
         header .header-inner nav .social-menu li {
           margin-right: 7px; }
           header .header-inner nav .social-menu li:last-child {
-            margin-rigth: 0px; }
+            margin-right: 0px; }
         header .header-inner nav .social-menu .btn_facebook {
           width: 23px;
           height: 23px;
@@ -164,5 +168,55 @@ header {
           header .header-inner nav .social-menu .btn_twitter:hover {
             background: #84d6f1 url("../img/icon_t.png") no-repeat center center;
             background-size: auto 15px; }
+
+#hero-image {
+  background: url("../img/hero-image.jpg") no-repeat;
+  background-size: cover;
+  height: 759px;
+  width: 100%;
+  display: block; }
+  #hero-image .hero-image-inner .hero-image-content {
+    max-width: 1200px;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    color: #fff;
+    padding-top: 140px; }
+    #hero-image .hero-image-inner .hero-image-content h1 {
+      font-size: 108px;
+      font-weight: 500;
+      line-height: 108px;
+      text-shadow: 7px 7px 21px rgba(0, 0, 0, 0.29); }
+    #hero-image .hero-image-inner .hero-image-content h2 {
+      font-size: 50px;
+      font-weight: 200;
+      line-height: 60px;
+      text-shadow: 7px 7px 21px rgba(0, 0, 0, 0.69); }
+    #hero-image .hero-image-inner .hero-image-content .btn-scroll-down {
+      font-size: 14px;
+      color: #fff;
+      position: relative;
+      text-decoration: none;
+      margin-top: 190px;
+      display: block; }
+      #hero-image .hero-image-inner .hero-image-content .btn-scroll-down:after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: 30px;
+        -webkit-transform: translateX(-50%);
+        -moz-transform: translateX(-50%);
+        -o-transform: translateX(-50%);
+        transform: translateX(-50%);
+        width: 20px;
+        height: 10px;
+        background: url("../img/arrow-down.png") no-repeat;
+        -webkit-transition: all 0.4s;
+        -moz-transition: all 0.4s;
+        -o-transition: all 0.4s;
+        transition: all 0.4s;
+        pointer-events: none; }
+      #hero-image .hero-image-inner .hero-image-content .btn-scroll-down:hover:after {
+        top: 38px; }
 
 /*# sourceMappingURL=style.css.map */
