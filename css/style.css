@@ -3,7 +3,7 @@ body {
   font-family: 'Montserrat', sans-serif;
   background: #fff; }
 
-.btn-class, header .header-inner nav ul li.btn a {
+.btn-class, header .header-inner nav ul li.btn a, #cards .cards-inner .card a.btn {
   -webkit-border-radius: 28px;
   -moz-border-radius: 28px;
   border-radius: 28px;
@@ -14,8 +14,9 @@ body {
   -webkit-transition: all 0.4s;
   -moz-transition: all 0.4s;
   -o-transition: all 0.4s;
-  transition: all 0.4s; }
-  .btn-class:hover, header .header-inner nav ul li.btn a:hover {
+  transition: all 0.4s;
+  text-decoration: none; }
+  .btn-class:hover, header .header-inner nav ul li.btn a:hover, #cards .cards-inner .card a.btn:hover {
     background: #509cfd; }
 
 header {
@@ -218,5 +219,81 @@ header {
         pointer-events: none; }
       #hero-image .hero-image-inner .hero-image-content .btn-scroll-down:hover:after {
         top: 38px; }
+
+#cards {
+  width: 100%;
+  background: #fff;
+  padding: 86px 0 88px;
+  overflow: hidden; }
+  #cards .cards-inner {
+    max-width: 1200px;
+    width: 100%;
+    margin: auto;
+    position: relative; }
+    #cards .cards-inner .card {
+      max-width: 520px;
+      text-align: center; }
+      #cards .cards-inner .card h2 {
+        font-size: 40px;
+        font-weight: 200;
+        color: #000; }
+      #cards .cards-inner .card img {
+        display: block;
+        margin: 0 auto 20px auto; }
+      #cards .cards-inner .card p {
+        font-size: 15px;
+        font-weight: 300;
+        line-height: 30px;
+        color: #000;
+        text-align: left;
+        margin-bottom: 28px; }
+      #cards .cards-inner .card strong {
+        font-weight: 400; }
+      #cards .cards-inner .card a {
+        font-size: 15px;
+        line-height: 30px;
+        color: #166fe1;
+        display: inline-block;
+        text-decoration: none;
+        -webkit-transition: all 0.4s;
+        -moz-transition: all 0.4s;
+        -o-transition: all 0.4s;
+        transition: all 0.4s; }
+        #cards .cards-inner .card a.btn {
+          display: inline-block;
+          color: #fff;
+          line-height: 15px;
+          padding: 21px 44px; }
+          #cards .cards-inner .card a.btn:hover {
+            color: #fff; }
+        #cards .cards-inner .card a:hover {
+          color: #000; }
+    #cards .cards-inner .card-left {
+      float: left; }
+    #cards .cards-inner .card-right {
+      float: right; }
+    #cards .cards-inner .btn-play {
+      text-align: center;
+      display: inline-block;
+      font-size: 15px;
+      color: #166fe1;
+      text-decoration: none;
+      -webkit-transition: all 0.4s;
+      -moz-transition: all 0.4s;
+      -o-transition: all 0.4s;
+      transition: all 0.4s;
+      position: absolute;
+      left: 50%;
+      -webkit-transform: translateX(-50%);
+      -moz-transform: translateX(-50%);
+      -o-transform: translateX(-50%);
+      transform: translateX(-50%);
+      top: 132px;
+      outline: none; }
+      #cards .cards-inner .btn-play img {
+        display: block;
+        margin: 0 auto 10px auto; }
+      #cards .cards-inner .btn-play:hover {
+        color: #000; }
 
 /*# sourceMappingURL=style.css.map */
