@@ -25,7 +25,15 @@ $(document).ready(function(){
         pause: 5000,
         nextSelector : '.logo-next',
         prevSelector : '.logo-prev'
+    });
 
+
+    //Scroll down on click
+    $('.btn-scroll-down').click(function(e){
+        e.preventDefault();
+        $('html,body').animate({
+            scrollTop: $('#hero-image').height()+"px"
+        },800,"swing");
     });
 
 });

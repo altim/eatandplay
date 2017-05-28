@@ -22,7 +22,11 @@ body {
 header {
   width: 100%;
   background: #fff;
-  height: 122px; }
+  height: 122px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999999; }
   header .header-inner {
     position: relative; }
     header .header-inner a.logo {
@@ -173,9 +177,11 @@ header {
 #hero-image {
   background: url("../img/hero-image.jpg") no-repeat;
   background-size: cover;
+  background-position: center center;
   height: 759px;
   width: 100%;
-  display: block; }
+  display: block;
+  margin-top: 122px; }
   #hero-image .hero-image-inner .hero-image-content {
     max-width: 1200px;
     width: 100%;
@@ -600,12 +606,12 @@ footer {
 #copyright {
   width: 100%;
   background: #fff;
-  padding: 32px 0; }
+  padding: 32px 0;
+  overflow: hidden; }
   #copyright .copyright-inner {
     max-width: 1120px;
     width: 100%;
-    margin: auto;
-    overflow: hidden; }
+    margin: auto; }
     #copyright .copyright-inner .copyright-info {
       max-width: 395px;
       float: left; }
@@ -637,5 +643,17 @@ footer {
         #copyright .copyright-inner .payment-menu ul li a {
           text-decoration: none;
           margin-left: 10px; }
+          #copyright .copyright-inner .payment-menu ul li a img {
+            -webkit-transform: translateZ(0);
+            -moz-transform: translateZ(0);
+            -o-transform: translateZ(0);
+            transform: translateZ(0);
+            -webkit-transition: .2s transform;
+            transition: .2s transform; }
+          #copyright .copyright-inner .payment-menu ul li a:hover img {
+            -webkit-transform: translateY(-5px);
+            -moz-transform: translateY(-5px);
+            -o-transform: translateY(-5px);
+            transform: translateY(-5px); }
 
 /*# sourceMappingURL=style.css.map */
