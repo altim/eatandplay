@@ -1,6 +1,6 @@
 @import url(reset.css);
 
-// =================== MIXINS ========================
+// =================== MIXINS ===================
 
 @mixin font1() {
   font-family: 'Montserrat', sans-serif;
@@ -38,7 +38,7 @@
   transform: $param;
 }
 
-// =================== COMMON ========================
+// =================== COMMON ===================
 
 body {
   @include font1();
@@ -60,7 +60,7 @@ body {
 }
 
 
-// ================== HEADER ============================
+// ================== HEADER ==================
 
 header {
   width:100%;
@@ -261,7 +261,7 @@ header {
 }
 
 
-// ============= HERO IMAGE SECTION ============
+// ============= HERO IMAGE SECTION =============
 
 #hero-image {
   background:url('../img/hero-image.jpg') no-repeat;
@@ -327,7 +327,7 @@ header {
 }
 
 
-// ============= CARDS SECTION ============
+// ============= CARDS SECTION =============
 
 #cards {
   width:100%;
@@ -336,7 +336,7 @@ header {
   overflow:hidden;
 
   .cards-inner {
-    max-width:1200px;
+    max-width:1120px;
     width:100%;
     margin:auto;
     position:relative;
@@ -436,8 +436,35 @@ header {
 
 
 
+// ============= PHRASES SECTION =============
 
+#phrases {
+  width:100%;
+  background:#f2faf2;
+  padding:82px 0 82px 0;
 
+  .phrases-inner {
+    max-width:1125px;
+    width:100%;
+    margin:auto;
+
+    ul {
+      li {
+        font-size:26px;
+        font-weight: 200;
+        line-height:50px;
+        padding-left:48px;
+        background:url('../img/checkmark.jpg') no-repeat;
+        background-position:left 10px;
+        letter-spacing: -0.01em;
+
+        strong {
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}
 
 
 

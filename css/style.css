@@ -226,7 +226,7 @@ header {
   padding: 86px 0 88px;
   overflow: hidden; }
   #cards .cards-inner {
-    max-width: 1200px;
+    max-width: 1120px;
     width: 100%;
     margin: auto;
     position: relative; }
@@ -295,5 +295,24 @@ header {
         margin: 0 auto 10px auto; }
       #cards .cards-inner .btn-play:hover {
         color: #000; }
+
+#phrases {
+  width: 100%;
+  background: #f2faf2;
+  padding: 82px 0 82px 0; }
+  #phrases .phrases-inner {
+    max-width: 1125px;
+    width: 100%;
+    margin: auto; }
+    #phrases .phrases-inner ul li {
+      font-size: 26px;
+      font-weight: 200;
+      line-height: 50px;
+      padding-left: 48px;
+      background: url("../img/checkmark.jpg") no-repeat;
+      background-position: left 10px;
+      letter-spacing: -0.01em; }
+      #phrases .phrases-inner ul li strong {
+        font-weight: 600; }
 
 /*# sourceMappingURL=style.css.map */
