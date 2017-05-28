@@ -3,7 +3,7 @@ body {
   font-family: 'Montserrat', sans-serif;
   background: #fff; }
 
-.btn-class, header .header-inner nav ul li.btn a, #cards .cards-inner .card a.btn, #how-it-works .how-it-works-inner .btn {
+.btn-class, header .header-inner nav ul li.btn a, #cards .cards-inner .card a.btn, #how-it-works .how-it-works-inner .btn, #testimonials .testimonials-inner .btn {
   -webkit-border-radius: 28px;
   -moz-border-radius: 28px;
   border-radius: 28px;
@@ -16,7 +16,7 @@ body {
   -o-transition: all 0.4s;
   transition: all 0.4s;
   text-decoration: none; }
-  .btn-class:hover, header .header-inner nav ul li.btn a:hover, #cards .cards-inner .card a.btn:hover, #how-it-works .how-it-works-inner .btn:hover {
+  .btn-class:hover, header .header-inner nav ul li.btn a:hover, #cards .cards-inner .card a.btn:hover, #how-it-works .how-it-works-inner .btn:hover, #testimonials .testimonials-inner .btn:hover {
     background: #509cfd; }
 
 header {
@@ -383,5 +383,35 @@ header {
     #how-it-works .how-it-works-inner .btn {
       display: inline-block;
       margin-top: 88px; }
+
+#testimonials {
+  width: 100%;
+  background: #fff;
+  padding: 88px 0 100px 0; }
+  #testimonials .testimonials-inner {
+    max-width: 1120px;
+    margin: auto;
+    font-size: 0;
+    vertical-align: top;
+    text-align: center; }
+    #testimonials .testimonials-inner .testimonials-list .testimonial-item {
+      text-align: center;
+      display: inline-block;
+      vertical-align: top;
+      margin-bottom: 65px; }
+      #testimonials .testimonials-inner .testimonials-list .testimonial-item p {
+        font-size: 24px;
+        line-height: 36px;
+        font-style: italic;
+        font-weight: 200;
+        margin-bottom: 25px; }
+      #testimonials .testimonials-inner .testimonials-list .testimonial-item.full-width {
+        width: 100%;
+        max-width: 675px; }
+      #testimonials .testimonials-inner .testimonials-list .testimonial-item.half-width {
+        width: 50%; }
+    #testimonials .testimonials-inner .btn {
+      font-size: 15px;
+      display: inline-block; }
 
 /*# sourceMappingURL=style.css.map */
