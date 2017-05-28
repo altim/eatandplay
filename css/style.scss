@@ -307,6 +307,7 @@ header {
         text-decoration:none;
         margin-top:190px;
         display:block;
+        outline:none;
 
         &:after {
           content: "";
@@ -563,6 +564,7 @@ header {
             width: 69px;
             height: 58px;
             cursor: pointer;
+            outline:none;
 
             &:hover {
               background: #afcdf3 url('../img/slider-arrow-left.png') no-repeat;
@@ -591,6 +593,8 @@ header {
             width: 69px;
             height: 58px;
             cursor: pointer;
+            outline:none;
+
 
             &:hover {
               background: #afcdf3 url('../img/slider-arrow-right.png') no-repeat;

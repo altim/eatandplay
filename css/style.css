@@ -205,7 +205,8 @@ header {
       position: relative;
       text-decoration: none;
       margin-top: 190px;
-      display: block; }
+      display: block;
+      outline: none; }
       #hero-image .hero-image-inner .hero-image-content .btn-scroll-down:after {
         content: "";
         position: absolute;
@@ -385,7 +386,8 @@ header {
           text-indent: -9999px;
           width: 69px;
           height: 58px;
-          cursor: pointer; }
+          cursor: pointer;
+          outline: none; }
           #logos .logos-inner .logos-controls .slider-controls .logo-prev a:hover {
             background: #afcdf3 url("../img/slider-arrow-left.png") no-repeat;
             background-position: center center; }
@@ -409,7 +411,8 @@ header {
           text-indent: -9999px;
           width: 69px;
           height: 58px;
-          cursor: pointer; }
+          cursor: pointer;
+          outline: none; }
           #logos .logos-inner .logos-controls .slider-controls .logo-next a:hover {
             background: #afcdf3 url("../img/slider-arrow-right.png") no-repeat;
             background-position: center center; }
