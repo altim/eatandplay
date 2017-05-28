@@ -315,4 +315,17 @@ header {
       #phrases .phrases-inner ul li strong {
         font-weight: 600; }
 
+#partner-banner {
+  width: 100%;
+  background: #509cfd;
+  padding: 72px 0 82px 0; }
+  #partner-banner .partner-banner-inner {
+    max-width: 1120px;
+    margin: auto;
+    text-align: center; }
+    #partner-banner .partner-banner-inner h2 {
+      font-size: 40px;
+      font-weight: 200;
+      color: #fff; }
+
 /*# sourceMappingURL=style.css.map */

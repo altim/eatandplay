@@ -467,8 +467,25 @@ header {
 }
 
 
+// ============= PARTNER BANNER SECTION =============
 
+#partner-banner {
+  width:100%;
+  background:#509cfd;
+  padding:72px 0 82px 0;
 
+  .partner-banner-inner {
+    max-width:1120px;
+    margin:auto;
+    text-align:center;
+
+    h2 {
+      font-size:40px;
+      font-weight: 200;
+      color:#fff;
+    }
+  }
+}
 
 
 
