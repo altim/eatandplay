@@ -411,20 +411,29 @@ header {
   padding: 86px 0 88px;
   overflow: hidden; }
   #cards .cards-inner {
-    max-width: 1120px;
+    max-width: 1160px;
     width: 100%;
     margin: auto;
-    position: relative; }
+    position: relative;
+    padding: 0 20px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
     #cards .cards-inner .card {
       max-width: 520px;
       text-align: center; }
+      @media (max-width: 1080px) {
+        #cards .cards-inner .card {
+          float: none !important;
+          margin: auto; } }
       #cards .cards-inner .card h2 {
         font-size: 40px;
         font-weight: 200;
         color: #000; }
       #cards .cards-inner .card img {
         display: block;
-        margin: 0 auto 20px auto; }
+        margin: 0 auto 20px auto;
+        max-width: 100%; }
       #cards .cards-inner .card p {
         font-size: 15px;
         font-weight: 300;
@@ -455,6 +464,9 @@ header {
           color: #000; }
     #cards .cards-inner .card-left {
       float: left; }
+      @media (max-width: 1080px) {
+        #cards .cards-inner .card-left {
+          margin-bottom: 86px; } }
     #cards .cards-inner .card-right {
       float: right; }
     #cards .cards-inner .btn-play {
@@ -475,6 +487,11 @@ header {
       transform: translateX(-50%);
       top: 132px;
       outline: none; }
+      @media (max-width: 1080px) {
+        #cards .cards-inner .btn-play {
+          position: relative;
+          top: 0;
+          margin-bottom: 76px; } }
       #cards .cards-inner .btn-play img {
         display: block;
         margin: 0 auto 10px auto; }

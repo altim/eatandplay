@@ -556,14 +556,21 @@ header {
   overflow:hidden;
 
   .cards-inner {
-    max-width:1120px;
+    max-width:1160px;
     width:100%;
     margin:auto;
     position:relative;
+    padding:0 20px;
+    @include box-sizing();
 
     .card {
       max-width:520px;
       text-align:center;
+
+      @media(max-width:1080px){
+        float:none !important;
+        margin:auto;
+      }
 
       h2 {
         font-size:40px;
@@ -574,6 +581,7 @@ header {
       img {
         display:block;
         margin:0 auto 20px auto;
+        max-width:100%;
       }
 
       p {
@@ -618,6 +626,9 @@ header {
 
     .card-left {
       float:left;
+      @media(max-width:1080px) {
+        margin-bottom:86px;
+      }
     }
 
     .card-right {
@@ -638,6 +649,11 @@ header {
       top:132px;
       outline:none;
 
+      @media(max-width:1080px) {
+        position:relative;
+        top:0;
+        margin-bottom:76px;
+      }
 
       img {
         display:block;
