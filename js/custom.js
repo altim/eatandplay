@@ -36,4 +36,12 @@ $(document).ready(function(){
         },800,"swing");
     });
 
+
+    //Mobile menu
+    $('.btn-mobile-menu').on('click',function(e){
+        e.preventDefault();
+        $('nav').toggleClass('active');
+    })
+
+
 });

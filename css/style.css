@@ -41,14 +41,37 @@ header {
     header .header-inner nav {
       float: right;
       margin: 33px 97px 0 0; }
+      @media (max-width: 1350px) {
+        header .header-inner nav {
+          float: none;
+          position: fixed;
+          right: -250px;
+          top: 122px;
+          bottom: 0;
+          margin: 0;
+          background: #fff;
+          -webkit-transition: all 1s;
+          -moz-transition: all 1s;
+          -o-transition: all 1s;
+          transition: all 1s; }
+          header .header-inner nav.active {
+            right: 0; } }
       header .header-inner nav ul {
         height: 122px;
         list-style: none;
         float: left; }
+        @media (max-width: 1350px) {
+          header .header-inner nav ul {
+            float: none;
+            height: auto; } }
         header .header-inner nav ul li {
           float: left;
           display: block;
           margin: 20px 20px 0 0; }
+          @media (max-width: 1350px) {
+            header .header-inner nav ul li {
+              float: none;
+              margin: 0; } }
           header .header-inner nav ul li a {
             font-family: 'Montserrat', sans-serif;
             font-size: 14px;
@@ -63,15 +86,29 @@ header {
             display: block; }
             header .header-inner nav ul li a:hover {
               color: #167af9; }
+            @media (max-width: 1350px) {
+              header .header-inner nav ul li a {
+                padding: 10px 20px; } }
           header .header-inner nav ul li.btn {
             margin: 0 19px 0 7px; }
+            @media (max-width: 1350px) {
+              header .header-inner nav ul li.btn {
+                margin: 10px 20px; } }
             header .header-inner nav ul li.btn a {
               color: #fff;
               text-transform: uppercase;
               height: auto; }
+              @media (max-width: 1350px) {
+                header .header-inner nav ul li.btn a {
+                  display: block; } }
           header .header-inner nav ul li.menu-item-has-children {
             position: relative;
             height: 69px; }
+            @media (max-width: 1350px) {
+              header .header-inner nav ul li.menu-item-has-children {
+                height: auto;
+                background: url("../img/menu-arrow-down.png") no-repeat;
+                background-position: right 10px top 15px; } }
             header .header-inner nav ul li.menu-item-has-children:after {
               content: '';
               width: 12px;
@@ -88,10 +125,16 @@ header {
               -moz-transition: all 0.4s;
               -o-transition: all 0.4s;
               transition: all 0.4s; }
+              @media (max-width: 1350px) {
+                header .header-inner nav ul li.menu-item-has-children:after {
+                  display: none; } }
             header .header-inner nav ul li.menu-item-has-children:hover:after {
               top: 40px; }
             header .header-inner nav ul li.menu-item-has-children a {
               height: 69px; }
+              @media (max-width: 1350px) {
+                header .header-inner nav ul li.menu-item-has-children a {
+                  height: auto; } }
             header .header-inner nav ul li.menu-item-has-children ul {
               opacity: 0;
               height: auto;
@@ -108,11 +151,38 @@ header {
               -moz-transition: all 0.4s;
               -o-transition: all 0.4s;
               transition: all 0.4s; }
+              @media (max-width: 1350px) {
+                header .header-inner nav ul li.menu-item-has-children ul {
+                  top: 0;
+                  left: 0;
+                  position: relative;
+                  -webkit-transform: none;
+                  -moz-transform: none;
+                  -o-transform: none;
+                  transform: none;
+                  opacity: 1;
+                  max-height: 0;
+                  -webkit-box-sizing: border-box;
+                  -moz-box-sizing: border-box;
+                  box-sizing: border-box;
+                  -webkit-transition: all 0.8s ease-in-out;
+                  -moz-transition: all 0.8s ease-in-out;
+                  -o-transition: all 0.8s ease-in-out;
+                  transition: all 0.8s ease-in-out;
+                  overflow: hidden;
+                  padding: 0; } }
               header .header-inner nav ul li.menu-item-has-children ul li {
                 float: none;
                 text-align: center;
                 height: auto;
                 margin: 0; }
+                @media (max-width: 1350px) {
+                  header .header-inner nav ul li.menu-item-has-children ul li {
+                    text-align: left; }
+                    header .header-inner nav ul li.menu-item-has-children ul li:first-child {
+                      padding-top: 10px; }
+                    header .header-inner nav ul li.menu-item-has-children ul li:last-child {
+                      padding-bottom: 10px; } }
                 header .header-inner nav ul li.menu-item-has-children ul li a {
                   height: auto;
                   padding: 7px 30px;
@@ -126,17 +196,33 @@ header {
                   transition: all 0.4s; }
                   header .header-inner nav ul li.menu-item-has-children ul li a:after {
                     display: none; }
+                  @media (max-width: 1350px) {
+                    header .header-inner nav ul li.menu-item-has-children ul li a {
+                      text-align: left;
+                      padding: 10px 20px; } }
                 header .header-inner nav ul li.menu-item-has-children ul li:hover a {
                   color: #000; }
             header .header-inner nav ul li.menu-item-has-children:hover ul {
               top: 69px;
               opacity: 1; }
+              @media (max-width: 1350px) {
+                header .header-inner nav ul li.menu-item-has-children:hover ul {
+                  top: 0;
+                  max-height: 200px; } }
       header .header-inner nav .social-menu {
         float: left; }
+        @media (max-width: 1350px) {
+          header .header-inner nav .social-menu {
+            float: none;
+            text-align: center;
+            margin-top: 20px; } }
         header .header-inner nav .social-menu li {
           margin-right: 7px; }
           header .header-inner nav .social-menu li:last-child {
             margin-right: 0px; }
+          @media (max-width: 1350px) {
+            header .header-inner nav .social-menu li {
+              display: inline; } }
         header .header-inner nav .social-menu .btn_facebook {
           width: 23px;
           height: 23px;
@@ -157,12 +243,19 @@ header {
           header .header-inner nav .social-menu .btn_facebook:hover {
             background: #86a0c8 url("../img/icon_f.png") no-repeat center center;
             background-size: auto 15px; }
+          @media (max-width: 1350px) {
+            header .header-inner nav .social-menu .btn_facebook {
+              display: inline-block; } }
         header .header-inner nav .social-menu .btn_twitter {
           width: 23px;
           height: 23px;
+          padding: 5px;
           -webkit-border-radius: 50%;
           -moz-border-radius: 50%;
           border-radius: 50%;
+          -webkit-box-sizing: border-box;
+          -moz-box-sizing: border-box;
+          box-sizing: border-box;
           background: #1cb7eb url("../img/icon_t.png") no-repeat center center;
           background-size: auto 15px;
           display: block;
@@ -173,6 +266,20 @@ header {
           header .header-inner nav .social-menu .btn_twitter:hover {
             background: #84d6f1 url("../img/icon_t.png") no-repeat center center;
             background-size: auto 15px; }
+          @media (max-width: 1350px) {
+            header .header-inner nav .social-menu .btn_twitter {
+              display: inline-block; } }
+    header .header-inner .btn-mobile-menu {
+      display: none;
+      width: 40px;
+      height: 40px;
+      margin: 41px 41px 0 0;
+      float: right; }
+      @media (max-width: 1350px) {
+        header .header-inner .btn-mobile-menu {
+          display: block; } }
+      header .header-inner .btn-mobile-menu img {
+        width: 100%; }
 
 #hero-image {
   background: url("../img/hero-image.jpg") no-repeat;

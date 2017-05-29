@@ -90,14 +90,41 @@ header {
       float:right;
       margin:33px 97px 0 0 ;
 
+      @media (max-width:1350px){
+        float:none;
+        position:fixed;
+        right:-250px;
+        top:122px;
+        bottom:0;
+        margin:0;
+        background:#fff;
+        @include transition(all 1s);
+
+        &.active {
+          right:0;
+        }
+      }
+
       ul {
         height:122px;
         list-style:none;
         float:left;
+
+        @media (max-width:1350px){
+          float:none;
+          height:auto;
+        }
+
         li {
           float:left;
           display:block;
           margin:20px 20px 0 0;
+
+
+          @media (max-width:1350px){
+            float:none;
+            margin:0;
+          }
 
 
           a {
@@ -115,21 +142,39 @@ header {
             &:hover {
               color:#167af9;
             }
+
+            @media (max-width:1350px){
+              padding:10px 20px;
+            }
           }
 
           &.btn {
             margin: 0 19px 0 7px;
+            @media (max-width:1350px){
+              margin:10px 20px;
+            }
+
             a {
               @extend .btn-class;
               color: #fff;
               text-transform: uppercase;
               height:auto;
+
+              @media (max-width:1350px){
+                display:block;
+              }
             }
           }
 
           &.menu-item-has-children {
             position:relative;
             height:69px;
+
+            @media (max-width:1350px){
+              height:auto;
+              background:url('../img/menu-arrow-down.png') no-repeat;
+              background-position:right 10px top 15px;
+            }
 
 
             &:after {
@@ -142,6 +187,10 @@ header {
               background:url('../img/menu-arrow-down.png');
               @include transform(translateX(-50%));
               @include transition(all .4s);
+
+              @media (max-width:1350px){
+                display:none;
+              }
             }
 
             &:hover:after {
@@ -151,6 +200,10 @@ header {
 
             a {
               height:69px;
+
+              @media (max-width:1350px){
+                height:auto;
+              }
             }
 
 
@@ -165,12 +218,37 @@ header {
               background:#509cfd;
               @include transition(all 0.4s);
 
+              @media (max-width:1350px){
+                top:0;
+                left:0;
+                position:relative;
+                @include transform(none);
+                opacity:1;
+                max-height:0;
+                @include box-sizing();
+                @include transition(all .8s ease-in-out);
+                overflow:hidden;
+                padding:0;
+              }
+
 
               li {
                 float:none;
                 text-align:center;
                 height:auto;
                 margin:0;
+
+                @media (max-width:1350px){
+                  text-align:left;
+
+                  &:first-child {
+                    padding-top:10px;
+                  }
+
+                  &:last-child {
+                    padding-bottom:10px;
+                  }
+                }
 
                 a {
                   height:auto;
@@ -183,6 +261,11 @@ header {
 
                   &:after {
                     display:none;
+                  }
+
+                  @media (max-width:1350px){
+                    text-align:left;
+                    padding:10px 20px;
                   }
                 }
 
@@ -199,6 +282,10 @@ header {
               ul {
                 top:69px;
                 opacity:1;
+                @media (max-width:1350px){
+                  top:0;
+                  max-height:200px;
+                }
               }
             }
 
@@ -214,11 +301,21 @@ header {
       .social-menu {
         float:left;
 
+        @media (max-width:1350px){
+          float:none;
+          text-align:center;
+          margin-top:20px;
+        }
+
         li {
           margin-right:7px;
 
           &:last-child {
             margin-right:0px;
+          }
+
+          @media (max-width:1350px){
+            display:inline;
           }
         }
 
@@ -238,12 +335,18 @@ header {
             background-size:auto 15px;
           }
 
+          @media (max-width:1350px){
+            display:inline-block;
+          }
+
         }
 
         .btn_twitter {
           width:23px;
           height:23px;
+          padding:5px;
           @include border-radius(50%);
+          @include box-sizing();
           background:#1cb7eb url('../img/icon_t.png') no-repeat center center;
           background-size:auto 15px;
           display:block;
@@ -254,12 +357,35 @@ header {
             background-size:auto 15px;
           }
 
+          @media (max-width:1350px){
+            display:inline-block;
+          }
+
         }
 
 
       }
 
     }
+
+
+    .btn-mobile-menu {
+      display:none;
+      width:40px;
+      height:40px;
+      margin:41px 41px 0 0;
+      float:right;
+
+
+      @media (max-width:1350px){
+        display:block;
+      }
+
+      img {
+        width:100%;
+      }
+    }
+
 
   }
 }
