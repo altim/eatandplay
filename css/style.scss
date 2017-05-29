@@ -70,7 +70,7 @@ header {
   position:fixed;
   top:0;
   left:0;
-  z-index:999999;
+  z-index:999;
 
   @media(max-width:580px){
     height:68px;
@@ -414,9 +414,7 @@ header {
 // ============= HERO IMAGE SECTION =============
 
 #hero-image {
-  //background:url('../img/hero-image.jpg') no-repeat;
   background-size:cover;
-  //background-position:center center;
   height:759px;
   width:100%;
   display:block;
@@ -701,10 +699,16 @@ header {
       img {
         display:block;
         margin:0 auto 10px auto;
+        @include transform(translateZ(0));
+        @include transition(all .4s);
       }
 
       &:hover {
         color:#000;
+
+        img {
+          @include transform(translateY(-5px));
+        }
       }
 
 
@@ -1131,7 +1135,9 @@ header {
 
       .post-image {
         width:50vw;
-        flex-grow: 0;
+        overflow:hidden;
+        flex: 1 0 auto;
+
 
         @media(max-width:1400px){
           width:100vw;
@@ -1140,6 +1146,11 @@ header {
         img {
           width:50vw;
           display:block;
+          @include transition(all 1s);
+
+          &:hover {
+            @include transform(scale(1.1) rotate(2deg));
+          }
 
           @media(max-width:1400px){
             width:100vw;

@@ -31,7 +31,7 @@ $(document).ready(function(){
         pager : false,
         controls: true,
         auto : true,
-        pause: 4000,
+        pause: 2000,
         nextSelector : '.logo-next',
         prevSelector : '.logo-prev'
     });
