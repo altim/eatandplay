@@ -306,6 +306,9 @@ header {
   width: 100%;
   display: block;
   margin-top: 122px; }
+  @media (max-width: 600px) {
+    #hero-image {
+      height: 650px; } }
   @media (max-width: 580px) {
     #hero-image {
       margin-top: 68px; } }
@@ -386,6 +389,9 @@ header {
         transform: translateX(-50%);
         display: block;
         outline: none; }
+        @media (max-width: 600px) {
+          #hero-image .hero-image-inner .hero-image-content .btn-scroll-down {
+            bottom: 85px; } }
         #hero-image .hero-image-inner .hero-image-content .btn-scroll-down:after {
           content: "";
           position: absolute;
@@ -411,6 +417,9 @@ header {
   background: #fff;
   padding: 86px 0 88px;
   overflow: hidden; }
+  @media (max-width: 600px) {
+    #cards {
+      padding: 50px 0 50px 0; } }
   #cards .cards-inner {
     max-width: 1160px;
     width: 100%;
@@ -468,6 +477,9 @@ header {
       @media (max-width: 1080px) {
         #cards .cards-inner .card-left {
           margin-bottom: 86px; } }
+      @media (max-width: 600px) {
+        #cards .cards-inner .card-left {
+          margin-bottom: 46px; } }
     #cards .cards-inner .card-right {
       float: right; }
     #cards .cards-inner .btn-play {
@@ -493,6 +505,9 @@ header {
           position: relative;
           top: 0;
           margin-bottom: 76px; } }
+      @media (max-width: 600px) {
+        #cards .cards-inner .btn-play {
+          margin-bottom: 36px; } }
       #cards .cards-inner .btn-play img {
         display: block;
         margin: 0 auto 10px auto; }
@@ -503,6 +518,9 @@ header {
   width: 100%;
   background: #f2faf2;
   padding: 82px 0 82px 0; }
+  @media (max-width: 600px) {
+    #phrases {
+      padding: 42px 0 42px 0; } }
   #phrases .phrases-inner {
     max-width: 1165px;
     width: 100%;
@@ -519,6 +537,10 @@ header {
       background: url("../img/checkmark.jpg") no-repeat;
       background-position: left 10px;
       letter-spacing: -0.01em; }
+      @media (max-width: 600px) {
+        #phrases .phrases-inner ul li {
+          font-size: 20px;
+          line-height: 42px; } }
       #phrases .phrases-inner ul li strong {
         font-weight: 600; }
 
@@ -526,6 +548,9 @@ header {
   width: 100%;
   background: #509cfd;
   padding: 72px 0 82px 0; }
+  @media (max-width: 600px) {
+    #partner-banner {
+      padding: 40px 0 45px 0; } }
   #partner-banner .partner-banner-inner {
     max-width: 1160px;
     margin: auto;
@@ -538,11 +563,17 @@ header {
       font-size: 40px;
       font-weight: 200;
       color: #fff; }
+      @media (max-width: 600px) {
+        #partner-banner .partner-banner-inner h2 {
+          font-size: 32px; } }
 
 #logos {
   width: 100%;
   background: #fff;
   padding: 70px 0 80px 0; }
+  @media (max-width: 600px) {
+    #logos {
+      padding: 40px 0 55px 0; } }
   #logos .logos-inner ul.logos-slider li {
     float: none !important;
     display: table-cell;
@@ -636,6 +667,9 @@ header {
   width: 100%;
   background: #f2faf2;
   padding: 78px 0 78px 0; }
+  @media (max-width: 600px) {
+    #how-it-works {
+      padding: 40px 0 60px 0; } }
   #how-it-works .how-it-works-inner {
     max-width: 1160px;
     width: 100%;
@@ -653,6 +687,9 @@ header {
       padding-top: 80px;
       text-align: center;
       margin-top: 76px; }
+      @media (max-width: 600px) {
+        #how-it-works .how-it-works-inner .hiw-wrapper {
+          padding-top: 40px; } }
       #how-it-works .how-it-works-inner .hiw-wrapper .hiw-item {
         width: 326px;
         height: 326px;
@@ -718,11 +755,17 @@ header {
     #how-it-works .how-it-works-inner .btn {
       display: inline-block;
       margin-top: 88px; }
+      @media (max-width: 600px) {
+        #how-it-works .how-it-works-inner .btn {
+          margin-top: 48px; } }
 
 #testimonials {
   width: 100%;
   background: #fff;
   padding: 88px 0 100px 0; }
+  @media (max-width: 600px) {
+    #testimonials {
+      padding: 48px 0 50px 0; } }
   #testimonials .testimonials-inner {
     max-width: 1160px;
     margin: auto;
@@ -794,7 +837,7 @@ header {
             padding: 90px; } }
         @media (max-width: 768px) {
           #blog .blog-inner .post-item .post-content {
-            padding: 30px;
+            padding: 45px 20px;
             text-align: center; } }
         #blog .blog-inner .post-item .post-content h2 {
           font-size: 32px;
@@ -839,6 +882,9 @@ footer {
   width: 100%;
   background: #4b99fd;
   padding: 80px 0 78px 0; }
+  @media (max-width: 600px) {
+    footer {
+      padding: 45px 0 45px 0; } }
   footer .footer-inner {
     max-width: 1160px;
     width: 100%;
@@ -854,6 +900,9 @@ footer {
       font-weight: 200;
       color: #000;
       margin-bottom: 35px; }
+      @media (max-width: 600px) {
+        footer .footer-inner h3 {
+          margin-bottom: 20px; } }
     footer .footer-inner ul li a {
       font-size: 15px;
       font-weight: 300;
@@ -874,9 +923,9 @@ footer {
       @media (max-width: 1200px) {
         footer .footer-inner .navigation-menu {
           width: 50%;
-          padding: 0 0 60px 0;
+          padding: 0 0 40px 0;
           text-align: center; } }
-      @media (max-width: 1200px) {
+      @media (max-width: 700px) {
         footer .footer-inner .navigation-menu {
           width: 100%; } }
     footer .footer-inner .stuff-menu {
@@ -884,9 +933,9 @@ footer {
       @media (max-width: 1200px) {
         footer .footer-inner .stuff-menu {
           width: 50%;
-          padding: 0 0 60px 0;
+          padding: 0 0 40px 0;
           text-align: center; } }
-      @media (max-width: 1200px) {
+      @media (max-width: 700px) {
         footer .footer-inner .stuff-menu {
           width: 100%; } }
     footer .footer-inner .connect-menu {
@@ -895,20 +944,20 @@ footer {
         footer .footer-inner .connect-menu {
           width: 50%;
           text-align: center; } }
-      @media (max-width: 1200px) {
+      @media (max-width: 700px) {
         footer .footer-inner .connect-menu {
           width: 100%;
-          padding: 0 0 60px 0; } }
+          padding: 0 0 40px 0; } }
     footer .footer-inner .newsletter {
       width: 350px; }
       @media (max-width: 1200px) {
         footer .footer-inner .newsletter {
           width: 50%;
           text-align: center; } }
-      @media (max-width: 1200px) {
+      @media (max-width: 700px) {
         footer .footer-inner .newsletter {
           width: 100%;
-          padding: 0 0 60px 0; } }
+          padding: 0; } }
       footer .footer-inner .newsletter input[type=email] {
         -webkit-border-radius: 28px;
         -moz-border-radius: 28px;

@@ -422,6 +422,10 @@ header {
   display:block;
   margin-top:122px;
 
+  @media(max-width:600px){
+    height:650px;
+  }
+
   @media(max-width:580px){
     margin-top:68px;
   }
@@ -512,15 +516,14 @@ header {
         color: #fff;
         position:absolute;
         text-decoration:none;
-        //margin-top:190px;
         bottom:135px;
         left:50%;
         @include transform(translateX(-50%));
         display:block;
         outline:none;
 
-        @media(max-width:830px){
-          //bottom:85px;
+        @media(max-width:600px){
+          bottom:85px;
         }
 
         &:after {
@@ -555,6 +558,10 @@ header {
   background:#fff;
   padding:86px 0 88px;
   overflow:hidden;
+
+  @media(max-width:600px){
+    padding:50px 0 50px 0;
+  }
 
   .cards-inner {
     max-width:1160px;
@@ -630,6 +637,10 @@ header {
       @media(max-width:1080px) {
         margin-bottom:86px;
       }
+
+      @media(max-width:600px){
+        margin-bottom:46px;
+      }
     }
 
     .card-right {
@@ -656,6 +667,10 @@ header {
         margin-bottom:76px;
       }
 
+      @media(max-width:600px){
+        margin-bottom:36px;
+      }
+
       img {
         display:block;
         margin:0 auto 10px auto;
@@ -680,6 +695,10 @@ header {
   background:#f2faf2;
   padding:82px 0 82px 0;
 
+  @media(max-width:600px){
+    padding:42px 0 42px 0;
+  }
+
   .phrases-inner {
     max-width:1165px;
     width:100%;
@@ -697,6 +716,11 @@ header {
         background-position:left 10px;
         letter-spacing: -0.01em;
 
+        @media(max-width:600px){
+          font-size:20px;
+          line-height:42px;
+        }
+
         strong {
           font-weight: 600;
         }
@@ -713,6 +737,10 @@ header {
   background:#509cfd;
   padding:72px 0 82px 0;
 
+  @media(max-width:600px){
+    padding:40px 0 45px 0;
+  }
+
   .partner-banner-inner {
     max-width:1160px;
     margin:auto;
@@ -724,6 +752,10 @@ header {
       font-size:40px;
       font-weight: 200;
       color:#fff;
+
+      @media(max-width:600px){
+        font-size:32px;
+      }
     }
   }
 }
@@ -735,6 +767,10 @@ header {
   width: 100%;
   background: #fff;
   padding: 70px 0 80px 0;
+
+  @media(max-width:600px){
+    padding:40px 0 55px 0;
+  }
 
   .logos-inner {
 
@@ -867,6 +903,10 @@ header {
   background:#f2faf2;
   padding:78px 0 78px 0;
 
+  @media(max-width:600px){
+    padding:40px 0 60px 0;
+  }
+
   .how-it-works-inner {
     max-width:1160px;
     width:100%;
@@ -885,6 +925,10 @@ header {
       padding-top:80px;
       text-align:center;
       margin-top:76px;
+
+      @media(max-width:600px){
+        padding-top:40px;
+      }
 
       .hiw-item {
         width:326px;
@@ -963,6 +1007,10 @@ header {
       @extend .btn-class;
       display:inline-block;
       margin-top:88px;
+
+      @media(max-width:600px){
+        margin-top:48px;
+      }
     }
 
   }
@@ -975,6 +1023,10 @@ header {
   width:100%;
   background:#fff;
   padding:88px 0 100px 0;
+
+  @media(max-width:600px){
+    padding:48px 0 50px 0;
+  }
 
   .testimonials-inner {
     max-width:1160px;
@@ -1080,7 +1132,7 @@ header {
         }
 
         @media(max-width:768px){
-          padding:30px;
+          padding:45px 20px;
           text-align:center;
         }
 
@@ -1175,6 +1227,10 @@ footer {
   background:#4b99fd;
   padding:80px 0 78px 0;
 
+  @media(max-width:600px){
+    padding:45px 0 45px 0;
+  }
+
   .footer-inner {
     max-width:1160px;
     width:100%;
@@ -1190,6 +1246,9 @@ footer {
       font-weight: 200;
       color:#000;
       margin-bottom:35px;
+      @media(max-width:600px){
+        margin-bottom:20px;
+      }
     }
 
     ul {
@@ -1219,11 +1278,11 @@ footer {
       width:268px;
       @media(max-width:1200px){
         width:50%;
-        padding:0 0 60px 0;
+        padding:0 0 40px 0;
         text-align: center;
       }
 
-      @media(max-width:1200px){
+      @media(max-width:700px){
         width:100%;
       }
 
@@ -1233,11 +1292,11 @@ footer {
       width:268px;
       @media(max-width:1200px){
         width:50%;
-        padding:0 0 60px 0;
+        padding:0 0 40px 0;
         text-align: center;
       }
 
-      @media(max-width:1200px){
+      @media(max-width:700px){
         width:100%;
       }
 
@@ -1250,9 +1309,9 @@ footer {
         text-align: center;
       }
 
-      @media(max-width:1200px){
+      @media(max-width:700px){
         width:100%;
-        padding:0 0 60px 0;
+        padding:0 0 40px 0;
       }
 
     }
@@ -1264,9 +1323,9 @@ footer {
         text-align: center;
       }
 
-      @media(max-width:1200px){
+      @media(max-width:700px){
         width:100%;
-        padding:0 0 60px 0;
+        padding:0;
       }
 
 
