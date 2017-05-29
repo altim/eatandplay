@@ -11,6 +11,15 @@ $(document).ready(function(){
         }
     });
 
+    //Hero slider
+    $('.hero-slider ul').bxSlider({
+        infiniteLoop: true,
+        touchEnabled : false,
+        pager : false,
+        controls: false,
+        auto : true,
+        pause: 4000
+    });
 
     //Logo slider
     $('.logos-slider').bxSlider({
@@ -22,7 +31,7 @@ $(document).ready(function(){
         pager : false,
         controls: true,
         auto : true,
-        pause: 5000,
+        pause: 4000,
         nextSelector : '.logo-next',
         prevSelector : '.logo-prev'
     });

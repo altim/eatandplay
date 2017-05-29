@@ -414,13 +414,14 @@ header {
 // ============= HERO IMAGE SECTION =============
 
 #hero-image {
-  background:url('../img/hero-image.jpg') no-repeat;
+  //background:url('../img/hero-image.jpg') no-repeat;
   background-size:cover;
-  background-position:center center;
+  //background-position:center center;
   height:759px;
   width:100%;
   display:block;
   margin-top:122px;
+
 
   @media(max-width:600px){
     height:650px;
@@ -434,13 +435,40 @@ header {
     height:100%;
     position:relative;
 
+    .hero-slider {
+      .bx-wrapper {
+        @include box-shadow(none);
+        border:none;
+        margin:0;
+
+        li {
+          height:759px;
+          width:100%;
+          background:url('../img/hero-image.jpg') no-repeat;
+          background-position:center center;
+
+          @media(max-width:600px){
+            height:650px;
+          }
+        }
+      }
+    }
+
     .hero-image-content {
       max-width:1200px;
       width:100%;
       margin:auto;
       text-align:center;
       color:#fff;
-      padding-top:140px;
+      position:absolute;
+      left:50%;
+      @include transform(translateX(-50%));
+      top:0;
+      height:100%;
+
+      .hero-image-content-inner {
+        padding-top:140px;
+      }
 
       h1 {
         font-size:108px;
@@ -543,7 +571,6 @@ header {
           top: 38px;
         }
       }
-
 
     }
 
