@@ -315,6 +315,7 @@ header {
 
       .social-menu {
         float:left;
+        height:50px;
 
         @media (max-width:1350px){
           float:none;
@@ -324,9 +325,10 @@ header {
 
         li {
           margin-right:7px;
+          margin-top:17px;
 
           &:last-child {
-            margin-right:0px;
+            margin-right:0;
           }
 
           @media (max-width:1350px){
@@ -644,6 +646,7 @@ header {
           color:#fff;
           line-height:15px;
           padding:21px 44px;
+          font-weight: 300;
 
           &:hover {
             color:#fff;
@@ -841,6 +844,7 @@ header {
         display: inline-block;
         padding:20px 50px !important;
         font-size:15px;
+        font-weight: 300;
 
         span {
           color:#95b9e7;
@@ -1038,6 +1042,7 @@ header {
       @extend .btn-class;
       display:inline-block;
       margin-top:88px;
+      font-weight: 300;
 
       @media(max-width:600px){
         margin-top:48px;
@@ -1108,6 +1113,7 @@ header {
       font-size:15px;
       @extend .btn-class;
       display:inline-block;
+      font-weight: 300;
     }
 
   }
@@ -1191,6 +1197,7 @@ header {
         .btn {
           @extend .btn-class;
           display: inline-block;
+          font-weight: 300;
         }
 
         .post-content-inner {
@@ -1392,6 +1399,7 @@ footer {
         display:inline-block;
         margin-top:19px;
         font-size:15px;
+        font-weight: 300;
       }
     }
 
