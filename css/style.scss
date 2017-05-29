@@ -44,6 +44,8 @@ body {
   @include font1();
   background:#fff;
   overflow-x:hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .btn-class {
