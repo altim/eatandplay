@@ -1316,13 +1316,22 @@ footer {
 
 
   .copyright-inner {
-    max-width:1120px;
+    max-width:1160px;
     width:100%;
     margin:auto;
+    padding:0 20px;
+    @include box-sizing();
 
     .copyright-info {
       max-width: 395px;
       float: left;
+
+      @media(max-width:1060px){
+        max-width: 100%;
+        width:100%;
+        text-align:center;
+        margin-bottom:20px;
+      }
 
 
       p {
@@ -1352,12 +1361,30 @@ footer {
     .payment-menu {
       float:right;
 
+      @media(max-width:1060px){
+        float:left;
+        width:100%;
+        text-align:center;
+      }
+
       ul {
+        @media(max-width:1060px){
+          display:inline-block;
+        }
+
         li {
           height:50px;
           display:table-cell;
           vertical-align: middle;
 
+          @media(max-width:700px){
+            margin:10px 0 0 0;
+          }
+
+          @media(max-width:480px){
+            margin:10px 0 0 0;
+            display:list-item;
+          }
 
           a {
             text-decoration: none;
@@ -1367,6 +1394,11 @@ footer {
               @include transform(translateZ(0));
               -webkit-transition: .2s transform;
               transition: .2s transform;
+              max-width:100%;
+              @media(max-width:700px){
+                padding:10px;
+                @include box-sizing();
+              }
             }
 
             &:hover {
