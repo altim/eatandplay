@@ -1524,5 +1524,82 @@ footer {
 
 
 
+// ======================================= PARTNERS PAGE =====================================
+
+#header-image {
+  width:100%;
+  height:279px;
+  background:url('../img/header-image-new-york.jpg') no-repeat;
+  background-size:cover;
+  background-position:center center;
+  margin-top:122px;
+
+  .header-image-inner {
+    position:relative;
+    height:279px;
+    width:100%;
+    padding:0 20px;
+    @include box-sizing();
+    text-align:center;
+
+    h1 {
+      font-size:90px;
+      font-weight:500;
+      line-height:279px;
+      text-shadow:7px 7px 21px rgba(0,0,0,0.29);
+      color:#fff;
+
+      @media(max-width:1250px){
+        padding:0 20px;
+      }
+
+      @media(max-width:1250px){
+        font-size:97px;
+        line-height:97px;
+      }
+
+      @media(max-width:1100px){
+        font-size:86px;
+        line-height:86px;
+      }
+
+      @media(max-width:980px){
+        font-size:68px;
+        line-height:68px;
+      }
+
+      @media(max-width:780px){
+        max-width:400px;
+        margin:auto;
+      }
+
+      @media(max-width:430px){
+        max-width:350px;
+        margin:auto;
+        font-size:45px;
+        line-height:45px;
+      }
+    }
+
+
+    .btn {
+      @extend .btn-class;
+      display:inline-block;
+      border:6px solid #fff;
+      @include box-sizing();
+      @include border-radius(40px);
+      padding:21px 55px;
+      @include transform(translateY(-35px));
+      text-transform: uppercase;
+      font-size:14px;
+      font-weight: 400;
+    }
+
+  }
+}
+
+
+
+
 
 
