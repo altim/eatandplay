@@ -1190,4 +1190,17 @@ footer {
       font-size: 14px;
       font-weight: 400; }
 
+.white-blank {
+  width: 100%;
+  background: #fff;
+  padding: 80px 0; }
+  .white-blank .white-blank-inner {
+    max-width: 1125px;
+    width: 100%;
+    margin: auto; }
+    .white-blank .white-blank-inner p {
+      font-size: 15px;
+      line-height: 31px;
+      font-weight: 300; }
+
 /*# sourceMappingURL=style.css.map */
