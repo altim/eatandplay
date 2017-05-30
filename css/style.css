@@ -1320,7 +1320,14 @@ footer {
                 font-size: 36px;
                 font-weight: 300;
                 line-height: 30px;
-                margin-left: 8px; }
+                margin-left: 8px;
+                -webkit-transition: all 0.4s;
+                -moz-transition: all 0.4s;
+                -o-transition: all 0.4s;
+                transition: all 0.4s; }
+                #merchants .merchants-inner .merchants-list .merchant-item .merchants-item-header .merchant-name p span.off {
+                  font-size: 36px;
+                  display: none; }
           #merchants .merchants-inner .merchants-list .merchant-item .merchants-item-header .merchant-controls {
             position: absolute;
             top: 66px;
@@ -1375,6 +1382,12 @@ footer {
           #merchants .merchants-inner .merchants-list .merchant-item.open .merchant-logo-wrapper img {
             max-height: 241px;
             max-width: 300px; }
+        #merchants .merchants-inner .merchants-list .merchant-item.open .merchant-name p span {
+          font-size: 48px;
+          font-weight: 500; }
+          #merchants .merchants-inner .merchants-list .merchant-item.open .merchant-name p span.off {
+            font-size: 48px;
+            display: inline-block; }
         #merchants .merchants-inner .merchants-list .merchant-item.open .merchant-controls {
           top: 50%;
           right: 40px;

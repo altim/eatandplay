@@ -1761,6 +1761,12 @@ footer {
                   font-weight: 300;
                   line-height:30px;
                   margin-left:8px;
+                  @include transition(all .4s);
+
+                  &.off {
+                    font-size:36px;
+                    display:none;
+                  }
                 }
               }
             }
@@ -1837,6 +1843,19 @@ footer {
             img {
               max-height:241px;
               max-width:300px;
+            }
+          }
+
+          .merchant-name {
+            p {
+              span {
+                font-size: 48px;
+                font-weight: 500;
+                &.off {
+                  font-size: 48px;
+                  display: inline-block;
+                }
+              }
             }
           }
 
