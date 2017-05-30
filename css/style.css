@@ -150,6 +150,7 @@ header {
                 header .header-inner nav ul li.menu-item-has-children a {
                   height: auto; } }
             header .header-inner nav ul li.menu-item-has-children ul {
+              pointer-events: none;
               opacity: 0;
               height: auto;
               position: absolute;
@@ -217,6 +218,7 @@ header {
                 header .header-inner nav ul li.menu-item-has-children ul li:hover a {
                   color: #000; }
             header .header-inner nav ul li.menu-item-has-children:hover ul {
+              pointer-events: auto;
               top: 69px;
               opacity: 1; }
               @media (max-width: 1350px) {

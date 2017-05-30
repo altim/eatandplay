@@ -225,6 +225,7 @@ header {
 
 
             ul {
+              pointer-events: none;
               opacity:0;
               height:auto;
               position:absolute;
@@ -297,6 +298,7 @@ header {
 
             &:hover {
               ul {
+                pointer-events: auto;
                 top:69px;
                 opacity:1;
                 @media (max-width:1350px){
