@@ -6,7 +6,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
-.btn-class, header .header-inner nav ul li.btn a, #cards .cards-inner .card a.btn, #logos .logos-inner .logos-controls .btn, #how-it-works .how-it-works-inner .btn, #testimonials .testimonials-inner .btn, #blog .blog-inner .post-item .post-content .btn, footer .footer-inner .newsletter .btn, #header-image .header-image-inner .btn, #filter-bar .filter-bar-inner ul.filter-menu li .btn {
+.btn-class, header .header-inner nav ul li.btn a, #cards .cards-inner .card a.btn, #logos .logos-inner .logos-controls .btn, #how-it-works .how-it-works-inner .btn, #testimonials .testimonials-inner .btn, #blog .blog-inner .post-item .post-content .btn, footer .footer-inner .newsletter .btn, #header-image .header-image-inner .btn, #filter-bar .filter-bar-inner ul.filter-menu li .btn, #merchants .merchants-inner .card a.btn {
   -webkit-border-radius: 28px;
   -moz-border-radius: 28px;
   border-radius: 28px;
@@ -19,7 +19,7 @@ body {
   -o-transition: all 0.4s;
   transition: all 0.4s;
   text-decoration: none; }
-  .btn-class:hover, header .header-inner nav ul li.btn a:hover, #cards .cards-inner .card a.btn:hover, #logos .logos-inner .logos-controls .btn:hover, #how-it-works .how-it-works-inner .btn:hover, #testimonials .testimonials-inner .btn:hover, #blog .blog-inner .post-item .post-content .btn:hover, footer .footer-inner .newsletter .btn:hover, #header-image .header-image-inner .btn:hover, #filter-bar .filter-bar-inner ul.filter-menu li .btn:hover {
+  .btn-class:hover, header .header-inner nav ul li.btn a:hover, #cards .cards-inner .card a.btn:hover, #logos .logos-inner .logos-controls .btn:hover, #how-it-works .how-it-works-inner .btn:hover, #testimonials .testimonials-inner .btn:hover, #blog .blog-inner .post-item .post-content .btn:hover, footer .footer-inner .newsletter .btn:hover, #header-image .header-image-inner .btn:hover, #filter-bar .filter-bar-inner ul.filter-menu li .btn:hover, #merchants .merchants-inner .card a.btn:hover {
     background: #509cfd; }
 
 header {
@@ -1190,11 +1190,11 @@ footer {
       font-size: 14px;
       font-weight: 400; }
 
-.white-blank {
+.blank-1 {
   width: 100%;
   background: #fff;
   padding: 80px 0; }
-  .white-blank .white-blank-inner {
+  .blank-1 .blank-1-inner {
     max-width: 1165px;
     width: 100%;
     padding: 0 20px;
@@ -1202,7 +1202,7 @@ footer {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     margin: auto; }
-    .white-blank .white-blank-inner p {
+    .blank-1 .blank-1-inner p {
       font-size: 15px;
       line-height: 31px;
       font-weight: 300; }
@@ -1373,5 +1373,73 @@ footer {
           #merchants .merchants-inner .merchants-list .merchant-item.open .merchant-controls a {
             background: url("../img/btn-expand-sprite.png") no-repeat;
             background-position: bottom; }
+    #merchants .merchants-inner .card {
+      max-width: 520px;
+      text-align: center;
+      margin: auto; }
+      @media (max-width: 1080px) {
+        #merchants .merchants-inner .card {
+          float: none !important;
+          margin: auto; } }
+      #merchants .merchants-inner .card h2 {
+        font-size: 40px;
+        font-weight: 200;
+        color: #000; }
+      #merchants .merchants-inner .card img {
+        display: block;
+        margin: 80px auto 12px auto;
+        max-width: 100%; }
+      #merchants .merchants-inner .card p {
+        font-size: 15px;
+        font-weight: 300;
+        line-height: 30px;
+        color: #000;
+        text-align: left;
+        margin-bottom: 28px; }
+      #merchants .merchants-inner .card strong {
+        font-weight: 400; }
+      #merchants .merchants-inner .card a {
+        font-size: 15px;
+        line-height: 30px;
+        color: #166fe1;
+        display: inline-block;
+        text-decoration: none;
+        -webkit-transition: all 0.4s;
+        -moz-transition: all 0.4s;
+        -o-transition: all 0.4s;
+        transition: all 0.4s; }
+        #merchants .merchants-inner .card a.btn {
+          display: inline-block;
+          color: #fff;
+          line-height: 15px;
+          padding: 21px 44px;
+          font-weight: 300; }
+          #merchants .merchants-inner .card a.btn:hover {
+            color: #fff; }
+        #merchants .merchants-inner .card a:hover {
+          color: #000; }
+
+.blank-2 {
+  width: 100%;
+  background: #f2faf2;
+  padding: 84px 0 82px 0; }
+  .blank-2 .blank-2-inner {
+    max-width: 1165px;
+    width: 100%;
+    padding: 0 20px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: auto; }
+    .blank-2 .blank-2-inner h2 {
+      font-size: 40px;
+      line-height: 40px;
+      font-weight: 200;
+      text-align: center;
+      margin-bottom: 40px; }
+    .blank-2 .blank-2-inner p {
+      font-size: 15px;
+      line-height: 31px;
+      font-weight: 300; }
 
 /*# sourceMappingURL=style.css.map */
