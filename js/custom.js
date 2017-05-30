@@ -72,5 +72,31 @@ $(document).ready(function(){
     });
 
 
+    //View all partners button
+    $('.btn-view-all-partners').click(function(e){
+        e.preventDefault();
+        $('html,body').animate({
+            scrollTop:  $('#filter-bar').offset().top -122
+        },800,"swing");
+    });
+
+
+    //Filter bar
+
+    $('.filter-menu li a').on('click',function(e){
+        e.preventDefault();
+        var selectedValue = $(this).data('type');
+
+        //hide all
+        $('.merchant-item').hide();
+        if(selectedValue === 'all'){
+            $('.merchant-item').fadeIn(400,'swing');
+        }
+        else {
+            $('.merchant-item.' + selectedValue).fadeIn(400, 'swing');
+        }
+    })
+
+
 
 });
