@@ -1266,14 +1266,13 @@ footer {
     #merchants .merchants-inner .merchants-list {
       max-width: 1122px;
       width: 100%;
-      margin: auto; }
+      margin: auto;
+      border-bottom: 1px solid #bdbdbd; }
       #merchants .merchants-inner .merchants-list .merchant-item {
         border-top: 1px solid #bdbdbd;
         width: 100%;
         position: relative;
         overflow: hidden; }
-        #merchants .merchants-inner .merchants-list .merchant-item:last-child {
-          border-bottom: 1px solid #bdbdbd; }
         #merchants .merchants-inner .merchants-list .merchant-item .expand-toggle {
           cursor: pointer; }
         #merchants .merchants-inner .merchants-list .merchant-item .merchants-item-header {

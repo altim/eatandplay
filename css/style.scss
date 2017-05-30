@@ -1711,12 +1711,10 @@ footer {
       max-width:1122px;
       width:100%;
       margin:auto;
+      border-bottom: 1px solid #bdbdbd;
 
       .merchant-item {
           border-top:1px solid #bdbdbd;
-          &:last-child {
-            border-bottom: 1px solid #bdbdbd;
-          }
           width:100%;
           position:relative;
           overflow:hidden;
