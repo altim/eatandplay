@@ -52,7 +52,25 @@ $(document).ready(function(){
     $('.btn-mobile-menu').on('click',function(e){
         e.preventDefault();
         $('nav').toggleClass('active');
-    })
+    });
+
+
+    //Merchants list
+    $('.expand-toggle').on('click',function(e){
+       e.preventDefault();
+
+       var $merchantItem = $(this).parent().parent();
+
+       if($merchantItem.hasClass('open')){
+           $merchantItem.removeClass('open').find('.merchants-item-body').slideUp(800,'swing');
+       }
+       else {
+           $merchantItem.addClass('open').find('.merchants-item-body').slideDown(800,'swing');
+
+       }
+
+    });
+
 
 
 });

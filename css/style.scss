@@ -216,7 +216,7 @@ header {
 
 
             a {
-              height:69px;
+              height:68px;
 
               @media (max-width:1350px){
                 height:auto;
@@ -1672,5 +1672,201 @@ footer {
 
   }
 }
+
+
+// ===================== MERCHANTS SECTION =====================
+
+#merchants {
+  width:100%;
+  background:#fff;
+  padding:86px 0;
+
+  .merchants-inner {
+    max-width:1165px;
+    margin:auto;
+    padding:0 20px;
+    @include box-sizing();
+    text-align:center;
+
+    h2 {
+      font-size:40px;
+      font-weight: 200;
+      margin-bottom:86px;
+    }
+
+
+
+
+    .merchants-list {
+      max-width:1122px;
+      width:100%;
+      margin:auto;
+
+      .merchant-item {
+          border-top:1px solid #bdbdbd;
+          &:last-child {
+            border-bottom: 1px solid #bdbdbd;
+          }
+          width:100%;
+          position:relative;
+          overflow:hidden;
+        
+          .expand-toggle {
+            cursor: pointer;
+          }
+
+          .merchants-item-header {
+            height:149px;
+            padding:9px 40px 9px 40px;
+            @include box-sizing();
+
+            .merchant-logo-wrapper {
+              float:left;
+              height:131px;
+              width:148px;
+              @include transition(all 0.8s ease-in-out);
+              position:relative;
+              img {
+                @include transition(all 0.8s ease-in-out);
+                max-height:131px;
+                display:block;
+                position:absolute;
+                left:50%;
+                top:50%;
+                @include transform(translate(-50%, -50%));
+              }
+            }
+
+            .merchant-name {
+              float:right;
+              margin:46px 50px 0 0;
+              p {
+                font-size:24px;
+                font-weight: 300;
+                line-height:30px;
+
+                span {
+                  font-size:36px;
+                  font-weight: 300;
+                  line-height:30px;
+                  margin-left:8px;
+                }
+              }
+            }
+
+            .merchant-controls {
+              position:absolute;
+              top:66px;
+              right:40px;
+              @include transform(translateY(0));
+              @include transition(all .8s ease-in-out);
+
+              a {
+                width:13px;
+                height:13px;
+                background:url('../img/btn-expand-sprite.png') no-repeat;
+                background-position:top;
+                display:block;
+                outline:none;
+              }
+            }
+
+
+          }
+
+
+          .merchants-item-body {
+            display:none;
+            padding:0 90px 0 0;
+            @include box-sizing();
+            float:right;
+            max-width:700px;
+            text-align: right;
+            padding-bottom:70px;
+
+            p {
+              font-size:15px;
+              line-height:24px;
+              font-weight: 300;
+            }
+
+            a {
+              font-size:15px;
+              line-height:24px;
+              color:#509cfd;
+              @include transition(all .4s);
+              text-decoration: none;
+
+              &:hover {
+                color:#000;
+              }
+            }
+
+            .merchants-item-body-address {
+              margin-bottom:25px;
+            }
+
+          }
+
+
+
+        &.open {
+          .merchant-logo-wrapper {
+            height:241px;
+            width:300px;
+            img {
+              max-height:241px;
+              max-width:300px;
+            }
+          }
+
+          .merchant-controls {
+            top:50%;
+            right:40px;
+            @include transform(translateY(-50%));
+            a {
+              background: url('../img/btn-expand-sprite.png') no-repeat;
+              background-position: bottom;
+            }
+          }
+        }
+
+      }
+
+
+    }
+
+
+
+
+
+
+  }
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

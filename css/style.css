@@ -145,7 +145,7 @@ header {
             header .header-inner nav ul li.menu-item-has-children:hover:after {
               top: 40px; }
             header .header-inner nav ul li.menu-item-has-children a {
-              height: 69px; }
+              height: 68px; }
               @media (max-width: 1350px) {
                 header .header-inner nav ul li.menu-item-has-children a {
                   height: auto; } }
@@ -1240,5 +1240,138 @@ footer {
             background: #fff;
             color: #000;
             width: 111px; }
+
+#merchants {
+  width: 100%;
+  background: #fff;
+  padding: 86px 0; }
+  #merchants .merchants-inner {
+    max-width: 1165px;
+    margin: auto;
+    padding: 0 20px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    text-align: center; }
+    #merchants .merchants-inner h2 {
+      font-size: 40px;
+      font-weight: 200;
+      margin-bottom: 86px; }
+    #merchants .merchants-inner .merchants-list {
+      max-width: 1122px;
+      width: 100%;
+      margin: auto; }
+      #merchants .merchants-inner .merchants-list .merchant-item {
+        border-top: 1px solid #bdbdbd;
+        width: 100%;
+        position: relative;
+        overflow: hidden; }
+        #merchants .merchants-inner .merchants-list .merchant-item:last-child {
+          border-bottom: 1px solid #bdbdbd; }
+        #merchants .merchants-inner .merchants-list .merchant-item .expand-toggle {
+          cursor: pointer; }
+        #merchants .merchants-inner .merchants-list .merchant-item .merchants-item-header {
+          height: 149px;
+          padding: 9px 40px 9px 40px;
+          -webkit-box-sizing: border-box;
+          -moz-box-sizing: border-box;
+          box-sizing: border-box; }
+          #merchants .merchants-inner .merchants-list .merchant-item .merchants-item-header .merchant-logo-wrapper {
+            float: left;
+            height: 131px;
+            width: 148px;
+            -webkit-transition: all 0.8s ease-in-out;
+            -moz-transition: all 0.8s ease-in-out;
+            -o-transition: all 0.8s ease-in-out;
+            transition: all 0.8s ease-in-out;
+            position: relative; }
+            #merchants .merchants-inner .merchants-list .merchant-item .merchants-item-header .merchant-logo-wrapper img {
+              -webkit-transition: all 0.8s ease-in-out;
+              -moz-transition: all 0.8s ease-in-out;
+              -o-transition: all 0.8s ease-in-out;
+              transition: all 0.8s ease-in-out;
+              max-height: 131px;
+              display: block;
+              position: absolute;
+              left: 50%;
+              top: 50%;
+              -webkit-transform: translate(-50%, -50%);
+              -moz-transform: translate(-50%, -50%);
+              -o-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%); }
+          #merchants .merchants-inner .merchants-list .merchant-item .merchants-item-header .merchant-name {
+            float: right;
+            margin: 46px 50px 0 0; }
+            #merchants .merchants-inner .merchants-list .merchant-item .merchants-item-header .merchant-name p {
+              font-size: 24px;
+              font-weight: 300;
+              line-height: 30px; }
+              #merchants .merchants-inner .merchants-list .merchant-item .merchants-item-header .merchant-name p span {
+                font-size: 36px;
+                font-weight: 300;
+                line-height: 30px;
+                margin-left: 8px; }
+          #merchants .merchants-inner .merchants-list .merchant-item .merchants-item-header .merchant-controls {
+            position: absolute;
+            top: 66px;
+            right: 40px;
+            -webkit-transform: translateY(0);
+            -moz-transform: translateY(0);
+            -o-transform: translateY(0);
+            transform: translateY(0);
+            -webkit-transition: all 0.8s ease-in-out;
+            -moz-transition: all 0.8s ease-in-out;
+            -o-transition: all 0.8s ease-in-out;
+            transition: all 0.8s ease-in-out; }
+            #merchants .merchants-inner .merchants-list .merchant-item .merchants-item-header .merchant-controls a {
+              width: 13px;
+              height: 13px;
+              background: url("../img/btn-expand-sprite.png") no-repeat;
+              background-position: top;
+              display: block;
+              outline: none; }
+        #merchants .merchants-inner .merchants-list .merchant-item .merchants-item-body {
+          display: none;
+          padding: 0 90px 0 0;
+          -webkit-box-sizing: border-box;
+          -moz-box-sizing: border-box;
+          box-sizing: border-box;
+          float: right;
+          max-width: 700px;
+          text-align: right;
+          padding-bottom: 70px; }
+          #merchants .merchants-inner .merchants-list .merchant-item .merchants-item-body p {
+            font-size: 15px;
+            line-height: 24px;
+            font-weight: 300; }
+          #merchants .merchants-inner .merchants-list .merchant-item .merchants-item-body a {
+            font-size: 15px;
+            line-height: 24px;
+            color: #509cfd;
+            -webkit-transition: all 0.4s;
+            -moz-transition: all 0.4s;
+            -o-transition: all 0.4s;
+            transition: all 0.4s;
+            text-decoration: none; }
+            #merchants .merchants-inner .merchants-list .merchant-item .merchants-item-body a:hover {
+              color: #000; }
+          #merchants .merchants-inner .merchants-list .merchant-item .merchants-item-body .merchants-item-body-address {
+            margin-bottom: 25px; }
+        #merchants .merchants-inner .merchants-list .merchant-item.open .merchant-logo-wrapper {
+          height: 241px;
+          width: 300px; }
+          #merchants .merchants-inner .merchants-list .merchant-item.open .merchant-logo-wrapper img {
+            max-height: 241px;
+            max-width: 300px; }
+        #merchants .merchants-inner .merchants-list .merchant-item.open .merchant-controls {
+          top: 50%;
+          right: 40px;
+          -webkit-transform: translateY(-50%);
+          -moz-transform: translateY(-50%);
+          -o-transform: translateY(-50%);
+          transform: translateY(-50%); }
+          #merchants .merchants-inner .merchants-list .merchant-item.open .merchant-controls a {
+            background: url("../img/btn-expand-sprite.png") no-repeat;
+            background-position: bottom; }
 
 /*# sourceMappingURL=style.css.map */
