@@ -1659,10 +1659,18 @@ footer {
           width:181px;
           @include box-sizing();
 
+          &:hover {
+            background:#323232;
+          }
+
           &.btn-white {
             background:#fff;
             color:#000;
             width:111px;
+
+            &:hover {
+              background:#dbdad9;
+            }
           }
 
 
@@ -1744,6 +1752,7 @@ footer {
                 font-size:24px;
                 font-weight: 300;
                 line-height:30px;
+                @include transition(all .4s);
 
                 span {
                   font-size:36px;
@@ -1768,6 +1777,15 @@ footer {
                 background-position:top;
                 display:block;
                 outline:none;
+              }
+            }
+
+
+            &:hover {
+              .merchant-name {
+                p {
+                  color:#509cfd;
+                }
               }
             }
 
