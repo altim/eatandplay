@@ -1718,6 +1718,10 @@ footer {
   background:#fff;
   padding:86px 0;
 
+  @media(max-width:600px){
+    padding:50px 0;
+  }
+
   .merchants-inner {
     max-width:1165px;
     margin:auto;
@@ -1729,6 +1733,10 @@ footer {
       font-size:40px;
       font-weight: 200;
       margin-bottom:86px;
+
+      @media(max-width:600px){
+        margin-bottom:50px;
+      }
     }
 
 
@@ -1755,12 +1763,34 @@ footer {
             padding:9px 40px 9px 40px;
             @include box-sizing();
 
+            @media(max-width:768px){
+              height:99px;
+              padding:9px 0px 9px 0px;
+            }
+
+            @media(max-width:440px){
+              height:79px;
+            }
+
             .merchant-logo-wrapper {
-              float:left;
+              position:absolute;
+              left:40px;
+              top:9px;
               height:131px;
               width:148px;
               @include transition(all 0.8s ease-in-out);
-              position:relative;
+
+              @media(max-width:768px){
+                left:10px;
+                top:9px;
+                height:80px;
+                width:90px;
+              }
+
+              @media(max-width:530px){
+                display:none;
+              }
+
               img {
                 @include transition(all 0.8s ease-in-out);
                 max-height:131px;
@@ -1769,17 +1799,49 @@ footer {
                 left:50%;
                 top:50%;
                 @include transform(translate(-50%, -50%));
+
+                @media(max-width:768px){
+                  max-height:80px;
+                  max-width:90px;
+                }
+
+                @media(max-width:530px){
+                  max-height:40px;
+                }
+
               }
             }
 
             .merchant-name {
               float:right;
               margin:46px 50px 0 0;
+
+              @media(max-width:768px){
+                margin:26px 50px 0 0;
+              }
+
+              @media(max-width:530px){
+                float:left;
+                margin:26px 0 0 0;
+              }
+
+              @media(max-width:440px){
+                margin:16px 0 0 0;
+              }
+
               p {
                 font-size:24px;
                 font-weight: 300;
                 line-height:30px;
                 @include transition(all .4s);
+
+                @media(max-width:768px){
+                  font-size:20px;
+                }
+
+                @media(max-width:440px){
+                  font-size:16px;
+                }
 
                 span {
                   font-size:36px;
@@ -1787,6 +1849,14 @@ footer {
                   line-height:30px;
                   margin-left:8px;
                   @include transition(all .4s);
+
+                  @media(max-width:768px){
+                    font-size:26px;
+                  }
+
+                  @media(max-width:440px){
+                    font-size:20px;
+                  }
 
                   &.off {
                     font-size:36px;
@@ -1802,6 +1872,15 @@ footer {
               right:40px;
               @include transform(translateY(0));
               @include transition(all .8s ease-in-out);
+
+              @media(max-width:768px){
+                top:46px;
+                right:20px;
+              }
+
+              @media(max-width:440px){
+                top:34px;
+              }
 
               a {
                 width:13px;
@@ -1835,10 +1914,23 @@ footer {
             text-align: right;
             padding-bottom:70px;
 
+            @media(max-width:768px){
+              padding:0 50px 30px 0;
+            }
+
+            @media(max-width:530px){
+              text-align:left;
+            }
+
             p {
               font-size:15px;
               line-height:24px;
               font-weight: 300;
+
+              @media(max-width:530px){
+                text-align:left;
+                font-size:14px;
+              }
             }
 
             a {
@@ -1857,28 +1949,42 @@ footer {
               margin-bottom:25px;
             }
 
+            .merchants-item-body-text {
+              padding-left:70px;
+
+              @media(max-width:768px){
+                padding-left:20px;
+              }
+              @media(max-width:530px){
+                padding-left:0;
+              }
+            }
+
           }
 
 
 
         &.open {
-          .merchant-logo-wrapper {
-            height:241px;
-            width:300px;
-            img {
-              max-height:241px;
-              max-width:300px;
-            }
-          }
 
-          .merchant-name {
-            p {
-              span {
-                font-size: 48px;
-                font-weight: 500;
-                &.off {
+          @media(min-width:768px) {
+            .merchant-logo-wrapper {
+              height: 241px;
+              width: 300px;
+              img {
+                max-height: 241px;
+                max-width: 300px;
+              }
+            }
+
+            .merchant-name {
+              p {
+                span {
                   font-size: 48px;
-                  display: inline-block;
+                  font-weight: 500;
+                  &.off {
+                    font-size: 48px;
+                    display: inline-block;
+                  }
                 }
               }
             }
@@ -1892,6 +1998,13 @@ footer {
               background: url('../img/btn-expand-sprite.png') no-repeat;
               background-position: bottom;
             }
+
+
+            @media(max-width:768px){
+              right:20px;
+            }
+
+
           }
         }
 

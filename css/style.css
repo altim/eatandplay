@@ -1269,6 +1269,9 @@ footer {
   width: 100%;
   background: #fff;
   padding: 86px 0; }
+  @media (max-width: 600px) {
+    #merchants {
+      padding: 50px 0; } }
   #merchants .merchants-inner {
     max-width: 1165px;
     margin: auto;
@@ -1281,6 +1284,9 @@ footer {
       font-size: 40px;
       font-weight: 200;
       margin-bottom: 86px; }
+      @media (max-width: 600px) {
+        #merchants .merchants-inner h2 {
+          margin-bottom: 50px; } }
     #merchants .merchants-inner .merchants-list {
       max-width: 1122px;
       width: 100%;
@@ -1299,15 +1305,32 @@ footer {
           -webkit-box-sizing: border-box;
           -moz-box-sizing: border-box;
           box-sizing: border-box; }
+          @media (max-width: 768px) {
+            #merchants .merchants-inner .merchants-list .merchant-item .merchants-item-header {
+              height: 99px;
+              padding: 9px 0px 9px 0px; } }
+          @media (max-width: 440px) {
+            #merchants .merchants-inner .merchants-list .merchant-item .merchants-item-header {
+              height: 79px; } }
           #merchants .merchants-inner .merchants-list .merchant-item .merchants-item-header .merchant-logo-wrapper {
-            float: left;
+            position: absolute;
+            left: 40px;
+            top: 9px;
             height: 131px;
             width: 148px;
             -webkit-transition: all 0.8s ease-in-out;
             -moz-transition: all 0.8s ease-in-out;
             -o-transition: all 0.8s ease-in-out;
-            transition: all 0.8s ease-in-out;
-            position: relative; }
+            transition: all 0.8s ease-in-out; }
+            @media (max-width: 768px) {
+              #merchants .merchants-inner .merchants-list .merchant-item .merchants-item-header .merchant-logo-wrapper {
+                left: 10px;
+                top: 9px;
+                height: 80px;
+                width: 90px; } }
+            @media (max-width: 530px) {
+              #merchants .merchants-inner .merchants-list .merchant-item .merchants-item-header .merchant-logo-wrapper {
+                display: none; } }
             #merchants .merchants-inner .merchants-list .merchant-item .merchants-item-header .merchant-logo-wrapper img {
               -webkit-transition: all 0.8s ease-in-out;
               -moz-transition: all 0.8s ease-in-out;
@@ -1322,9 +1345,26 @@ footer {
               -moz-transform: translate(-50%, -50%);
               -o-transform: translate(-50%, -50%);
               transform: translate(-50%, -50%); }
+              @media (max-width: 768px) {
+                #merchants .merchants-inner .merchants-list .merchant-item .merchants-item-header .merchant-logo-wrapper img {
+                  max-height: 80px;
+                  max-width: 90px; } }
+              @media (max-width: 530px) {
+                #merchants .merchants-inner .merchants-list .merchant-item .merchants-item-header .merchant-logo-wrapper img {
+                  max-height: 40px; } }
           #merchants .merchants-inner .merchants-list .merchant-item .merchants-item-header .merchant-name {
             float: right;
             margin: 46px 50px 0 0; }
+            @media (max-width: 768px) {
+              #merchants .merchants-inner .merchants-list .merchant-item .merchants-item-header .merchant-name {
+                margin: 26px 50px 0 0; } }
+            @media (max-width: 530px) {
+              #merchants .merchants-inner .merchants-list .merchant-item .merchants-item-header .merchant-name {
+                float: left;
+                margin: 26px 0 0 0; } }
+            @media (max-width: 440px) {
+              #merchants .merchants-inner .merchants-list .merchant-item .merchants-item-header .merchant-name {
+                margin: 16px 0 0 0; } }
             #merchants .merchants-inner .merchants-list .merchant-item .merchants-item-header .merchant-name p {
               font-size: 24px;
               font-weight: 300;
@@ -1333,6 +1373,12 @@ footer {
               -moz-transition: all 0.4s;
               -o-transition: all 0.4s;
               transition: all 0.4s; }
+              @media (max-width: 768px) {
+                #merchants .merchants-inner .merchants-list .merchant-item .merchants-item-header .merchant-name p {
+                  font-size: 20px; } }
+              @media (max-width: 440px) {
+                #merchants .merchants-inner .merchants-list .merchant-item .merchants-item-header .merchant-name p {
+                  font-size: 16px; } }
               #merchants .merchants-inner .merchants-list .merchant-item .merchants-item-header .merchant-name p span {
                 font-size: 36px;
                 font-weight: 300;
@@ -1342,6 +1388,12 @@ footer {
                 -moz-transition: all 0.4s;
                 -o-transition: all 0.4s;
                 transition: all 0.4s; }
+                @media (max-width: 768px) {
+                  #merchants .merchants-inner .merchants-list .merchant-item .merchants-item-header .merchant-name p span {
+                    font-size: 26px; } }
+                @media (max-width: 440px) {
+                  #merchants .merchants-inner .merchants-list .merchant-item .merchants-item-header .merchant-name p span {
+                    font-size: 20px; } }
                 #merchants .merchants-inner .merchants-list .merchant-item .merchants-item-header .merchant-name p span.off {
                   font-size: 36px;
                   display: none; }
@@ -1357,6 +1409,13 @@ footer {
             -moz-transition: all 0.8s ease-in-out;
             -o-transition: all 0.8s ease-in-out;
             transition: all 0.8s ease-in-out; }
+            @media (max-width: 768px) {
+              #merchants .merchants-inner .merchants-list .merchant-item .merchants-item-header .merchant-controls {
+                top: 46px;
+                right: 20px; } }
+            @media (max-width: 440px) {
+              #merchants .merchants-inner .merchants-list .merchant-item .merchants-item-header .merchant-controls {
+                top: 34px; } }
             #merchants .merchants-inner .merchants-list .merchant-item .merchants-item-header .merchant-controls a {
               width: 13px;
               height: 13px;
@@ -1376,10 +1435,20 @@ footer {
           max-width: 700px;
           text-align: right;
           padding-bottom: 70px; }
+          @media (max-width: 768px) {
+            #merchants .merchants-inner .merchants-list .merchant-item .merchants-item-body {
+              padding: 0 50px 30px 0; } }
+          @media (max-width: 530px) {
+            #merchants .merchants-inner .merchants-list .merchant-item .merchants-item-body {
+              text-align: left; } }
           #merchants .merchants-inner .merchants-list .merchant-item .merchants-item-body p {
             font-size: 15px;
             line-height: 24px;
             font-weight: 300; }
+            @media (max-width: 530px) {
+              #merchants .merchants-inner .merchants-list .merchant-item .merchants-item-body p {
+                text-align: left;
+                font-size: 14px; } }
           #merchants .merchants-inner .merchants-list .merchant-item .merchants-item-body a {
             font-size: 15px;
             line-height: 24px;
@@ -1393,18 +1462,27 @@ footer {
               color: #000; }
           #merchants .merchants-inner .merchants-list .merchant-item .merchants-item-body .merchants-item-body-address {
             margin-bottom: 25px; }
-        #merchants .merchants-inner .merchants-list .merchant-item.open .merchant-logo-wrapper {
-          height: 241px;
-          width: 300px; }
-          #merchants .merchants-inner .merchants-list .merchant-item.open .merchant-logo-wrapper img {
-            max-height: 241px;
-            max-width: 300px; }
-        #merchants .merchants-inner .merchants-list .merchant-item.open .merchant-name p span {
-          font-size: 48px;
-          font-weight: 500; }
-          #merchants .merchants-inner .merchants-list .merchant-item.open .merchant-name p span.off {
+          #merchants .merchants-inner .merchants-list .merchant-item .merchants-item-body .merchants-item-body-text {
+            padding-left: 70px; }
+            @media (max-width: 768px) {
+              #merchants .merchants-inner .merchants-list .merchant-item .merchants-item-body .merchants-item-body-text {
+                padding-left: 20px; } }
+            @media (max-width: 530px) {
+              #merchants .merchants-inner .merchants-list .merchant-item .merchants-item-body .merchants-item-body-text {
+                padding-left: 0; } }
+        @media (min-width: 768px) {
+          #merchants .merchants-inner .merchants-list .merchant-item.open .merchant-logo-wrapper {
+            height: 241px;
+            width: 300px; }
+            #merchants .merchants-inner .merchants-list .merchant-item.open .merchant-logo-wrapper img {
+              max-height: 241px;
+              max-width: 300px; }
+          #merchants .merchants-inner .merchants-list .merchant-item.open .merchant-name p span {
             font-size: 48px;
-            display: inline-block; }
+            font-weight: 500; }
+            #merchants .merchants-inner .merchants-list .merchant-item.open .merchant-name p span.off {
+              font-size: 48px;
+              display: inline-block; } }
         #merchants .merchants-inner .merchants-list .merchant-item.open .merchant-controls {
           top: 50%;
           right: 40px;
@@ -1415,6 +1493,9 @@ footer {
           #merchants .merchants-inner .merchants-list .merchant-item.open .merchant-controls a {
             background: url("../img/btn-expand-sprite.png") no-repeat;
             background-position: bottom; }
+          @media (max-width: 768px) {
+            #merchants .merchants-inner .merchants-list .merchant-item.open .merchant-controls {
+              right: 20px; } }
     #merchants .merchants-inner .card {
       max-width: 520px;
       text-align: center;
