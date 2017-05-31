@@ -1221,6 +1221,9 @@ footer {
   @media (max-width: 1060px) {
     #filter-bar {
       padding: 55px 0 35px 0; } }
+  @media (max-width: 1060px) {
+    #filter-bar {
+      padding: 35px 0 15px 0; } }
   #filter-bar .filter-bar-inner {
     max-width: 1165px;
     margin: auto;
@@ -1256,6 +1259,11 @@ footer {
           @media (max-width: 1060px) {
             #filter-bar .filter-bar-inner ul.filter-menu li .btn {
               margin-bottom: 20px; } }
+          @media (max-width: 768px) {
+            #filter-bar .filter-bar-inner ul.filter-menu li .btn {
+              font-size: 12px;
+              padding: 10px 20px;
+              width: 100px; } }
           #filter-bar .filter-bar-inner ul.filter-menu li .btn:hover {
             background: #323232; }
           #filter-bar .filter-bar-inner ul.filter-menu li .btn.btn-white {
@@ -1512,6 +1520,9 @@ footer {
         display: block;
         margin: 80px auto 12px auto;
         max-width: 100%; }
+        @media (max-width: 600px) {
+          #merchants .merchants-inner .card img {
+            margin: 50px auto 12px auto; } }
       #merchants .merchants-inner .card p {
         font-size: 15px;
         font-weight: 300;
@@ -1546,6 +1557,9 @@ footer {
   width: 100%;
   background: #f2faf2;
   padding: 84px 0 82px 0; }
+  @media (max-width: 600px) {
+    .blank-2 {
+      padding: 50px 0 50px 0; } }
   .blank-2 .blank-2-inner {
     max-width: 1165px;
     width: 100%;

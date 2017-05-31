@@ -1645,6 +1645,10 @@ footer {
     padding:55px 0 35px 0;
   }
 
+  @media(max-width:1060px){
+    padding:35px 0 15px 0;
+  }
+
   .filter-bar-inner {
     max-width:1165px;
     margin:auto;
@@ -1684,6 +1688,12 @@ footer {
 
           @media(max-width:1060px){
             margin-bottom:20px;
+          }
+
+          @media(max-width:768px){
+            font-size:12px;
+            padding:10px 20px;
+            width:100px;
           }
 
 
@@ -2034,6 +2044,10 @@ footer {
         display:block;
         margin:80px auto 12px auto;
         max-width:100%;
+
+        @media(max-width:600px){
+          margin:50px auto 12px auto;
+        }
       }
 
       p {
@@ -2097,6 +2111,10 @@ footer {
   width:100%;
   background:#f2faf2;
   padding:84px 0 82px 0;
+
+  @media(max-width:600px){
+    padding:50px 0 50px 0;
+  }
 
   .blank-2-inner {
     max-width:1165px;
