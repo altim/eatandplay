@@ -6,7 +6,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
-.btn-class, header .header-inner nav ul li.btn a, #cards .cards-inner .card a.btn, #logos .logos-inner .logos-controls .btn, #how-it-works .how-it-works-inner .btn, #testimonials .testimonials-inner .btn, #blog .blog-inner .post-item .post-content .btn, footer .footer-inner .newsletter .btn, #header-image .header-image-inner .btn, #filter-bar .filter-bar-inner ul.filter-menu li .btn, #merchants .merchants-inner .card a.btn {
+.btn-class, header .header-inner nav ul li.btn a, #cards .cards-inner .card a.btn, #logos .logos-inner .logos-controls .btn, #how-it-works .how-it-works-inner .btn, #testimonials .testimonials-inner .btn, #blog .blog-inner .post-item .post-content .btn, footer .footer-inner .newsletter .btn, #page-header .page-header-inner .btn, #filter-bar .filter-bar-inner ul.filter-menu li .btn, #merchants .merchants-inner .card a.btn {
   -webkit-border-radius: 28px;
   -moz-border-radius: 28px;
   border-radius: 28px;
@@ -19,7 +19,7 @@ body {
   -o-transition: all 0.4s;
   transition: all 0.4s;
   text-decoration: none; }
-  .btn-class:hover, header .header-inner nav ul li.btn a:hover, #cards .cards-inner .card a.btn:hover, #logos .logos-inner .logos-controls .btn:hover, #how-it-works .how-it-works-inner .btn:hover, #testimonials .testimonials-inner .btn:hover, #blog .blog-inner .post-item .post-content .btn:hover, footer .footer-inner .newsletter .btn:hover, #header-image .header-image-inner .btn:hover, #filter-bar .filter-bar-inner ul.filter-menu li .btn:hover, #merchants .merchants-inner .card a.btn:hover {
+  .btn-class:hover, header .header-inner nav ul li.btn a:hover, #cards .cards-inner .card a.btn:hover, #logos .logos-inner .logos-controls .btn:hover, #how-it-works .how-it-works-inner .btn:hover, #testimonials .testimonials-inner .btn:hover, #blog .blog-inner .post-item .post-content .btn:hover, footer .footer-inner .newsletter .btn:hover, #page-header .page-header-inner .btn:hover, #filter-bar .filter-bar-inner ul.filter-menu li .btn:hover, #merchants .merchants-inner .card a.btn:hover {
     background: #509cfd; }
 
 header {
@@ -1127,14 +1127,16 @@ footer {
             -o-transform: translateY(-5px);
             transform: translateY(-5px); }
 
-#header-image {
+#page-header {
   width: 100%;
-  height: 279px;
   background: url("../img/header-image-new-york.jpg") no-repeat;
   background-size: cover;
   background-position: center center;
   margin-top: 122px; }
-  #header-image .header-image-inner {
+  @media (max-width: 580px) {
+    #page-header {
+      margin-top: 68px; } }
+  #page-header .page-header-inner {
     position: relative;
     height: 279px;
     width: 100%;
@@ -1143,38 +1145,38 @@ footer {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     text-align: center; }
-    #header-image .header-image-inner h1 {
+    @media (max-width: 430px) {
+      #page-header .page-header-inner {
+        height: 200px; } }
+    #page-header .page-header-inner h1 {
       font-size: 90px;
       font-weight: 500;
       line-height: 279px;
       text-shadow: 7px 7px 21px rgba(0, 0, 0, 0.29);
       color: #fff; }
       @media (max-width: 1250px) {
-        #header-image .header-image-inner h1 {
+        #page-header .page-header-inner h1 {
           padding: 0 20px; } }
       @media (max-width: 1250px) {
-        #header-image .header-image-inner h1 {
-          font-size: 97px;
-          line-height: 97px; } }
+        #page-header .page-header-inner h1 {
+          font-size: 97px; } }
       @media (max-width: 1100px) {
-        #header-image .header-image-inner h1 {
-          font-size: 86px;
-          line-height: 86px; } }
+        #page-header .page-header-inner h1 {
+          font-size: 86px; } }
       @media (max-width: 980px) {
-        #header-image .header-image-inner h1 {
-          font-size: 68px;
-          line-height: 68px; } }
+        #page-header .page-header-inner h1 {
+          font-size: 68px; } }
       @media (max-width: 780px) {
-        #header-image .header-image-inner h1 {
+        #page-header .page-header-inner h1 {
           max-width: 400px;
           margin: auto; } }
       @media (max-width: 430px) {
-        #header-image .header-image-inner h1 {
+        #page-header .page-header-inner h1 {
           max-width: 350px;
           margin: auto;
           font-size: 45px;
-          line-height: 45px; } }
-    #header-image .header-image-inner .btn {
+          line-height: 200px; } }
+    #page-header .page-header-inner .btn {
       display: inline-block;
       border: 6px solid #fff;
       -webkit-box-sizing: border-box;
@@ -1196,6 +1198,9 @@ footer {
   width: 100%;
   background: #fff;
   padding: 80px 0; }
+  @media (max-width: 600px) {
+    .blank-1 {
+      padding: 50px 0 50px 0; } }
   .blank-1 .blank-1-inner {
     max-width: 1165px;
     width: 100%;
@@ -1213,6 +1218,9 @@ footer {
   width: 100%;
   background: #509cfd;
   padding: 55px 0; }
+  @media (max-width: 1060px) {
+    #filter-bar {
+      padding: 55px 0 35px 0; } }
   #filter-bar .filter-bar-inner {
     max-width: 1165px;
     margin: auto;
@@ -1224,6 +1232,13 @@ footer {
       width: 100%;
       text-align: center;
       font-size: 0; }
+      @media (max-width: 1060px) {
+        #filter-bar .filter-bar-inner ul.filter-menu {
+          max-width: 530px;
+          margin: auto; } }
+      @media (max-width: 440px) {
+        #filter-bar .filter-bar-inner ul.filter-menu {
+          max-width: 300px; } }
       #filter-bar .filter-bar-inner ul.filter-menu li {
         display: inline;
         margin-right: 11px; }
@@ -1238,6 +1253,9 @@ footer {
           -webkit-box-sizing: border-box;
           -moz-box-sizing: border-box;
           box-sizing: border-box; }
+          @media (max-width: 1060px) {
+            #filter-bar .filter-bar-inner ul.filter-menu li .btn {
+              margin-bottom: 20px; } }
           #filter-bar .filter-bar-inner ul.filter-menu li .btn:hover {
             background: #323232; }
           #filter-bar .filter-bar-inner ul.filter-menu li .btn.btn-white {
