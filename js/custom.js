@@ -11,6 +11,7 @@ $(document).ready(function(){
         }
     });
 
+
     //Hero slider
     $('.hero-slider ul').bxSlider({
         minSlider:1,
@@ -22,6 +23,7 @@ $(document).ready(function(){
         auto : true,
         pause: 4000
     });
+
 
     //Logo slider
     $('.logos-slider').bxSlider({
@@ -82,7 +84,6 @@ $(document).ready(function(){
 
 
     //Filter bar
-
     $('.filter-menu li a').on('click',function(e){
         e.preventDefault();
         var selectedValue = $(this).data('type');

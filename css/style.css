@@ -6,7 +6,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
-.btn-class, header .header-inner nav ul li.btn a, #cards .cards-inner .card a.btn, #logos .logos-inner .logos-controls .btn, #how-it-works .how-it-works-inner .btn, #testimonials .testimonials-inner .btn, #blog .blog-inner .post-item .post-content .btn, footer .footer-inner .newsletter .btn, #page-header .page-header-inner .btn, #filter-bar .filter-bar-inner ul.filter-menu li .btn, #merchants .merchants-inner .card a.btn {
+.btn-class, header .header-inner nav ul li.btn a, #cards .cards-inner .card a.btn, #logos .logos-inner .logos-controls .btn, #how-it-works .how-it-works-inner .btn, #testimonials .testimonials-inner .btn, #blog .blog-inner .post-item .post-content .btn, footer .footer-inner .newsletter .btn, #page-header .page-header-inner .btn, #filter-bar .filter-bar-inner ul.filter-menu li .btn, #merchants .merchants-inner .card a.btn, #purchase .purchase-inner .cards .card a.btn {
   -webkit-border-radius: 28px;
   -moz-border-radius: 28px;
   border-radius: 28px;
@@ -19,7 +19,7 @@ body {
   -o-transition: all 0.4s;
   transition: all 0.4s;
   text-decoration: none; }
-  .btn-class:hover, header .header-inner nav ul li.btn a:hover, #cards .cards-inner .card a.btn:hover, #logos .logos-inner .logos-controls .btn:hover, #how-it-works .how-it-works-inner .btn:hover, #testimonials .testimonials-inner .btn:hover, #blog .blog-inner .post-item .post-content .btn:hover, footer .footer-inner .newsletter .btn:hover, #page-header .page-header-inner .btn:hover, #filter-bar .filter-bar-inner ul.filter-menu li .btn:hover, #merchants .merchants-inner .card a.btn:hover {
+  .btn-class:hover, header .header-inner nav ul li.btn a:hover, #cards .cards-inner .card a.btn:hover, #logos .logos-inner .logos-controls .btn:hover, #how-it-works .how-it-works-inner .btn:hover, #testimonials .testimonials-inner .btn:hover, #blog .blog-inner .post-item .post-content .btn:hover, footer .footer-inner .newsletter .btn:hover, #page-header .page-header-inner .btn:hover, #filter-bar .filter-bar-inner ul.filter-menu li .btn:hover, #merchants .merchants-inner .card a.btn:hover, #purchase .purchase-inner .cards .card a.btn:hover {
     background: #509cfd; }
 
 header {
@@ -1129,10 +1129,13 @@ footer {
 
 #page-header {
   width: 100%;
-  background: url("../img/header-image-new-york.jpg") no-repeat;
+  margin-top: 122px;
   background-size: cover;
-  background-position: center center;
-  margin-top: 122px; }
+  background-position: center center; }
+  #page-header.bg-new-york {
+    background: url("../img/header-image-new-york.jpg") no-repeat; }
+  #page-header.bg-purchase {
+    background: url("../img/header-image-purchase.jpg") no-repeat; }
   @media (max-width: 580px) {
     #page-header {
       margin-top: 68px; } }
@@ -1578,5 +1581,75 @@ footer {
       font-size: 15px;
       line-height: 31px;
       font-weight: 300; }
+
+#purchase {
+  background: #fff;
+  padding: 90px 0; }
+  #purchase .purchase-inner {
+    max-width: 1165px;
+    width: 100%;
+    margin: auto;
+    padding: 0 20px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    overflow: hidden; }
+    #purchase .purchase-inner .cards {
+      max-width: 975px;
+      margin: auto; }
+      #purchase .purchase-inner .cards .card {
+        max-width: 520px;
+        text-align: center; }
+        @media (max-width: 1080px) {
+          #purchase .purchase-inner .cards .card {
+            float: none !important;
+            margin: auto; } }
+        #purchase .purchase-inner .cards .card h2 {
+          font-size: 40px;
+          font-weight: 200;
+          color: #000; }
+        #purchase .purchase-inner .cards .card img {
+          display: block;
+          margin: 0 auto 20px auto;
+          max-width: 100%; }
+        #purchase .purchase-inner .cards .card p {
+          font-size: 15px;
+          font-weight: 300;
+          line-height: 30px;
+          color: #000;
+          text-align: left;
+          margin-bottom: 28px; }
+        #purchase .purchase-inner .cards .card strong {
+          font-weight: 400; }
+        #purchase .purchase-inner .cards .card a {
+          font-size: 15px;
+          line-height: 30px;
+          color: #166fe1;
+          display: inline-block;
+          text-decoration: none;
+          -webkit-transition: all 0.4s;
+          -moz-transition: all 0.4s;
+          -o-transition: all 0.4s;
+          transition: all 0.4s; }
+          #purchase .purchase-inner .cards .card a.btn {
+            display: inline-block;
+            color: #fff;
+            line-height: 15px;
+            padding: 21px 44px;
+            font-weight: 300; }
+            #purchase .purchase-inner .cards .card a.btn:hover {
+              color: #fff; }
+          #purchase .purchase-inner .cards .card a:hover {
+            color: #000; }
+      #purchase .purchase-inner .cards .card-left {
+        float: left; }
+        @media (max-width: 1080px) {
+          #purchase .purchase-inner .cards .card-left {
+            margin-bottom: 86px; } }
+        @media (max-width: 600px) {
+          #purchase .purchase-inner .cards .card-left {
+            margin-bottom: 46px; } }
+      #purchase .purchase-inner .cards .card-right {
+        float: right; }
 
 /*# sourceMappingURL=style.css.map */
