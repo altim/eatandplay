@@ -2164,11 +2164,11 @@ footer {
     margin: auto;
     padding: 0 20px;
     @include box-sizing();
-    overflow:hidden;
 
     .cards {
       max-width:975px;
       margin:auto;
+      overflow:hidden;
 
       .card {
         max-width: 520px;
@@ -2248,6 +2248,89 @@ footer {
       }
 
     }
+
+    .dropdown{
+      position:relative;
+
+      .btn {
+        position:relative;
+        z-index:2;
+      }
+
+      .dropdown-menu {
+        z-index:1;
+        background:#3d3c3c;
+        position:absolute;
+        top:29px;
+        left:0;
+        width:100%;
+        padding-top:39px;
+        -webkit-border-bottom-right-radius: 29px;
+        -webkit-border-bottom-left-radius: 29px;
+        -moz-border-radius-bottomright: 29px;
+        -moz-border-radius-bottomleft: 29px;
+        border-bottom-right-radius: 29px;
+        border-bottom-left-radius: 29px;
+        display:none;
+
+        li {
+          height:40px;
+          a {
+            line-height:40px;
+            color:#fff;
+            text-decoration:none;
+            display:block;
+            @include transition(all .4s);
+
+            &:hover {
+              color:#4e9bfd;
+            }
+          }
+        }
+
+      }
+    }
+
+    .select-card-box {
+      text-align:center;
+
+      .dropdown-select-card {
+        width:295px;
+        margin:auto;
+
+        .btn {
+          @extend .btn-class;
+          text-transform: uppercase;
+          display: inline-block;
+          width:100%;
+          background:#000 url('../img/arrow-down-dropdown.png') no-repeat;
+          background-position:right 25px center;
+          @include box-sizing();
+
+          &:hover {
+            background:#509cfd url('../img/arrow-down-dropdown.png') no-repeat;
+            background-position:right 25px center;
+          }
+        }
+
+        .btn-dropdown-close {
+          background:url('../img/arrow-up-dropdown.png') no-repeat;
+          background-position: center center;
+          display:block;
+          height:40px;
+          width:100%;
+          @include transition(all .4s);
+
+          &:hover {
+            background-position:center top 10px;
+          }
+        }
+      }
+
+    }
+
+
+
 
   }
 

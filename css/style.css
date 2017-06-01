@@ -6,7 +6,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
-.btn-class, header .header-inner nav ul li.btn a, #cards .cards-inner .card a.btn, #logos .logos-inner .logos-controls .btn, #how-it-works .how-it-works-inner .btn, #testimonials .testimonials-inner .btn, #blog .blog-inner .post-item .post-content .btn, footer .footer-inner .newsletter .btn, #page-header .page-header-inner .btn, #filter-bar .filter-bar-inner ul.filter-menu li .btn, #merchants .merchants-inner .card a.btn, #purchase .purchase-inner .cards .card a.btn {
+.btn-class, header .header-inner nav ul li.btn a, #cards .cards-inner .card a.btn, #logos .logos-inner .logos-controls .btn, #how-it-works .how-it-works-inner .btn, #testimonials .testimonials-inner .btn, #blog .blog-inner .post-item .post-content .btn, footer .footer-inner .newsletter .btn, #page-header .page-header-inner .btn, #filter-bar .filter-bar-inner ul.filter-menu li .btn, #merchants .merchants-inner .card a.btn, #purchase .purchase-inner .cards .card a.btn, #purchase .purchase-inner .select-card-box .dropdown-select-card .btn {
   -webkit-border-radius: 28px;
   -moz-border-radius: 28px;
   border-radius: 28px;
@@ -19,7 +19,7 @@ body {
   -o-transition: all 0.4s;
   transition: all 0.4s;
   text-decoration: none; }
-  .btn-class:hover, header .header-inner nav ul li.btn a:hover, #cards .cards-inner .card a.btn:hover, #logos .logos-inner .logos-controls .btn:hover, #how-it-works .how-it-works-inner .btn:hover, #testimonials .testimonials-inner .btn:hover, #blog .blog-inner .post-item .post-content .btn:hover, footer .footer-inner .newsletter .btn:hover, #page-header .page-header-inner .btn:hover, #filter-bar .filter-bar-inner ul.filter-menu li .btn:hover, #merchants .merchants-inner .card a.btn:hover, #purchase .purchase-inner .cards .card a.btn:hover {
+  .btn-class:hover, header .header-inner nav ul li.btn a:hover, #cards .cards-inner .card a.btn:hover, #logos .logos-inner .logos-controls .btn:hover, #how-it-works .how-it-works-inner .btn:hover, #testimonials .testimonials-inner .btn:hover, #blog .blog-inner .post-item .post-content .btn:hover, footer .footer-inner .newsletter .btn:hover, #page-header .page-header-inner .btn:hover, #filter-bar .filter-bar-inner ul.filter-menu li .btn:hover, #merchants .merchants-inner .card a.btn:hover, #purchase .purchase-inner .cards .card a.btn:hover, #purchase .purchase-inner .select-card-box .dropdown-select-card .btn:hover {
     background: #509cfd; }
 
 header {
@@ -1592,11 +1592,11 @@ footer {
     padding: 0 20px;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    overflow: hidden; }
+    box-sizing: border-box; }
     #purchase .purchase-inner .cards {
       max-width: 975px;
-      margin: auto; }
+      margin: auto;
+      overflow: hidden; }
       #purchase .purchase-inner .cards .card {
         max-width: 520px;
         text-align: center; }
@@ -1651,5 +1651,67 @@ footer {
             margin-bottom: 46px; } }
       #purchase .purchase-inner .cards .card-right {
         float: right; }
+    #purchase .purchase-inner .dropdown {
+      position: relative; }
+      #purchase .purchase-inner .dropdown .btn {
+        position: relative;
+        z-index: 2; }
+      #purchase .purchase-inner .dropdown .dropdown-menu {
+        z-index: 1;
+        background: #3d3c3c;
+        position: absolute;
+        top: 29px;
+        left: 0;
+        width: 100%;
+        padding-top: 39px;
+        -webkit-border-bottom-right-radius: 29px;
+        -webkit-border-bottom-left-radius: 29px;
+        -moz-border-radius-bottomright: 29px;
+        -moz-border-radius-bottomleft: 29px;
+        border-bottom-right-radius: 29px;
+        border-bottom-left-radius: 29px;
+        display: none; }
+        #purchase .purchase-inner .dropdown .dropdown-menu li {
+          height: 40px; }
+          #purchase .purchase-inner .dropdown .dropdown-menu li a {
+            line-height: 40px;
+            color: #fff;
+            text-decoration: none;
+            display: block;
+            -webkit-transition: all 0.4s;
+            -moz-transition: all 0.4s;
+            -o-transition: all 0.4s;
+            transition: all 0.4s; }
+            #purchase .purchase-inner .dropdown .dropdown-menu li a:hover {
+              color: #4e9bfd; }
+    #purchase .purchase-inner .select-card-box {
+      text-align: center; }
+      #purchase .purchase-inner .select-card-box .dropdown-select-card {
+        width: 295px;
+        margin: auto; }
+        #purchase .purchase-inner .select-card-box .dropdown-select-card .btn {
+          text-transform: uppercase;
+          display: inline-block;
+          width: 100%;
+          background: #000 url("../img/arrow-down-dropdown.png") no-repeat;
+          background-position: right 25px center;
+          -webkit-box-sizing: border-box;
+          -moz-box-sizing: border-box;
+          box-sizing: border-box; }
+          #purchase .purchase-inner .select-card-box .dropdown-select-card .btn:hover {
+            background: #509cfd url("../img/arrow-down-dropdown.png") no-repeat;
+            background-position: right 25px center; }
+        #purchase .purchase-inner .select-card-box .dropdown-select-card .btn-dropdown-close {
+          background: url("../img/arrow-up-dropdown.png") no-repeat;
+          background-position: center center;
+          display: block;
+          height: 40px;
+          width: 100%;
+          -webkit-transition: all 0.4s;
+          -moz-transition: all 0.4s;
+          -o-transition: all 0.4s;
+          transition: all 0.4s; }
+          #purchase .purchase-inner .select-card-box .dropdown-select-card .btn-dropdown-close:hover {
+            background-position: center top 10px; }
 
 /*# sourceMappingURL=style.css.map */

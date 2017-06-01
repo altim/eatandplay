@@ -96,7 +96,30 @@ $(document).ready(function(){
         else {
             $('.merchant-item.' + selectedValue).fadeIn(400, 'swing');
         }
-    })
+    });
+
+
+    //Dropdowns
+    $('.btn-dropdown').on('click',function(e){
+        e.preventDefault();
+        if(! $(this).parent().hasClass('open')) {
+            $(this).parent().addClass('open').find('.dropdown-menu').slideDown(400, 'swing');
+        }
+        else {
+            $(this).parent().removeClass('open').find('.dropdown-menu').slideUp(400, 'swing');
+        }
+    });
+
+    $('.dropdown-menu li a').on('click',function(e){
+        e.preventDefault();
+        var selectedItem = $(this).html();
+        if(!$(this).hasClass('btn-dropdown-close')) {
+            $(this).parent().parent().parent().find('.btn-dropdown').html(selectedItem);
+        }
+        $(this).parent().parent().parent().removeClass('open');
+        $(this).parent().parent().slideUp(400,'swing');
+    });
+
 
 
 
