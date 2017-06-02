@@ -1695,6 +1695,9 @@ footer {
     #purchase .purchase-inner .select-card-box {
       width: 295px;
       margin: auto; }
+      @media (max-width: 340px) {
+        #purchase .purchase-inner .select-card-box {
+          width: 100%; } }
       #purchase .purchase-inner .select-card-box .dropdown-select-card {
         margin: 0 auto 28px auto; }
         #purchase .purchase-inner .select-card-box .dropdown-select-card .btn {
@@ -1708,6 +1711,9 @@ footer {
           box-sizing: border-box;
           text-align: center;
           font-weight: 300; }
+          @media (max-width: 600px) {
+            #purchase .purchase-inner .select-card-box .dropdown-select-card .btn {
+              width: 100%; } }
           #purchase .purchase-inner .select-card-box .dropdown-select-card .btn:hover {
             background: #3d3c3c url("../img/arrow-down-dropdown.png") no-repeat;
             background-position: right 25px center; }

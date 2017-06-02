@@ -2305,8 +2305,14 @@ footer {
       width:295px;
       margin:auto;
 
+      @media(max-width:340px){
+        width:100%;
+      }
+
       .dropdown-select-card {
         margin:0 auto 28px auto;
+
+
 
         .btn {
           @extend .btn-class;
@@ -2318,6 +2324,10 @@ footer {
           @include box-sizing();
           text-align:center;
           font-weight: 300;
+
+          @media(max-width:600px){
+            width:100%;
+          }
 
           &:hover {
             background:#3d3c3c url('../img/arrow-down-dropdown.png') no-repeat;
