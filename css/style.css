@@ -6,7 +6,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
-.btn-class, header .header-inner nav ul li.btn a, #cards .cards-inner .card a.btn, #logos .logos-inner .logos-controls .btn, #how-it-works .how-it-works-inner .btn, #testimonials .testimonials-inner .btn, #blog .blog-inner .post-item .post-content .btn, footer .footer-inner .newsletter .btn, #page-header .page-header-inner .btn, #filter-bar .filter-bar-inner ul.filter-menu li .btn, #merchants .merchants-inner .card a.btn, #purchase .purchase-inner .cards .card a.btn, #purchase .purchase-inner .select-card-box .dropdown-select-card .btn, #purchase .purchase-inner .delivery-box .btn {
+.btn-class, header .header-inner nav ul li.btn a, #cards .cards-inner .card a.btn, #logos .logos-inner .logos-controls .btn, #how-it-works .how-it-works-inner .btn, #testimonials .testimonials-inner .btn, #blog .blog-inner .post-item .post-content .btn, footer .footer-inner .newsletter .btn, #page-header .page-header-inner .btn, #filter-bar .filter-bar-inner ul.filter-menu li .btn, #merchants .merchants-inner .card a.btn, #purchase .purchase-inner .cards .card a.btn, #purchase .purchase-inner .select-card-box .dropdown-select-card .btn, #purchase .purchase-inner .delivery-box .btn, #purchase .purchase-inner .confirm-order-box .btn {
   -webkit-border-radius: 28px;
   -moz-border-radius: 28px;
   border-radius: 28px;
@@ -19,7 +19,7 @@ body {
   -o-transition: all 0.4s;
   transition: all 0.4s;
   text-decoration: none; }
-  .btn-class:hover, header .header-inner nav ul li.btn a:hover, #cards .cards-inner .card a.btn:hover, #logos .logos-inner .logos-controls .btn:hover, #how-it-works .how-it-works-inner .btn:hover, #testimonials .testimonials-inner .btn:hover, #blog .blog-inner .post-item .post-content .btn:hover, footer .footer-inner .newsletter .btn:hover, #page-header .page-header-inner .btn:hover, #filter-bar .filter-bar-inner ul.filter-menu li .btn:hover, #merchants .merchants-inner .card a.btn:hover, #purchase .purchase-inner .cards .card a.btn:hover, #purchase .purchase-inner .select-card-box .dropdown-select-card .btn:hover, #purchase .purchase-inner .delivery-box .btn:hover {
+  .btn-class:hover, header .header-inner nav ul li.btn a:hover, #cards .cards-inner .card a.btn:hover, #logos .logos-inner .logos-controls .btn:hover, #how-it-works .how-it-works-inner .btn:hover, #testimonials .testimonials-inner .btn:hover, #blog .blog-inner .post-item .post-content .btn:hover, footer .footer-inner .newsletter .btn:hover, #page-header .page-header-inner .btn:hover, #filter-bar .filter-bar-inner ul.filter-menu li .btn:hover, #merchants .merchants-inner .card a.btn:hover, #purchase .purchase-inner .cards .card a.btn:hover, #purchase .purchase-inner .select-card-box .dropdown-select-card .btn:hover, #purchase .purchase-inner .delivery-box .btn:hover, #purchase .purchase-inner .confirm-order-box .btn:hover {
     background: #509cfd; }
 
 header {
@@ -1584,7 +1584,7 @@ footer {
 
 #purchase {
   background: #fff;
-  padding: 90px 0; }
+  padding: 90px 0 97px 0; }
   #purchase .purchase-inner {
     max-width: 1165px;
     width: 100%;
@@ -1903,7 +1903,7 @@ footer {
           #purchase .purchase-inner .delivery-box .option-box .option-box-inner .btn:hover {
             color: #fff; }
     #purchase .purchase-inner .credit-card-info {
-      padding: 90px 0 108px 0; }
+      padding: 90px 0 86px 0; }
       #purchase .purchase-inner .credit-card-info h2 {
         font-size: 40px;
         font-weight: 200;
@@ -1989,5 +1989,28 @@ footer {
             transition: all 0.4s; }
             #purchase .purchase-inner .credit-card-info .dropdown .dropdown-menu .btn-dropdown-close:hover {
               background-position: center top 10px; }
+    #purchase .purchase-inner .confirm-order-box {
+      padding: 0 0 0 0;
+      text-align: center; }
+      #purchase .purchase-inner .confirm-order-box h2 {
+        font-size: 40px;
+        font-weight: 200;
+        margin-bottom: 41px;
+        text-align: center; }
+      #purchase .purchase-inner .confirm-order-box .btn {
+        display: inline-block;
+        background: #f2a50b;
+        -webkit-transition: all 0.4s;
+        -moz-transition: all 0.4s;
+        -o-transition: all 0.4s;
+        transition: all 0.4s;
+        color: #000;
+        font-weight: 300;
+        width: 312px;
+        margin-bottom: 43px; }
+        #purchase .purchase-inner .confirm-order-box .btn:hover {
+          background: #f0bf5e; }
+      #purchase .purchase-inner .confirm-order-box img {
+        max-width: 100%; }
 
 /*# sourceMappingURL=style.css.map */
