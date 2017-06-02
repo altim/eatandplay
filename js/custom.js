@@ -122,5 +122,24 @@ $(document).ready(function(){
 
 
 
+    //Delivery option boxes
+    $('.option .btn-delivery').on('click',function(e){
+       e.preventDefault();
+       if(!$(this).hasClass('open')) {
+           $(this).addClass('open');
+           $(this).parent().find('.option-box').slideDown(400,'swing');
+       }
+       else {
+           $(this).removeClass('open');
+           $(this).parent().find('.option-box').slideUp(400,'swing');
+       }
+
+    });
+
+    $('.option .btn-choose').on('click',function(e){
+       e.preventDefault();
+       $(this).parent().parent().slideUp(400,'swing');
+       $(this).parent().parent().parent().find('.btn-delivery').removeClass('open');
+    });
 
 });

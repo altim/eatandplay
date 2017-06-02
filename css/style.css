@@ -6,7 +6,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
-.btn-class, header .header-inner nav ul li.btn a, #cards .cards-inner .card a.btn, #logos .logos-inner .logos-controls .btn, #how-it-works .how-it-works-inner .btn, #testimonials .testimonials-inner .btn, #blog .blog-inner .post-item .post-content .btn, footer .footer-inner .newsletter .btn, #page-header .page-header-inner .btn, #filter-bar .filter-bar-inner ul.filter-menu li .btn, #merchants .merchants-inner .card a.btn, #purchase .purchase-inner .cards .card a.btn, #purchase .purchase-inner .select-card-box .dropdown-select-card .btn {
+.btn-class, header .header-inner nav ul li.btn a, #cards .cards-inner .card a.btn, #logos .logos-inner .logos-controls .btn, #how-it-works .how-it-works-inner .btn, #testimonials .testimonials-inner .btn, #blog .blog-inner .post-item .post-content .btn, footer .footer-inner .newsletter .btn, #page-header .page-header-inner .btn, #filter-bar .filter-bar-inner ul.filter-menu li .btn, #merchants .merchants-inner .card a.btn, #purchase .purchase-inner .cards .card a.btn, #purchase .purchase-inner .select-card-box .dropdown-select-card .btn, #purchase .purchase-inner .delivery-box .btn {
   -webkit-border-radius: 28px;
   -moz-border-radius: 28px;
   border-radius: 28px;
@@ -19,7 +19,7 @@ body {
   -o-transition: all 0.4s;
   transition: all 0.4s;
   text-decoration: none; }
-  .btn-class:hover, header .header-inner nav ul li.btn a:hover, #cards .cards-inner .card a.btn:hover, #logos .logos-inner .logos-controls .btn:hover, #how-it-works .how-it-works-inner .btn:hover, #testimonials .testimonials-inner .btn:hover, #blog .blog-inner .post-item .post-content .btn:hover, footer .footer-inner .newsletter .btn:hover, #page-header .page-header-inner .btn:hover, #filter-bar .filter-bar-inner ul.filter-menu li .btn:hover, #merchants .merchants-inner .card a.btn:hover, #purchase .purchase-inner .cards .card a.btn:hover, #purchase .purchase-inner .select-card-box .dropdown-select-card .btn:hover {
+  .btn-class:hover, header .header-inner nav ul li.btn a:hover, #cards .cards-inner .card a.btn:hover, #logos .logos-inner .logos-controls .btn:hover, #how-it-works .how-it-works-inner .btn:hover, #testimonials .testimonials-inner .btn:hover, #blog .blog-inner .post-item .post-content .btn:hover, footer .footer-inner .newsletter .btn:hover, #page-header .page-header-inner .btn:hover, #filter-bar .filter-bar-inner ul.filter-menu li .btn:hover, #merchants .merchants-inner .card a.btn:hover, #purchase .purchase-inner .cards .card a.btn:hover, #purchase .purchase-inner .select-card-box .dropdown-select-card .btn:hover, #purchase .purchase-inner .delivery-box .btn:hover {
     background: #509cfd; }
 
 header {
@@ -1703,7 +1703,7 @@ footer {
           text-align: center;
           font-weight: 300; }
           #purchase .purchase-inner .select-card-box .dropdown-select-card .btn:hover {
-            background: #509cfd url("../img/arrow-down-dropdown.png") no-repeat;
+            background: #3d3c3c url("../img/arrow-down-dropdown.png") no-repeat;
             background-position: right 25px center; }
         #purchase .purchase-inner .select-card-box .dropdown-select-card .btn-dropdown-close {
           background: url("../img/arrow-up-dropdown.png") no-repeat;
@@ -1807,7 +1807,7 @@ footer {
           -o-transition: all 0.4s;
           transition: all 0.4s; }
           #purchase .purchase-inner .customer-info-box .dropdown-select-country .btn:hover {
-            background: #f3f2f2 url("../img/arrow-down-2-dropdown.png") no-repeat;
+            background: #cdcdcd url("../img/arrow-down-2-dropdown.png") no-repeat;
             background-position: right 25px center; }
         #purchase .purchase-inner .customer-info-box .dropdown-select-country .dropdown-menu {
           background: #f3f2f2;
@@ -1836,5 +1836,66 @@ footer {
             transition: all 0.4s; }
             #purchase .purchase-inner .customer-info-box .dropdown-select-country .dropdown-menu .btn-dropdown-close:hover {
               background-position: center top 10px; }
+    #purchase .purchase-inner .delivery-box h2 {
+      font-size: 40px;
+      font-weight: 200;
+      margin-bottom: 50px;
+      text-align: center; }
+    #purchase .purchase-inner .delivery-box .btn {
+      display: block;
+      text-align: center; }
+      #purchase .purchase-inner .delivery-box .btn.btn-delivery {
+        width: 472px;
+        margin: 0 auto 19px auto;
+        text-transform: uppercase;
+        background: #000 url("../img/icon-orange-plus.png") no-repeat;
+        background-position: right 25px center;
+        font-weight: 300; }
+        #purchase .purchase-inner .delivery-box .btn.btn-delivery.open {
+          background: #000 url("../img/icon-orange-minus.png") no-repeat;
+          background-position: right 25px center; }
+        #purchase .purchase-inner .delivery-box .btn.btn-delivery:hover {
+          background: #509cfd url("../img/icon-orange-plus.png") no-repeat;
+          background-position: right 25px center; }
+          #purchase .purchase-inner .delivery-box .btn.btn-delivery:hover.open {
+            background: #509cfd url("../img/icon-orange-minus.png") no-repeat;
+            background-position: right 25px center; }
+    #purchase .purchase-inner .delivery-box .option-box {
+      width: 810px;
+      border: 1px solid #9a9a9a;
+      margin: 50px auto 50px auto;
+      display: none; }
+      #purchase .purchase-inner .delivery-box .option-box .option-box-inner {
+        padding: 75px 80px 86px 80px;
+        text-align: center; }
+        #purchase .purchase-inner .delivery-box .option-box .option-box-inner p {
+          font-size: 17px;
+          font-weight: 300;
+          line-height: 30px;
+          margin-bottom: 22px; }
+        #purchase .purchase-inner .delivery-box .option-box .option-box-inner a {
+          font-size: 17px;
+          font-weight: 300;
+          line-height: 30px;
+          text-decoration: none;
+          color: #4f9bfd;
+          -webkit-transition: all 0.4s;
+          -moz-transition: all 0.4s;
+          -o-transition: all 0.4s;
+          transition: all 0.4s; }
+          #purchase .purchase-inner .delivery-box .option-box .option-box-inner a:hover {
+            color: #000; }
+        #purchase .purchase-inner .delivery-box .option-box .option-box-inner .btn {
+          display: inline-block;
+          text-transform: uppercase;
+          padding: 21px 85px;
+          -webkit-box-sizing: border-box;
+          -moz-box-sizing: border-box;
+          box-sizing: border-box;
+          font-weight: 300;
+          color: #fff;
+          line-height: 16px; }
+          #purchase .purchase-inner .delivery-box .option-box .option-box-inner .btn:hover {
+            color: #fff; }
 
 /*# sourceMappingURL=style.css.map */

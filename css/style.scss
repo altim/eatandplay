@@ -2312,7 +2312,7 @@ footer {
           font-weight: 300;
 
           &:hover {
-            background:#509cfd url('../img/arrow-down-dropdown.png') no-repeat;
+            background:#3d3c3c url('../img/arrow-down-dropdown.png') no-repeat;
             background-position:right 25px center;
           }
         }
@@ -2436,7 +2436,7 @@ footer {
           @include transition(all .4s);
 
           &:hover {
-            background:#f3f2f2 url('../img/arrow-down-2-dropdown.png') no-repeat;
+            background:#cdcdcd url('../img/arrow-down-2-dropdown.png') no-repeat;
             background-position:right 25px center;
           }
         }
@@ -2481,6 +2481,101 @@ footer {
 
       }
     }
+
+
+
+    .delivery-box {
+      h2 {
+        font-size:40px;
+        font-weight:200;
+        margin-bottom:50px;
+        text-align:center;
+      }
+
+      .btn {
+        @extend .btn-class;
+        display:block;
+        text-align:center;
+
+        &.btn-delivery {
+          width:472px;
+          margin:0 auto 19px auto;
+          text-transform: uppercase;
+          background:#000 url('../img/icon-orange-plus.png') no-repeat;
+          background-position:right 25px center;
+          font-weight: 300;
+
+          &.open {
+            background:#000 url('../img/icon-orange-minus.png') no-repeat;
+            background-position:right 25px center;
+          }
+
+          &:hover {
+            background:#509cfd url('../img/icon-orange-plus.png') no-repeat;
+            background-position:right 25px center;
+
+            &.open {
+              background:#509cfd url('../img/icon-orange-minus.png') no-repeat;
+              background-position:right 25px center;
+            }
+          }
+        }
+      }
+
+      .option-box {
+        width:810px;
+        border:1px solid #9a9a9a;
+        margin:50px auto 50px auto;
+        display:none;
+
+
+        .option-box-inner {
+          padding:75px 80px 86px 80px;
+          text-align:center;
+
+          p {
+            font-size:17px;
+            font-weight: 300;
+            line-height:30px;
+            margin-bottom:22px;
+          }
+
+          a {
+            font-size:17px;
+            font-weight: 300;
+            line-height:30px;
+            text-decoration: none;
+            color:#4f9bfd;
+            @include transition(all .4s);
+
+            &:hover {
+              color:#000;
+            }
+
+          }
+
+          .btn {
+            display:inline-block;
+            text-transform: uppercase;
+            padding:21px 85px;
+            @include box-sizing();
+            font-weight: 300;
+            color:#fff;
+            line-height:16px;
+
+            &:hover {
+              color:#fff;
+            }
+          }
+        }
+      }
+
+
+    }
+
+
+
+
 
 
   }
