@@ -1682,7 +1682,8 @@ footer {
             -webkit-transition: all 0.4s;
             -moz-transition: all 0.4s;
             -o-transition: all 0.4s;
-            transition: all 0.4s; }
+            transition: all 0.4s;
+            font-weight: 300; }
             #purchase .purchase-inner .dropdown .dropdown-menu li a:hover {
               color: #4e9bfd; }
     #purchase .purchase-inner .select-card-box {
@@ -1698,7 +1699,9 @@ footer {
           background-position: right 25px center;
           -webkit-box-sizing: border-box;
           -moz-box-sizing: border-box;
-          box-sizing: border-box; }
+          box-sizing: border-box;
+          text-align: center;
+          font-weight: 300; }
           #purchase .purchase-inner .select-card-box .dropdown-select-card .btn:hover {
             background: #509cfd url("../img/arrow-down-dropdown.png") no-repeat;
             background-position: right 25px center; }
@@ -1715,13 +1718,11 @@ footer {
           #purchase .purchase-inner .select-card-box .dropdown-select-card .btn-dropdown-close:hover {
             background-position: center top 10px; }
       #purchase .purchase-inner .select-card-box .input {
-        font-family: 'Montserrat', sans-serif;
         font-size: 24px;
         padding: 15px 15px;
         width: 140px;
         display: inline-block;
-        margin-left: 78px;
-        font-weight: 300; }
+        margin-left: 78px; }
       #purchase .purchase-inner .select-card-box p {
         font-size: 14px;
         font-weight: 300;
@@ -1729,6 +1730,8 @@ footer {
         margin-left: 12px;
         display: inline; }
     #purchase .purchase-inner .input {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 300;
       border: none;
       -webkit-border-radius: 28px;
       -moz-border-radius: 28px;
@@ -1742,5 +1745,96 @@ footer {
       -webkit-box-sizing: border-box;
       -moz-box-sizing: border-box;
       box-sizing: border-box; }
+      #purchase .purchase-inner .input.input-1-2 {
+        width: 476px;
+        margin-right: 10px; }
+      #purchase .purchase-inner .input.input-1-3 {
+        width: 314px;
+        margin-right: 10px; }
+      #purchase .purchase-inner .input.no-margin {
+        margin-right: 0; }
+    #purchase .purchase-inner .customer-info-box {
+      padding: 100px 0 104px 0;
+      font-size: 0;
+      max-width: 965px;
+      margin: auto; }
+      #purchase .purchase-inner .customer-info-box h2 {
+        font-size: 40px;
+        font-weight: 200;
+        margin-bottom: 45px;
+        text-align: center; }
+      #purchase .purchase-inner .customer-info-box .input {
+        font-size: 15px;
+        padding: 20px 15px 19px 15px;
+        margin-bottom: 22px;
+        display: inline-block; }
+      #purchase .purchase-inner .customer-info-box ::-webkit-input-placeholder {
+        /* Chrome/Opera/Safari */
+        color: #000; }
+      #purchase .purchase-inner .customer-info-box ::-moz-placeholder {
+        /* Firefox 19+ */
+        color: #000; }
+      #purchase .purchase-inner .customer-info-box :-ms-input-placeholder {
+        /* IE 10+ */
+        color: #000; }
+      #purchase .purchase-inner .customer-info-box :-moz-placeholder {
+        /* Firefox 18- */
+        color: #000; }
+      #purchase .purchase-inner .customer-info-box .dropdown-select-country {
+        width: 314px;
+        display: inline-block;
+        margin-right: 10px; }
+        #purchase .purchase-inner .customer-info-box .dropdown-select-country .btn {
+          font-family: 'Montserrat', sans-serif;
+          font-weight: 300;
+          -webkit-border-radius: 28px;
+          -moz-border-radius: 28px;
+          border-radius: 28px;
+          padding: 20px 15px 19px 15px;
+          color: #000;
+          display: block;
+          text-align: center;
+          outline: none;
+          -webkit-box-sizing: border-box;
+          -moz-box-sizing: border-box;
+          box-sizing: border-box;
+          font-size: 15px;
+          text-decoration: none;
+          background: #efefef url("../img/arrow-down-2-dropdown.png") no-repeat;
+          background-position: right 25px center;
+          -webkit-transition: all 0.4s;
+          -moz-transition: all 0.4s;
+          -o-transition: all 0.4s;
+          transition: all 0.4s; }
+          #purchase .purchase-inner .customer-info-box .dropdown-select-country .btn:hover {
+            background: #f3f2f2 url("../img/arrow-down-2-dropdown.png") no-repeat;
+            background-position: right 25px center; }
+        #purchase .purchase-inner .customer-info-box .dropdown-select-country .dropdown-menu {
+          background: #f3f2f2;
+          max-height: 200px;
+          overflow-x: auto; }
+          #purchase .purchase-inner .customer-info-box .dropdown-select-country .dropdown-menu li a {
+            color: #000;
+            font-size: 16px;
+            font-weight: 300;
+            -webkit-transition: all 0.4s;
+            -moz-transition: all 0.4s;
+            -o-transition: all 0.4s;
+            transition: all 0.4s;
+            outline: none; }
+            #purchase .purchase-inner .customer-info-box .dropdown-select-country .dropdown-menu li a:hover {
+              color: #4e9afd; }
+          #purchase .purchase-inner .customer-info-box .dropdown-select-country .dropdown-menu .btn-dropdown-close {
+            background: url("../img/arrow-up-2-dropdown.png") no-repeat;
+            background-position: center center;
+            display: block;
+            height: 40px;
+            width: 100%;
+            -webkit-transition: all 0.4s;
+            -moz-transition: all 0.4s;
+            -o-transition: all 0.4s;
+            transition: all 0.4s; }
+            #purchase .purchase-inner .customer-info-box .dropdown-select-country .dropdown-menu .btn-dropdown-close:hover {
+              background-position: center top 10px; }
 
 /*# sourceMappingURL=style.css.map */
