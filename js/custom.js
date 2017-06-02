@@ -103,10 +103,13 @@ $(document).ready(function(){
     $('.btn-dropdown').on('click',function(e){
         e.preventDefault();
         if(! $(this).parent().hasClass('open')) {
-            $(this).parent().addClass('open').find('.dropdown-menu').slideDown(400, 'swing');
+            $(this).css({'z-index' : 12}).parent().addClass('open').find('.dropdown-menu').css({'z-index' : 10}).slideDown(400, 'swing');
         }
         else {
-            $(this).parent().removeClass('open').find('.dropdown-menu').slideUp(400, 'swing');
+            $(this).parent().removeClass('open').find('.dropdown-menu').slideUp(400, 'swing', function(){
+                $(this).parent().find('.btn-dropdown').css({'z-index' : 2});
+                $(this).css({'z-index' : 1})
+            });
         }
     });
 
