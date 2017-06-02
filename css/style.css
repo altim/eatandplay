@@ -1670,7 +1670,8 @@ footer {
         -moz-border-radius-bottomleft: 29px;
         border-bottom-right-radius: 29px;
         border-bottom-left-radius: 29px;
-        display: none; }
+        display: none;
+        text-align: center; }
         #purchase .purchase-inner .dropdown .dropdown-menu li {
           height: 40px; }
           #purchase .purchase-inner .dropdown .dropdown-menu li a {
@@ -1685,10 +1686,10 @@ footer {
             #purchase .purchase-inner .dropdown .dropdown-menu li a:hover {
               color: #4e9bfd; }
     #purchase .purchase-inner .select-card-box {
-      text-align: center; }
+      width: 295px;
+      margin: auto; }
       #purchase .purchase-inner .select-card-box .dropdown-select-card {
-        width: 295px;
-        margin: auto; }
+        margin: 0 auto 28px auto; }
         #purchase .purchase-inner .select-card-box .dropdown-select-card .btn {
           text-transform: uppercase;
           display: inline-block;
@@ -1713,5 +1714,33 @@ footer {
           transition: all 0.4s; }
           #purchase .purchase-inner .select-card-box .dropdown-select-card .btn-dropdown-close:hover {
             background-position: center top 10px; }
+      #purchase .purchase-inner .select-card-box .input {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 24px;
+        padding: 15px 15px;
+        width: 140px;
+        display: inline-block;
+        margin-left: 78px;
+        font-weight: 300; }
+      #purchase .purchase-inner .select-card-box p {
+        font-size: 14px;
+        font-weight: 300;
+        text-transform: uppercase;
+        margin-left: 12px;
+        display: inline; }
+    #purchase .purchase-inner .input {
+      border: none;
+      -webkit-border-radius: 28px;
+      -moz-border-radius: 28px;
+      border-radius: 28px;
+      padding: 21px 35px;
+      background: #efefef;
+      color: #000;
+      display: block;
+      text-align: center;
+      outline: none;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box; }
 
 /*# sourceMappingURL=style.css.map */

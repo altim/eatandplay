@@ -2272,6 +2272,7 @@ footer {
         border-bottom-right-radius: 29px;
         border-bottom-left-radius: 29px;
         display:none;
+        text-align:center;
 
         li {
           height:40px;
@@ -2292,11 +2293,11 @@ footer {
     }
 
     .select-card-box {
-      text-align:center;
+      width:295px;
+      margin:auto;
 
       .dropdown-select-card {
-        width:295px;
-        margin:auto;
+        margin:0 auto 28px auto;
 
         .btn {
           @extend .btn-class;
@@ -2327,9 +2328,37 @@ footer {
         }
       }
 
+      .input {
+        @include font1();
+        font-size:24px;
+        padding:15px 15px;
+        width:140px;
+        display:inline-block;
+        margin-left:78px;
+        font-weight: 300;
+      }
+
+      p {
+        font-size:14px;
+        font-weight: 300;
+        text-transform: uppercase;
+        margin-left:12px;
+        display:inline;
+      }
+
     }
 
-
+    .input {
+      border:none;
+      @include border-radius(28px);
+      padding:21px 35px;
+      background:#efefef;
+      color:#000;
+      display:block;
+      text-align:center;
+      outline:none;
+      @include box-sizing();
+    }
 
 
   }
