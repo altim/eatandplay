@@ -2375,6 +2375,15 @@ footer {
       &.no-margin {
         margin-right:0;
       }
+
+      &.centered {
+        margin:0 auto;
+        display:block !important;
+      }
+
+      &.promo {
+        background:#b7e6fc;
+      }
     }
 
 
@@ -2573,6 +2582,121 @@ footer {
 
     }
 
+
+
+
+    .credit-card-info {
+      padding:90px 0 108px 0;
+
+      h2 {
+        font-size:40px;
+        font-weight:200;
+        margin-bottom:45px;
+        text-align:center;
+      }
+
+      .credit-card-form {
+        font-size:0;
+        max-width:965px;
+        margin:auto;
+      }
+
+      .input {
+        font-size:15px;
+        padding:20px 15px 19px 15px;
+        margin-bottom:22px;
+        display:inline-block;
+
+
+      }
+
+      ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+        color: #000;
+      }
+      ::-moz-placeholder { /* Firefox 19+ */
+        color: #000;
+      }
+      :-ms-input-placeholder { /* IE 10+ */
+        color: #000;
+      }
+      :-moz-placeholder { /* Firefox 18- */
+        color: #000;
+      }
+
+
+      .dropdown {
+        width:314px;
+        display:inline-block;
+        margin-right:10px;
+        margin-bottom:24px;
+
+        &.no-margin {
+          margin-right:0;
+        }
+
+        .btn {
+          @include font1();
+          font-weight: 300;
+          @include border-radius(28px);
+          padding:21px 15px 20px 15px;
+          color: #000;
+          display: block;
+          text-align: center;
+          outline: none;
+          @include box-sizing();
+          font-size:15px;
+          text-decoration: none;
+          background:#efefef url('../img/arrow-down-2-dropdown.png') no-repeat;
+          background-position:right 25px center;
+          @include transition(all .4s);
+
+          &:hover {
+            background:#cdcdcd url('../img/arrow-down-2-dropdown.png') no-repeat;
+            background-position:right 25px center;
+          }
+        }
+
+        .dropdown-menu {
+          background:#f3f2f2;
+          max-height:200px;
+          overflow-x:auto;
+          //@include border-radius(0);
+          //-webkit-border-bottom-left-radius: 29px;
+          //-moz-border-radius-bottomleft: 29px;
+          //border-bottom-left-radius: 29px;
+
+
+          li {
+            a {
+              color:#000;
+              font-size:16px;
+              font-weight: 300;
+              @include transition(all .4s);
+              outline:none;
+
+              &:hover {
+                color:#4e9afd;
+              }
+            }
+          }
+
+          .btn-dropdown-close {
+            background:url('../img/arrow-up-2-dropdown.png') no-repeat;
+            background-position: center center;
+            display:block;
+            height:40px;
+            width:100%;
+            @include transition(all .4s);
+
+            &:hover {
+              background-position:center top 10px;
+            }
+          }
+        }
+
+      }
+
+    }
 
 
 
