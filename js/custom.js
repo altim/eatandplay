@@ -86,6 +86,9 @@ $(document).ready(function(){
     //Filter bar
     $('.filter-menu li a').on('click',function(e){
         e.preventDefault();
+        $('.filter-menu li a.active').removeClass('active');
+        $(this).addClass('active');
+
         var selectedValue = $(this).data('type');
 
         //hide all
