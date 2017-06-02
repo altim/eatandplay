@@ -56,6 +56,14 @@ $(document).ready(function(){
         $('nav').toggleClass('active');
     });
 
+    $('ul.main-menu li a').on('click',function(e){
+        e.preventDefault();
+    });
+
+    $('ul.social-menu li a').on('click',function(e){
+        e.preventDefault();
+    });
+
 
     //Merchants list
     $('.expand-toggle').on('click',function(e){
@@ -106,7 +114,10 @@ $(document).ready(function(){
     $('.btn-dropdown').on('click',function(e){
         e.preventDefault();
         if(! $(this).parent().hasClass('open')) {
-            $(this).css({'z-index' : 12}).parent().addClass('open').find('.dropdown-menu').css({'z-index' : 10}).slideDown(400, 'swing');
+            $(this).parent().find('.btn-dropdown').css({'z-index' : 12});
+            $(this).css({'z-index' : 11});
+
+            $(this).parent().addClass('open').find('.dropdown-menu').slideDown(400, 'swing');
         }
         else {
             $(this).parent().removeClass('open').find('.dropdown-menu').slideUp(400, 'swing', function(){

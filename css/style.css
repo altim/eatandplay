@@ -1661,7 +1661,8 @@ footer {
       position: relative; }
       #purchase .purchase-inner .dropdown .btn {
         position: relative;
-        z-index: 2; }
+        z-index: 2;
+        outline: none; }
       #purchase .purchase-inner .dropdown .dropdown-menu {
         z-index: 1;
         background: #3d3c3c;
@@ -1726,7 +1727,8 @@ footer {
           -webkit-transition: all 0.4s;
           -moz-transition: all 0.4s;
           -o-transition: all 0.4s;
-          transition: all 0.4s; }
+          transition: all 0.4s;
+          outline: none; }
           #purchase .purchase-inner .select-card-box .dropdown-select-card .btn-dropdown-close:hover {
             background-position: center top 10px; }
       #purchase .purchase-inner .select-card-box .input {
@@ -1850,11 +1852,7 @@ footer {
           font-size: 15px;
           text-decoration: none;
           background: #efefef url("../img/arrow-down-2-dropdown.png") no-repeat;
-          background-position: right 25px center;
-          -webkit-transition: all 0.4s;
-          -moz-transition: all 0.4s;
-          -o-transition: all 0.4s;
-          transition: all 0.4s; }
+          background-position: right 25px center; }
           #purchase .purchase-inner .customer-info-box .dropdown-select-country .btn:hover {
             background: #cdcdcd url("../img/arrow-down-2-dropdown.png") no-repeat;
             background-position: right 25px center; }

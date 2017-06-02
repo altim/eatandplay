@@ -2263,6 +2263,7 @@ footer {
       .btn {
         position:relative;
         z-index:2;
+        outline:none;
       }
 
       .dropdown-menu {
@@ -2342,6 +2343,7 @@ footer {
           height:40px;
           width:100%;
           @include transition(all .4s);
+          outline:none;
 
           &:hover {
             background-position:center top 10px;
@@ -2499,7 +2501,7 @@ footer {
           text-decoration: none;
           background:#efefef url('../img/arrow-down-2-dropdown.png') no-repeat;
           background-position:right 25px center;
-          @include transition(all .4s);
+          //@include transition(all .4s);
 
           &:hover {
             background:#cdcdcd url('../img/arrow-down-2-dropdown.png') no-repeat;
