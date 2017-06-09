@@ -26,18 +26,29 @@ $(document).ready(function(){
 
 
     //Logo slider
-    $('.logos-slider').bxSlider({
-        minSlider:1,
-        maxSlides:10,
-        sliderMargin: 75,
-        infiniteLoop: true,
-        touchEnabled : false,
-        pager : false,
-        controls: true,
-        auto : true,
-        pause: 3000,
-        nextSelector : '.logo-next',
-        prevSelector : '.logo-prev'
+    // $('.logos-slider').bxSlider({
+    //     minSlider:1,
+    //     maxSlides:10,
+    //     sliderMargin: 75,
+    //     infiniteLoop: true,
+    //     touchEnabled : false,
+    //     pager : false,
+    //     controls: true,
+    //     auto : true,
+    //     pause: 3000,
+    //     nextSelector : '.logo-next',
+    //     prevSelector : '.logo-prev'
+    // });
+
+    $(".logos-slider-owl").owlCarousel({
+        loop:true,
+        autoWidth:true,
+        items:10,
+        dots: false,
+        nav: true,
+        autoplay: true,
+        autoplayTimeout: 3000,
+        navContainer: '.slider-controls'
     });
 
 

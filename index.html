@@ -13,6 +13,8 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
     <link rel="stylesheet" href="lib/bxslider/jquery.bxslider.min.css">
+    <link rel="stylesheet" href="lib/owl/owl.carousel.min.css">
+    <script src="lib/owl/owl.carousel.min.js"></script>
     <link rel="stylesheet" href="lib/magnificpopup/magnific-popup.css">
     <link rel="stylesheet" href="css/style.css">
     <script src="js/custom.js"></script>
@@ -36,7 +38,7 @@
                             <li><a href="#">What is it?</a></li>
                         </ul>
                     </li>
-                    <li class="menu-item-has-children">
+                    <li class="menu-item-has-children buy-card-menu-parent">
                         <a href="#">Destinations</a>
 
                         <ul class="sub-menu">
@@ -67,8 +69,8 @@
 
             <div class="hero-slider">
                 <ul>
-                    <li></li>
-                    <li></li>
+                    <li style="background-image: url('img/hero-image.jpg')"></li>
+                    <li style="background-image: url('img/hero-image-2.jpg')"></li>
                 </ul>
             </div>
 
@@ -133,23 +135,21 @@
     <section id="logos">
         <div class="logos-inner">
 
-            <ul class="logos-slider">
-                <li><img src="img/partners/oneil.jpg" alt="oneil" /></li>
-                <li><img src="img/partners/wonderworks.jpg" alt="wonderworks" /></li>
-                <li><img src="img/partners/macys.jpg" alt="macy's" /></li>
-                <li><img src="img/partners/dennys.jpg" alt="denny's" /></li>
-                <li><img src="img/partners/outback.jpg" alt="outback" /></li>
-                <li><img src="img/partners/johnnyrockets.jpg" alt="johnny rockets" /></li>
-                <li><img src="img/partners/lucilles.jpg" alt="lucille's" /></li>
-                <li><img src="img/partners/texasroadhouse.jpg" alt="texas roadhouse" /></li>
-                <li><img src="img/partners/margaritaville.jpg" alt="margaritaville" /></li>
-            </ul>
+            <div class="logos-slider-owl owl-carousel">
+                <div><img src="img/partners/oneil.jpg" alt="oneil" /></div>
+                <div><img src="img/partners/wonderworks.jpg" alt="wonderworks" /></div>
+                <div><img src="img/partners/macys.jpg" alt="macy's" /></div>
+                <div><img src="img/partners/dennys.jpg" alt="denny's" /></div>
+                <div><img src="img/partners/outback.jpg" alt="outback" /></div>
+                <div><img src="img/partners/johnnyrockets.jpg" alt="johnny rockets" /></div>
+                <div><img src="img/partners/lucilles.jpg" alt="lucille's" /></div>
+                <div><img src="img/partners/texasroadhouse.jpg" alt="texas roadhouse" /></div>
+                <div><img src="img/partners/margaritaville.jpg" alt="margaritaville" /></div>
+            </div>
 
             <div class="logos-controls">
                 <a href="#" class="btn">ORLANDO&nbsp;&nbsp;-&nbsp;&nbsp;<span>View all partners</span></a>
                 <div class="slider-controls">
-                    <div class="logo-prev"></div>
-                    <div class="logo-next"></div>
                 </div>
                 <a href="#" class="btn">NEW YORK&nbsp;&nbsp;-&nbsp;&nbsp;<span>View all partners</span></a>
             </div>
@@ -257,9 +257,9 @@
         <div class="blog-inner">
 
             <div class="post-item post-image-left">
-                <div class="post-image">
+                <a href="#" class="post-image">
                     <img src="img/happy-family-1.jpg" alt="" />
-                </div>
+                </a>
                 <div class="post-content">
                     <div class="post-content-inner">
                         <h2>How to travel with small kids</h2>
@@ -270,9 +270,9 @@
             </div>
 
             <div class="post-item post-image-right">
-                <div class="post-image">
+                <a href="#" class="post-image">
                     <img src="img/happy-family-2.jpg" alt="" />
-                </div>
+                </a>
                 <div class="post-content">
                     <div class="post-content-inner">
                         <h2>The beach is a great place</h2>
@@ -344,9 +344,9 @@
 
             <div class="payment-menu">
                 <ul>
-                    <li><a href="#"><img src="img/payment-visa.jpg" alt="Visa" /></a></li>
-                    <li><a href="#"><img src="img/payment-mastercard.jpg" alt="Mastercard" /></a></li>
-                    <li><a href="#"><img src="img/payment-bambora.jpg" alt="Bambora" /></a></li>
+                    <li><img src="img/payment-visa.jpg" alt="Visa" /></li>
+                    <li><img src="img/payment-mastercard.jpg" alt="Mastercard" /></li>
+                    <li><img src="img/payment-bambora.jpg" alt="Bambora" /></li>
                     <li><a href="#"><img src="img/google-play.png" alt="Google Play" /></a></li>
                     <li><a href="#"><img src="img/apple-store.png" alt="Apple Store" /></a></li>
                 </ul>

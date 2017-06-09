@@ -223,7 +223,18 @@ header {
               }
             }
 
-
+            &.buy-card-menu-parent ul {
+              padding-bottom: 0;
+              & > li:last-of-type a {
+                background: black;
+                color: white;
+                margin-top: 27px;
+                padding: 25px 30px;
+                &:hover {
+                  background: #353535;
+                }
+              }
+            }
             ul {
               pointer-events: none;
               opacity:0;
@@ -235,6 +246,9 @@ header {
               padding:27px 0;
               background:#509cfd;
               @include transition(all 0.4s);
+              &.buy-card-menu-parent {
+                padding-bottom: 0;
+              }
 
               @media (max-width:1350px){
                 top:0;
@@ -307,9 +321,6 @@ header {
                 }
               }
             }
-
-
-
           }
         }
       }
@@ -448,8 +459,9 @@ header {
         li {
           height:759px;
           width:100%;
-          background:url('../img/hero-image.jpg') no-repeat;
+          background-size: cover;
           background-position:center center;
+          background-repeat: no-repeat;
 
           @media(max-width:600px){
             height:650px;
@@ -479,6 +491,7 @@ header {
         font-weight:500;
         line-height:108px;
         text-shadow:7px 7px 21px rgba(0,0,0,0.29);
+        letter-spacing: -0.02em;
         @media(max-width:1250px){
           padding:0 20px;
         }
@@ -810,6 +823,13 @@ header {
     padding:40px 0 55px 0;
   }
 
+  .logos-slider-owl {
+    margin-bottom: 60px;
+    & .owl-item div {
+      margin: 0 25px;
+    }
+  }
+
   .logos-inner {
 
     ul.logos-slider {
@@ -865,61 +885,56 @@ header {
           margin:19px;
         }
 
-        .logo-prev {
+        .owl-prev {
           display:inline;
-          a {
-            -webkit-border-top-left-radius: 28px;
-            -webkit-border-bottom-left-radius: 28px;
-            -moz-border-radius-topleft: 28px;
-            -moz-border-radius-bottomleft: 28px;
-            border-top-left-radius: 28px;
-            border-bottom-left-radius: 28px;
+          -webkit-border-top-left-radius: 28px;
+          -webkit-border-bottom-left-radius: 28px;
+          -moz-border-radius-topleft: 28px;
+          -moz-border-radius-bottomleft: 28px;
+          border-top-left-radius: 28px;
+          border-bottom-left-radius: 28px;
 
-            background: #65a8fd url('../img/slider-arrow-left.png') no-repeat;
+          background: #65a8fd url('../img/slider-arrow-left.png') no-repeat;
+          background-position: center center;
+          display: inline-block;
+          @include transition(all .4s);
+          text-decoration: none;
+          text-indent: -9999px;
+          width: 69px;
+          height: 58px;
+          cursor: pointer;
+          outline:none;
+
+          &:hover {
+            background: #afcdf3 url('../img/slider-arrow-left.png') no-repeat;
             background-position: center center;
-            display: inline-block;
-            @include transition(all .4s);
-            text-decoration: none;
-            text-indent: -9999px;
-            width: 69px;
-            height: 58px;
-            cursor: pointer;
-            outline:none;
-
-            &:hover {
-              background: #afcdf3 url('../img/slider-arrow-left.png') no-repeat;
-              background-position: center center;
-            }
           }
         }
 
 
-        .logo-next {
-          display:inline;
-          a {
-            -webkit-border-top-right-radius: 28px;
-            -webkit-border-bottom-right-radius: 28px;
-            -moz-border-radius-topright: 28px;
-            -moz-border-radius-bottomright: 28px;
-            border-top-right-radius: 28px;
-            border-bottom-right-radius: 28px;
+        .owl-next {
+          -webkit-border-top-right-radius: 28px;
+          -webkit-border-bottom-right-radius: 28px;
+          -moz-border-radius-topright: 28px;
+          -moz-border-radius-bottomright: 28px;
+          border-top-right-radius: 28px;
+          border-bottom-right-radius: 28px;
 
-            background: #65a8fd url('../img/slider-arrow-right.png') no-repeat;
+          background: #65a8fd url('../img/slider-arrow-right.png') no-repeat;
+          background-position: center center;
+          display: inline-block;
+          @include transition(all .4s);
+          text-decoration: none;
+          text-indent: -9999px;
+          width: 69px;
+          height: 58px;
+          cursor: pointer;
+          outline:none;
+
+
+          &:hover {
+            background: #afcdf3 url('../img/slider-arrow-right.png') no-repeat;
             background-position: center center;
-            display: inline-block;
-            @include transition(all .4s);
-            text-decoration: none;
-            text-indent: -9999px;
-            width: 69px;
-            height: 58px;
-            cursor: pointer;
-            outline:none;
-
-
-            &:hover {
-              background: #afcdf3 url('../img/slider-arrow-right.png') no-repeat;
-              background-position: center center;
-            }
           }
         }
 
@@ -1495,9 +1510,12 @@ footer {
             display:list-item;
           }
 
+          & img {
+            margin-left: 10px;
+          }
+
           a {
             text-decoration: none;
-            margin-left:10px;
 
             img {
               @include transform(translateZ(0));
