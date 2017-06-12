@@ -60,13 +60,12 @@
 					
 				); 
 				$partner_query = new WP_Query( $args );
-				$partner_cats = ''; 
 
 				?>
 
-				<?php if ( $partner_query->have_posts() ) : while ( $partner_query->have_posts() ) : $partner_query->the_post(); ?>
-
-					<?php $term_list = wp_get_post_terms($post->ID, 'partner_category', array("fields" => "all", ));
+				<?php if ( $partner_query->have_posts() ) : while ( $partner_query->have_posts() ) : $partner_query->the_post();
+                    $partner_cats = ''; 
+					$term_list = wp_get_post_terms($post->ID, 'partner_category', array("fields" => "all", ));
 						foreach($term_list as $term_single) {
 							$partner_cats .= $term_single->slug . ' ';
 						}
