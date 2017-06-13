@@ -2919,6 +2919,15 @@ footer {
 
 // ===================== Generic Page =====================
 
+.page-template-parnters-orlando,
+.page-template-partners-newyork {
+  & .inner-page-content {
+    padding: 80px 0 50px;
+    @media(max-width:600px){
+      padding: 50px 0 21px;
+    }
+  }
+}
 .inner-page-content {
   width:100%;
   background:#fff;
@@ -2962,7 +2971,14 @@ footer {
       line-height:31px;
       font-weight: 300;
       padding-bottom: 29px;
+      & + h2 {
+        padding-top: 30px;
+      }
+      & strong {
+        font-weight: 400;
+      }
     }
+
 
     & ul,
     & ol {
