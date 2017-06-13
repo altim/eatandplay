@@ -584,7 +584,7 @@ header {
           @include transform(translateX(-50%));
           width:20px;
           height:10px;
-          background:url('img/arrow-down.png') no-repeat;
+          background:url('../img/arrow-down.png') no-repeat;
           @include transition(all .4s);
           pointer-events: none;
         }
@@ -768,7 +768,7 @@ header {
         font-weight: 200;
         line-height:50px;
         padding-left:48px;
-        background:url('img/checkmark.jpg') no-repeat;
+        background:url('../img/checkmark.jpg') no-repeat;
         background-position:left 10px;
         letter-spacing: -0.01em;
 
@@ -1593,11 +1593,11 @@ footer {
   background-position:center center;
 
   &.bg-new-york {
-    background:url('img/header-image-new-york.jpg') no-repeat;
+    background:url('../img/header-image-new-york.jpg') no-repeat;
   }
 
   &.bg-purchase {
-    background:url('img/header-image-purchase.jpg') no-repeat;
+    background:url('../img/header-image-purchase.jpg') no-repeat;
   }
 
   @media(max-width:580px){
@@ -1975,7 +1975,7 @@ footer {
               a {
                 width:13px;
                 height:13px;
-                background:url('img/btn-expand-sprite.png') no-repeat;
+                background:url('../img/btn-expand-sprite.png') no-repeat;
                 background-position:top;
                 display:block;
                 outline:none;
@@ -2089,7 +2089,7 @@ footer {
             right:40px;
             @include transform(translateY(-50%));
             a {
-              background: url('img/btn-expand-sprite.png') no-repeat;
+              background: url('../img/btn-expand-sprite.png') no-repeat;
               background-position: bottom;
             }
 
@@ -2397,7 +2397,7 @@ footer {
           text-transform: uppercase;
           display: inline-block;
           width:100%;
-          background:#000 url('img/arrow-down-dropdown.png') no-repeat;
+          background:#000 url('../img/arrow-down-dropdown.png') no-repeat;
           background-position:right 25px center;
           @include box-sizing();
           text-align:center;
@@ -2408,13 +2408,13 @@ footer {
           }
 
           &:hover {
-            background:#3d3c3c url('img/arrow-down-dropdown.png') no-repeat;
+            background:#3d3c3c url('../img/arrow-down-dropdown.png') no-repeat;
             background-position:right 25px center;
           }
         }
 
         .btn-dropdown-close {
-          background:url('img/arrow-up-dropdown.png') no-repeat;
+          background:url('../img/arrow-up-dropdown.png') no-repeat;
           background-position: center center;
           display:block;
           height:40px;
@@ -2576,12 +2576,12 @@ footer {
           @include box-sizing();
           font-size:15px;
           text-decoration: none;
-          background:#efefef url('img/arrow-down-2-dropdown.png') no-repeat;
+          background:#efefef url('../img/arrow-down-2-dropdown.png') no-repeat;
           background-position:right 25px center;
           //@include transition(all .4s);
 
           &:hover {
-            background:#cdcdcd url('img/arrow-down-2-dropdown.png') no-repeat;
+            background:#cdcdcd url('../img/arrow-down-2-dropdown.png') no-repeat;
             background-position:right 25px center;
           }
         }
@@ -2611,7 +2611,7 @@ footer {
           }
 
           .btn-dropdown-close {
-            background:url('img/arrow-up-2-dropdown.png') no-repeat;
+            background:url('../img/arrow-up-2-dropdown.png') no-repeat;
             background-position: center center;
             display:block;
             height:40px;
@@ -2648,7 +2648,7 @@ footer {
           width:472px;
           margin:0 auto 19px auto;
           text-transform: uppercase;
-          background:#000 url('img/icon-orange-plus.png') no-repeat;
+          background:#000 url('../img/icon-orange-plus.png') no-repeat;
           background-position:right 25px center;
           font-weight: 300;
           @include box-sizing();
@@ -2660,16 +2660,16 @@ footer {
           }
 
           &.open {
-            background:#000 url('img/icon-orange-minus.png') no-repeat;
+            background:#000 url('../img/icon-orange-minus.png') no-repeat;
             background-position:right 25px center;
           }
 
           &:hover {
-            background:#509cfd url('img/icon-orange-plus.png') no-repeat;
+            background:#509cfd url('../img/icon-orange-plus.png') no-repeat;
             background-position:right 25px center;
 
             &.open {
-              background:#509cfd url('img/icon-orange-minus.png') no-repeat;
+              background:#509cfd url('../img/icon-orange-minus.png') no-repeat;
               background-position:right 25px center;
             }
           }
@@ -2818,12 +2818,12 @@ footer {
           @include box-sizing();
           font-size:15px;
           text-decoration: none;
-          background:#efefef url('img/arrow-down-2-dropdown.png') no-repeat;
+          background:#efefef url('../img/arrow-down-2-dropdown.png') no-repeat;
           background-position:right 25px center;
           @include transition(all .4s);
 
           &:hover {
-            background:#cdcdcd url('img/arrow-down-2-dropdown.png') no-repeat;
+            background:#cdcdcd url('../img/arrow-down-2-dropdown.png') no-repeat;
             background-position:right 25px center;
           }
         }
@@ -2853,7 +2853,7 @@ footer {
           }
 
           .btn-dropdown-close {
-            background:url('img/arrow-up-2-dropdown.png') no-repeat;
+            background:url('../img/arrow-up-2-dropdown.png') no-repeat;
             background-position: center center;
             display:block;
             height:40px;

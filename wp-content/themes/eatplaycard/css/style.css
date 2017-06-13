@@ -448,7 +448,7 @@ header {
           transform: translateX(-50%);
           width: 20px;
           height: 10px;
-          background: url("img/arrow-down.png") no-repeat;
+          background: url("../img/arrow-down.png") no-repeat;
           -webkit-transition: all 0.4s;
           -moz-transition: all 0.4s;
           -o-transition: all 0.4s;
@@ -593,7 +593,7 @@ header {
       font-weight: 200;
       line-height: 50px;
       padding-left: 48px;
-      background: url("img/checkmark.jpg") no-repeat;
+      background: url("../img/checkmark.jpg") no-repeat;
       background-position: left 10px;
       letter-spacing: -0.01em; }
       @media (max-width: 600px) {
@@ -1181,9 +1181,9 @@ footer {
   background-size: cover;
   background-position: center center; }
   #page-header.bg-new-york {
-    background: url("img/header-image-new-york.jpg") no-repeat; }
+    background: url("../img/header-image-new-york.jpg") no-repeat; }
   #page-header.bg-purchase {
-    background: url("img/header-image-purchase.jpg") no-repeat; }
+    background: url("../img/header-image-purchase.jpg") no-repeat; }
   @media (max-width: 580px) {
     #page-header {
       margin-top: 68px; } }
@@ -1486,7 +1486,7 @@ footer {
             #merchants .merchants-inner .merchants-list .merchant-item .merchants-item-header .merchant-controls a {
               width: 13px;
               height: 13px;
-              background: url("img/btn-expand-sprite.png") no-repeat;
+              background: url("../img/btn-expand-sprite.png") no-repeat;
               background-position: top;
               display: block;
               outline: none; }
@@ -1560,7 +1560,7 @@ footer {
           -o-transform: translateY(-50%);
           transform: translateY(-50%); }
           #merchants .merchants-inner .merchants-list .merchant-item.open .merchant-controls a {
-            background: url("img/btn-expand-sprite.png") no-repeat;
+            background: url("../img/btn-expand-sprite.png") no-repeat;
             background-position: bottom; }
           @media (max-width: 768px) {
             #merchants .merchants-inner .merchants-list .merchant-item.open .merchant-controls {
@@ -1763,7 +1763,7 @@ footer {
           text-transform: uppercase;
           display: inline-block;
           width: 100%;
-          background: #000 url("img/arrow-down-dropdown.png") no-repeat;
+          background: #000 url("../img/arrow-down-dropdown.png") no-repeat;
           background-position: right 25px center;
           -webkit-box-sizing: border-box;
           -moz-box-sizing: border-box;
@@ -1774,10 +1774,10 @@ footer {
             #purchase .purchase-inner .select-card-box .dropdown-select-card .btn {
               width: 100%; } }
           #purchase .purchase-inner .select-card-box .dropdown-select-card .btn:hover {
-            background: #3d3c3c url("img/arrow-down-dropdown.png") no-repeat;
+            background: #3d3c3c url("../img/arrow-down-dropdown.png") no-repeat;
             background-position: right 25px center; }
         #purchase .purchase-inner .select-card-box .dropdown-select-card .btn-dropdown-close {
-          background: url("img/arrow-up-dropdown.png") no-repeat;
+          background: url("../img/arrow-up-dropdown.png") no-repeat;
           background-position: center center;
           display: block;
           height: 40px;
@@ -1909,10 +1909,10 @@ footer {
           box-sizing: border-box;
           font-size: 15px;
           text-decoration: none;
-          background: #efefef url("img/arrow-down-2-dropdown.png") no-repeat;
+          background: #efefef url("../img/arrow-down-2-dropdown.png") no-repeat;
           background-position: right 25px center; }
           #purchase .purchase-inner .customer-info-box .dropdown-select-country .btn:hover {
-            background: #cdcdcd url("img/arrow-down-2-dropdown.png") no-repeat;
+            background: #cdcdcd url("../img/arrow-down-2-dropdown.png") no-repeat;
             background-position: right 25px center; }
         #purchase .purchase-inner .customer-info-box .dropdown-select-country .dropdown-menu {
           background: #f3f2f2;
@@ -1930,7 +1930,7 @@ footer {
             #purchase .purchase-inner .customer-info-box .dropdown-select-country .dropdown-menu li a:hover {
               color: #4e9afd; }
           #purchase .purchase-inner .customer-info-box .dropdown-select-country .dropdown-menu .btn-dropdown-close {
-            background: url("img/arrow-up-2-dropdown.png") no-repeat;
+            background: url("../img/arrow-up-2-dropdown.png") no-repeat;
             background-position: center center;
             display: block;
             height: 40px;
@@ -1953,7 +1953,7 @@ footer {
         width: 472px;
         margin: 0 auto 19px auto;
         text-transform: uppercase;
-        background: #000 url("img/icon-orange-plus.png") no-repeat;
+        background: #000 url("../img/icon-orange-plus.png") no-repeat;
         background-position: right 25px center;
         font-weight: 300;
         -webkit-box-sizing: border-box;
@@ -1965,13 +1965,13 @@ footer {
             display: block !important;
             margin: 0 auto 22px auto !important; } }
         #purchase .purchase-inner .delivery-box .btn.btn-delivery.open {
-          background: #000 url("img/icon-orange-minus.png") no-repeat;
+          background: #000 url("../img/icon-orange-minus.png") no-repeat;
           background-position: right 25px center; }
         #purchase .purchase-inner .delivery-box .btn.btn-delivery:hover {
-          background: #509cfd url("img/icon-orange-plus.png") no-repeat;
+          background: #509cfd url("../img/icon-orange-plus.png") no-repeat;
           background-position: right 25px center; }
           #purchase .purchase-inner .delivery-box .btn.btn-delivery:hover.open {
-            background: #509cfd url("img/icon-orange-minus.png") no-repeat;
+            background: #509cfd url("../img/icon-orange-minus.png") no-repeat;
             background-position: right 25px center; }
     #purchase .purchase-inner .delivery-box .option-box {
       max-width: 810px;
@@ -2083,14 +2083,14 @@ footer {
           box-sizing: border-box;
           font-size: 15px;
           text-decoration: none;
-          background: #efefef url("img/arrow-down-2-dropdown.png") no-repeat;
+          background: #efefef url("../img/arrow-down-2-dropdown.png") no-repeat;
           background-position: right 25px center;
           -webkit-transition: all 0.4s;
           -moz-transition: all 0.4s;
           -o-transition: all 0.4s;
           transition: all 0.4s; }
           #purchase .purchase-inner .credit-card-info .dropdown .btn:hover {
-            background: #cdcdcd url("img/arrow-down-2-dropdown.png") no-repeat;
+            background: #cdcdcd url("../img/arrow-down-2-dropdown.png") no-repeat;
             background-position: right 25px center; }
         #purchase .purchase-inner .credit-card-info .dropdown .dropdown-menu {
           background: #f3f2f2;
@@ -2108,7 +2108,7 @@ footer {
             #purchase .purchase-inner .credit-card-info .dropdown .dropdown-menu li a:hover {
               color: #4e9afd; }
           #purchase .purchase-inner .credit-card-info .dropdown .dropdown-menu .btn-dropdown-close {
-            background: url("img/arrow-up-2-dropdown.png") no-repeat;
+            background: url("../img/arrow-up-2-dropdown.png") no-repeat;
             background-position: center center;
             display: block;
             height: 40px;
@@ -2202,11 +2202,9 @@ footer {
         padding-top: 30px; }
       .inner-page-content .wc p strong {
         font-weight: 400; }
-    .inner-page-content .wc ul,
-    .inner-page-content .wc ol {
+    .inner-page-content .wc ul, .inner-page-content .wc ol {
       padding-bottom: 29px; }
-      .inner-page-content .wc ul li,
-      .inner-page-content .wc ol li {
+      .inner-page-content .wc ul li, .inner-page-content .wc ol li {
         font-size: 15px;
         line-height: 31px;
         font-weight: 300; }
@@ -2245,15 +2243,13 @@ footer {
     .single-blog-pagination {
       margin-bottom: 51px;
       margin-top: 41px; } }
-  .single-blog-pagination .previous-post,
-  .single-blog-pagination .next-post {
+  .single-blog-pagination .previous-post, .single-blog-pagination .next-post {
     position: absolute;
     font-size: 14.5px;
     display: inline-block;
     vertical-align: middle; }
     @media screen and (max-width: 600px) {
-      .single-blog-pagination .previous-post,
-      .single-blog-pagination .next-post {
+      .single-blog-pagination .previous-post, .single-blog-pagination .next-post {
         position: static;
         display: block; } }
   .single-blog-pagination .previous-post {
@@ -2352,3 +2348,5 @@ section.advantages {
         -moz-transform: translateY(-50%);
         -o-transform: translateY(-50%);
         transform: translateY(-50%); }
+
+/*# sourceMappingURL=style.css.map */
