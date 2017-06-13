@@ -1,4 +1,4 @@
-@import url(reset.css);
+@import url(css/reset.css);
 body {
   font-family: 'Montserrat', sans-serif;
   background: #fff;
@@ -38,7 +38,7 @@ header {
     header .header-inner a.logo {
       width: 394px;
       height: 176px;
-      background: url("../img/logo.png") no-repeat;
+      background: url("img/logo.png") no-repeat;
       background-size: contain;
       outline: none;
       display: block;
@@ -121,7 +121,7 @@ header {
             @media (max-width: 1350px) {
               header .header-inner nav ul li.menu-item-has-children {
                 height: auto;
-                background: url("../img/menu-arrow-down.png") no-repeat;
+                background: url("img/menu-arrow-down.png") no-repeat;
                 background-position: right 10px top 15px; } }
             header .header-inner nav ul li.menu-item-has-children:after {
               content: '';
@@ -130,7 +130,7 @@ header {
               position: absolute;
               left: 50%;
               top: 32px;
-              background: url("../img/menu-arrow-down.png");
+              background: url("img/menu-arrow-down.png");
               -webkit-transform: translateX(-50%);
               -moz-transform: translateX(-50%);
               -o-transform: translateX(-50%);
@@ -267,7 +267,7 @@ header {
           -webkit-box-sizing: border-box;
           -moz-box-sizing: border-box;
           box-sizing: border-box;
-          background: #4e71a8 url("../img/icon_f.png") no-repeat center center;
+          background: #4e71a8 url("img/icon_f.png") no-repeat center center;
           background-size: auto 15px;
           display: block;
           -webkit-transition: all 0.4s;
@@ -275,7 +275,7 @@ header {
           -o-transition: all 0.4s;
           transition: all 0.4s; }
           header .header-inner nav .social-menu .btn_facebook:hover {
-            background: #86a0c8 url("../img/icon_f.png") no-repeat center center;
+            background: #86a0c8 url("img/icon_f.png") no-repeat center center;
             background-size: auto 15px; }
           @media (max-width: 1350px) {
             header .header-inner nav .social-menu .btn_facebook {
@@ -290,7 +290,7 @@ header {
           -webkit-box-sizing: border-box;
           -moz-box-sizing: border-box;
           box-sizing: border-box;
-          background: #1cb7eb url("../img/icon_t.png") no-repeat center center;
+          background: #1cb7eb url("img/icon_t.png") no-repeat center center;
           background-size: auto 15px;
           display: block;
           -webkit-transition: all 0.4s;
@@ -298,7 +298,7 @@ header {
           -o-transition: all 0.4s;
           transition: all 0.4s; }
           header .header-inner nav .social-menu .btn_twitter:hover {
-            background: #84d6f1 url("../img/icon_t.png") no-repeat center center;
+            background: #84d6f1 url("img/icon_t.png") no-repeat center center;
             background-size: auto 15px; }
           @media (max-width: 1350px) {
             header .header-inner nav .social-menu .btn_twitter {
@@ -2189,9 +2189,11 @@ footer {
       line-height: 31px;
       font-weight: 300;
       padding-bottom: 29px; }
-    .inner-page-content .wc ul, .inner-page-content .wc ol {
+    .inner-page-content .wc ul,
+    .inner-page-content .wc ol {
       padding-bottom: 29px; }
-      .inner-page-content .wc ul li, .inner-page-content .wc ol li {
+      .inner-page-content .wc ul li,
+      .inner-page-content .wc ol li {
         font-size: 15px;
         line-height: 31px;
         font-weight: 300; }
@@ -2210,7 +2212,7 @@ footer {
   height: 50px;
   width: 50px;
   margin: 32px auto 0;
-  background: url("../img/back-to-top-icon.png") no-repeat center center; }
+  background: url("img/back-to-top-icon.png") no-repeat center center; }
   @media (max-width: 600px) {
     .back-to-top {
       margin-top: 10px; } }
@@ -2230,13 +2232,15 @@ footer {
     .single-blog-pagination {
       margin-bottom: 51px;
       margin-top: 41px; } }
-  .single-blog-pagination .previous-post, .single-blog-pagination .next-post {
+  .single-blog-pagination .previous-post,
+  .single-blog-pagination .next-post {
     position: absolute;
     font-size: 14.5px;
     display: inline-block;
     vertical-align: middle; }
     @media screen and (max-width: 600px) {
-      .single-blog-pagination .previous-post, .single-blog-pagination .next-post {
+      .single-blog-pagination .previous-post,
+      .single-blog-pagination .next-post {
         position: static;
         display: block; } }
   .single-blog-pagination .previous-post {
@@ -2279,56 +2283,3 @@ footer {
   .single-post #page-header h1 {
     position: relative;
     z-index: 2; }
-
-.checkmark-list {
-  list-style: none; }
-  .checkmark-list li {
-    padding-left: 34px;
-    background: url("../img/icon-ok.png") no-repeat;
-    background-position: left center; }
-
-section.advantages {
-  margin-top: 40px; }
-  section.advantages .checkmark-table {
-    margin-bottom: 80px; }
-    section.advantages .checkmark-table th {
-      text-align: center;
-      font-size: 24px;
-      font-style: italic;
-      color: #4b99fd;
-      padding: 0 20px 55px 20px; }
-    section.advantages .checkmark-table tbody tr:nth-child(odd) {
-      background: #f2f2f2; }
-    section.advantages .checkmark-table tbody tr:nth-child(even) {
-      background: #fafafa; }
-    section.advantages .checkmark-table tbody tr td {
-      font-size: 15px;
-      color: #000;
-      line-height: 24px;
-      font-weight: 300;
-      height: 50px;
-      vertical-align: middle;
-      padding: 34px 30px 34px 110px;
-      width: 50%; }
-    section.advantages .checkmark-table tbody tr td:nth-child(odd) {
-      background: url("../img/icon-cancel-lg.png") no-repeat;
-      background-position: left 27px center; }
-    section.advantages .checkmark-table tbody tr td:nth-child(even) {
-      background: url("../img/icon-ok-lg.png") no-repeat;
-      background-position: left 27px center;
-      position: relative; }
-      section.advantages .checkmark-table tbody tr td:nth-child(even):before {
-        content: "";
-        width: 1px;
-        height: 78px;
-        background: #c6c7c7;
-        display: block;
-        position: absolute;
-        left: 0;
-        top: 50%;
-        -webkit-transform: translateY(-50%);
-        -moz-transform: translateY(-50%);
-        -o-transform: translateY(-50%);
-        transform: translateY(-50%); }
-
-/*# sourceMappingURL=style.css.map */

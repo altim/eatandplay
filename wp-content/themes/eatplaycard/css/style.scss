@@ -1,4 +1,4 @@
-@import url(css/reset.css);
+@import url(reset.css);
 
 // =================== MIXINS ===================
 
@@ -84,7 +84,7 @@ header {
     a.logo {
       width:394px;
       height:176px;
-      background:url('img/logo.png') no-repeat;
+      background:url('../img/logo.png') no-repeat;
       background-size:contain;
       outline:none;
       display:block;
@@ -189,7 +189,7 @@ header {
 
             @media (max-width:1350px){
               height:auto;
-              background:url('img/menu-arrow-down.png') no-repeat;
+              background:url('../img/menu-arrow-down.png') no-repeat;
               background-position:right 10px top 15px;
             }
 
@@ -201,7 +201,7 @@ header {
               position:absolute;
               left:50%;
               top:32px;
-              background:url('img/menu-arrow-down.png');
+              background:url('../img/menu-arrow-down.png');
               @include transform(translateX(-50%));
               @include transition(all .4s);
 
@@ -362,13 +362,13 @@ header {
           padding:5px;
           @include border-radius(50%);
           @include box-sizing();
-          background:#4e71a8 url('img/icon_f.png') no-repeat center center;
+          background:#4e71a8 url('../img/icon_f.png') no-repeat center center;
           background-size:auto 15px;
           display:block;
           @include transition(all .4s);
 
           &:hover {
-            background:#86a0c8 url('img/icon_f.png') no-repeat center center;
+            background:#86a0c8 url('../img/icon_f.png') no-repeat center center;
             background-size:auto 15px;
           }
 
@@ -384,13 +384,13 @@ header {
           padding:5px;
           @include border-radius(50%);
           @include box-sizing();
-          background:#1cb7eb url('img/icon_t.png') no-repeat center center;
+          background:#1cb7eb url('../img/icon_t.png') no-repeat center center;
           background-size:auto 15px;
           display:block;
           @include transition(all .4s);
 
           &:hover {
-            background:#84d6f1 url('img/icon_t.png') no-repeat center center;
+            background:#84d6f1 url('../img/icon_t.png') no-repeat center center;
             background-size:auto 15px;
           }
 
@@ -2996,7 +2996,7 @@ footer {
   height: 50px;
   width: 50px;
   margin: 32px auto 0;
-  background: url('img/back-to-top-icon.png') no-repeat center center;
+  background: url('../img/back-to-top-icon.png') no-repeat center center;
   @media(max-width:600px){
     margin-top: 10px;
   }
@@ -3083,7 +3083,82 @@ footer {
 }
 
 
+// ===================== How we're different Page =====================
 
+.checkmark-list {
+  list-style:none;
+
+  li {
+    padding-left:34px;
+    background:url('../img/icon-ok.png') no-repeat;
+    background-position:left center;
+  }
+}
+
+section.advantages {
+  margin-top:40px;
+
+  .checkmark-table {
+    margin-bottom:80px;
+
+    th {
+      text-align:center;
+      font-size:24px;
+      font-style: italic;
+      color:#4b99fd;
+      padding:0 20px 55px 20px;
+    }
+
+    tbody {
+      tr:nth-child(odd) {
+        background:#f2f2f2;
+      }
+
+      tr:nth-child(even) {
+        background:#fafafa;
+      }
+
+      tr {
+        td {
+          font-size:15px;
+          color:#000;
+          line-height:24px;
+          font-weight: 300;
+          height:50px;
+          vertical-align: middle;
+          padding:34px 30px 34px 110px;
+          width:50%;
+        }
+
+        td:nth-child(odd){
+          background:url('../img/icon-cancel-lg.png') no-repeat;
+          background-position:left 27px center;
+        }
+
+        td:nth-child(even){
+          background:url('../img/icon-ok-lg.png') no-repeat;
+          background-position:left 27px center;
+          position:relative;
+
+          &:before {
+            content:"";
+            width:1px;
+            height:78px;
+            background:#c6c7c7;
+            display:block;
+            position:absolute;
+            left:0;
+            top:50%;
+            @include transform(translateY(-50%));
+          }
+
+        }
+      }
+    }
+
+
+  }
+}
 
 
 
