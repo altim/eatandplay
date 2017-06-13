@@ -2150,6 +2150,14 @@ footer {
       #purchase .purchase-inner .confirm-order-box img {
         max-width: 100%; }
 
+.page-template-parnters-orlando .inner-page-content,
+.page-template-partners-newyork .inner-page-content {
+  padding: 80px 0 50px; }
+  @media (max-width: 600px) {
+    .page-template-parnters-orlando .inner-page-content,
+    .page-template-partners-newyork .inner-page-content {
+      padding: 50px 0 21px; } }
+
 .inner-page-content {
   width: 100%;
   background: #fff;
@@ -2189,6 +2197,10 @@ footer {
       line-height: 31px;
       font-weight: 300;
       padding-bottom: 29px; }
+      .inner-page-content .wc p + h2 {
+        padding-top: 30px; }
+      .inner-page-content .wc p strong {
+        font-weight: 400; }
     .inner-page-content .wc ul,
     .inner-page-content .wc ol {
       padding-bottom: 29px; }

@@ -17,10 +17,10 @@
     </section>
     <?php endwhile; endif; ?>
 
-    <section class="blank-1">
-        <div class="blank-1-inner">
+    <section class="inner-page-content">
+        <div class="wc">
 
-            <?php the_content(); ?>
+            <?php the_content(); endwhile; endif;  ?>
 
         </div>
     </section>
