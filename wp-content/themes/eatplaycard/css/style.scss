@@ -899,7 +899,7 @@ header {
           border-top-left-radius: 28px;
           border-bottom-left-radius: 28px;
 
-          background: #65a8fd url('img/slider-arrow-left.png') no-repeat;
+          background: #65a8fd url('../img/slider-arrow-left.png') no-repeat;
           background-position: center center;
           display: inline-block;
           @include transition(all .4s);
@@ -911,7 +911,7 @@ header {
           outline:none;
 
           &:hover {
-            background: #afcdf3 url('img/slider-arrow-left.png') no-repeat;
+            background: #afcdf3 url('../img/slider-arrow-left.png') no-repeat;
             background-position: center center;
           }
         }
@@ -925,7 +925,7 @@ header {
           border-top-right-radius: 28px;
           border-bottom-right-radius: 28px;
 
-          background: #65a8fd url('img/slider-arrow-right.png') no-repeat;
+          background: #65a8fd url('../img/slider-arrow-right.png') no-repeat;
           background-position: center center;
           display: inline-block;
           @include transition(all .4s);
@@ -938,7 +938,7 @@ header {
 
 
           &:hover {
-            background: #afcdf3 url('img/slider-arrow-right.png') no-repeat;
+            background: #afcdf3 url('../img/slider-arrow-right.png') no-repeat;
             background-position: center center;
           }
         }
@@ -1435,7 +1435,7 @@ footer {
       input[type=email]{
         @include border-radius(28px);
         border:none;
-        padding:21px 35px;
+        padding:19px 35px;
         background:#fff;
         color:#000;
         display:block;
@@ -1445,6 +1445,7 @@ footer {
         max-width:350px;
         width:100%;
         outline:none;
+        font-size: 15px;
 
         @media(max-width:1200px){
           margin:auto;
@@ -3108,6 +3109,16 @@ footer {
     padding-left:34px;
     background:url('../img/icon-ok.png') no-repeat;
     background-position:left center;
+  }
+}
+
+.page-template-why-we-are-different {
+  & .inner-page-content .wc {
+    & ul li {
+      padding-left:34px;
+      background:url('../img/icon-ok.png') no-repeat;
+      background-position:left center;
+    }
   }
 }
 

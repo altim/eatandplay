@@ -37,7 +37,7 @@
 
                 <p><strong>Orlando</strong> can be expensive and dining is often a visitor’s single biggest expense. There’s no better or easier way to save in Orlando than Eat and Play Card – especially if you’re staying in an off-Disney property hotel, it’s your answer to a family dining plan…  <a href="#">Learn More</a></p>
 
-                <a href="#" class="btn">Get this card</a>
+                <a href="" class="btn">Get this card</a>
             </div>
 
             <div class="card card-right">
@@ -157,7 +157,7 @@
 
             </div>
 
-            <a href="#" class="btn">How we are different</a>
+            <a href="/how-were-different/" class="btn">How we are different</a>
 
         </div>
     </section>

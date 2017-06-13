@@ -64,8 +64,8 @@
                     <li><img src="<?php echo get_template_directory_uri(); ?>/img/payment-visa.jpg" alt="Visa" /></li>
                     <li><img src="<?php echo get_template_directory_uri(); ?>/img/payment-mastercard.jpg" alt="Mastercard" /></li>
                     <li><img src="<?php echo get_template_directory_uri(); ?>/img/payment-bambora.jpg" alt="Bambora" /></li>
-                    <li><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/google-play.png" alt="Google Play" /></a></li>
-                    <li><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/apple-store.png" alt="Apple Store" /></a></li>
+                    <li><a target="_blank" href="https://play.google.com/store/apps/details?id=com.favequest.mea.eat_and_play_card&hl=en"><img src="<?php echo get_template_directory_uri(); ?>/img/google-play.png" alt="Google Play" /></a></li>
+                    <li><a target="_blank"  href="https://itunes.apple.com/us/app/eat-and-play-card/id913039433?ls=1&mt=8"><img src="<?php echo get_template_directory_uri(); ?>/img/apple-store.png" alt="Apple Store" /></a></li>
                 </ul>
             </div>
         </div>
