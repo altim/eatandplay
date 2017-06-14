@@ -1723,6 +1723,7 @@ footer {
         outline: none; }
       #purchase .purchase-inner .dropdown .dropdown-menu-wrapper {
         z-index: 1;
+        background: #3d3c3c;
         position: absolute;
         top: 29px;
         left: 0;
