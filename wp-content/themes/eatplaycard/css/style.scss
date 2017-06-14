@@ -2408,10 +2408,10 @@ footer {
           }
 
           &:hover {
-            background:#3d3c3c url('../img/arrow-down-dropdown.png') no-repeat;
-            background-position:right 25px center;
+            background:#3d3c3c url('../img/arrow-down-dropdown.png') right 25px center no-repeat;
           }
         }
+
 
         .btn-dropdown-close {
           background:url('../img/arrow-up-dropdown.png') no-repeat;
@@ -2673,6 +2673,14 @@ footer {
               background-position:right 25px center;
             }
           }
+
+          &.selected {
+            background:url('../img/icon-orange-plus.png') right 25px center no-repeat,
+            url('../img/icon-orange-checkmark.png') left 23px center no-repeat,
+            #000;
+
+          }
+
         }
       }
 

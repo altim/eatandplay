@@ -133,7 +133,7 @@ jQuery(document).ready(function($) {
         if(!$(this).hasClass('btn-dropdown-close')) {
             $(this).parent().parent().parent().find('.btn-dropdown').html(selectedItem);
         }
-        $(this).parent().parent().parent().removeClass('open');
+        $(this).parent().parent().parent().removeClass('open').addClass('selected');
         $(this).parent().parent().slideUp(400,'swing');
     });
 
@@ -156,7 +156,7 @@ jQuery(document).ready(function($) {
     $('.option .btn-choose').on('click',function(e){
        e.preventDefault();
        $(this).parent().parent().slideUp(400,'swing');
-       $(this).parent().parent().parent().find('.btn-delivery').removeClass('open');
+       $(this).parent().parent().parent().find('.btn-delivery').removeClass('open').addClass('selected');
     });
 
     $('.back-to-top').on('click',function(e){
