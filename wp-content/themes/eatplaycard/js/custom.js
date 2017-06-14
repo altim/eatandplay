@@ -117,10 +117,10 @@ jQuery(document).ready(function($) {
             $(this).parent().find('.btn-dropdown').css({'z-index' : 12});
             $(this).css({'z-index' : 11});
 
-            $(this).parent().addClass('open').find('.dropdown-menu').slideDown(400, 'swing');
+            $(this).parent().addClass('open').find('.dropdown-menu-wrapper').slideDown(400, 'swing');
         }
         else {
-            $(this).parent().removeClass('open').find('.dropdown-menu').slideUp(400, 'swing', function(){
+            $(this).parent().removeClass('open').find('.dropdown-menu-wrapper').slideUp(400, 'swing', function(){
                 $(this).parent().find('.btn-dropdown').css({'z-index' : 2});
                 $(this).css({'z-index' : 1});
             });
@@ -131,10 +131,10 @@ jQuery(document).ready(function($) {
         e.preventDefault();
         var selectedItem = $(this).html();
         if(!$(this).hasClass('btn-dropdown-close')) {
-            $(this).parent().parent().parent().find('.btn-dropdown').html(selectedItem);
+            $(this).parent().parent().parent().parent().find('.btn-dropdown').html(selectedItem);
         }
-        $(this).parent().parent().parent().removeClass('open').addClass('selected');
-        $(this).parent().parent().slideUp(400,'swing');
+        $(this).parent().parent().parent().parent().removeClass('open').addClass('selected');
+        $(this).parent().parent().parent().slideUp(400,'swing');
     });
 
 

@@ -1721,14 +1721,12 @@ footer {
         position: relative;
         z-index: 2;
         outline: none; }
-      #purchase .purchase-inner .dropdown .dropdown-menu {
+      #purchase .purchase-inner .dropdown .dropdown-menu-wrapper {
         z-index: 1;
-        background: #3d3c3c;
         position: absolute;
         top: 29px;
         left: 0;
         width: 100%;
-        padding-top: 39px;
         -webkit-border-bottom-right-radius: 29px;
         -webkit-border-bottom-left-radius: 29px;
         -moz-border-radius-bottomright: 29px;
@@ -1737,20 +1735,22 @@ footer {
         border-bottom-left-radius: 29px;
         display: none;
         text-align: center; }
-        #purchase .purchase-inner .dropdown .dropdown-menu li {
-          height: 40px; }
-          #purchase .purchase-inner .dropdown .dropdown-menu li a {
-            line-height: 40px;
-            color: #fff;
-            text-decoration: none;
-            display: block;
-            -webkit-transition: all 0.4s;
-            -moz-transition: all 0.4s;
-            -o-transition: all 0.4s;
-            transition: all 0.4s;
-            font-weight: 300; }
-            #purchase .purchase-inner .dropdown .dropdown-menu li a:hover {
-              color: #4e9bfd; }
+        #purchase .purchase-inner .dropdown .dropdown-menu-wrapper .dropdown-menu {
+          margin-top: 39px; }
+          #purchase .purchase-inner .dropdown .dropdown-menu-wrapper .dropdown-menu li {
+            height: 40px; }
+            #purchase .purchase-inner .dropdown .dropdown-menu-wrapper .dropdown-menu li a {
+              line-height: 40px;
+              color: #fff;
+              text-decoration: none;
+              display: block;
+              -webkit-transition: all 0.4s;
+              -moz-transition: all 0.4s;
+              -o-transition: all 0.4s;
+              transition: all 0.4s;
+              font-weight: 300; }
+              #purchase .purchase-inner .dropdown .dropdown-menu-wrapper .dropdown-menu li a:hover {
+                color: #4e9bfd; }
     #purchase .purchase-inner .select-card-box {
       width: 295px;
       margin: auto; }
@@ -1913,33 +1913,39 @@ footer {
           #purchase .purchase-inner .customer-info-box .dropdown-select-country .btn:hover {
             background: #cdcdcd url("../img/arrow-down-2-dropdown.png") no-repeat;
             background-position: right 25px center; }
-        #purchase .purchase-inner .customer-info-box .dropdown-select-country .dropdown-menu {
+        #purchase .purchase-inner .customer-info-box .dropdown-select-country .dropdown-menu-wrapper {
           background: #f3f2f2;
-          max-height: 200px;
-          overflow-x: auto; }
-          #purchase .purchase-inner .customer-info-box .dropdown-select-country .dropdown-menu li a {
-            color: #000;
-            font-size: 16px;
-            font-weight: 300;
-            -webkit-transition: all 0.4s;
-            -moz-transition: all 0.4s;
-            -o-transition: all 0.4s;
-            transition: all 0.4s;
-            outline: none; }
-            #purchase .purchase-inner .customer-info-box .dropdown-select-country .dropdown-menu li a:hover {
-              color: #4e9afd; }
-          #purchase .purchase-inner .customer-info-box .dropdown-select-country .dropdown-menu .btn-dropdown-close {
-            background: url("../img/arrow-up-2-dropdown.png") no-repeat;
-            background-position: center center;
-            display: block;
-            height: 40px;
-            width: 100%;
-            -webkit-transition: all 0.4s;
-            -moz-transition: all 0.4s;
-            -o-transition: all 0.4s;
-            transition: all 0.4s; }
-            #purchase .purchase-inner .customer-info-box .dropdown-select-country .dropdown-menu .btn-dropdown-close:hover {
-              background-position: center top 10px; }
+          padding: 0 20px 20px 20px;
+          -webkit-box-sizing: border-box;
+          -moz-box-sizing: border-box;
+          box-sizing: border-box; }
+          #purchase .purchase-inner .customer-info-box .dropdown-select-country .dropdown-menu-wrapper .dropdown-menu {
+            background: #f3f2f2;
+            max-height: 200px;
+            overflow-x: auto; }
+            #purchase .purchase-inner .customer-info-box .dropdown-select-country .dropdown-menu-wrapper .dropdown-menu li a {
+              color: #000;
+              font-size: 16px;
+              font-weight: 300;
+              -webkit-transition: all 0.4s;
+              -moz-transition: all 0.4s;
+              -o-transition: all 0.4s;
+              transition: all 0.4s;
+              outline: none; }
+              #purchase .purchase-inner .customer-info-box .dropdown-select-country .dropdown-menu-wrapper .dropdown-menu li a:hover {
+                color: #4e9afd; }
+            #purchase .purchase-inner .customer-info-box .dropdown-select-country .dropdown-menu-wrapper .dropdown-menu .btn-dropdown-close {
+              background: url("../img/arrow-up-2-dropdown.png") no-repeat;
+              background-position: center center;
+              display: block;
+              height: 40px;
+              width: 100%;
+              -webkit-transition: all 0.4s;
+              -moz-transition: all 0.4s;
+              -o-transition: all 0.4s;
+              transition: all 0.4s; }
+              #purchase .purchase-inner .customer-info-box .dropdown-select-country .dropdown-menu-wrapper .dropdown-menu .btn-dropdown-close:hover {
+                background-position: center top 10px; }
     #purchase .purchase-inner .delivery-box h2 {
       font-size: 40px;
       font-weight: 200;
@@ -2093,33 +2099,39 @@ footer {
           #purchase .purchase-inner .credit-card-info .dropdown .btn:hover {
             background: #cdcdcd url("../img/arrow-down-2-dropdown.png") no-repeat;
             background-position: right 25px center; }
-        #purchase .purchase-inner .credit-card-info .dropdown .dropdown-menu {
+        #purchase .purchase-inner .credit-card-info .dropdown .dropdown-menu-wrapper {
           background: #f3f2f2;
-          max-height: 200px;
-          overflow-x: auto; }
-          #purchase .purchase-inner .credit-card-info .dropdown .dropdown-menu li a {
-            color: #000;
-            font-size: 16px;
-            font-weight: 300;
-            -webkit-transition: all 0.4s;
-            -moz-transition: all 0.4s;
-            -o-transition: all 0.4s;
-            transition: all 0.4s;
-            outline: none; }
-            #purchase .purchase-inner .credit-card-info .dropdown .dropdown-menu li a:hover {
-              color: #4e9afd; }
-          #purchase .purchase-inner .credit-card-info .dropdown .dropdown-menu .btn-dropdown-close {
-            background: url("../img/arrow-up-2-dropdown.png") no-repeat;
-            background-position: center center;
-            display: block;
-            height: 40px;
-            width: 100%;
-            -webkit-transition: all 0.4s;
-            -moz-transition: all 0.4s;
-            -o-transition: all 0.4s;
-            transition: all 0.4s; }
-            #purchase .purchase-inner .credit-card-info .dropdown .dropdown-menu .btn-dropdown-close:hover {
-              background-position: center top 10px; }
+          padding: 0 20px 20px 20px;
+          -webkit-box-sizing: border-box;
+          -moz-box-sizing: border-box;
+          box-sizing: border-box; }
+          #purchase .purchase-inner .credit-card-info .dropdown .dropdown-menu-wrapper .dropdown-menu {
+            background: #f3f2f2;
+            max-height: 200px;
+            overflow-x: auto; }
+            #purchase .purchase-inner .credit-card-info .dropdown .dropdown-menu-wrapper .dropdown-menu li a {
+              color: #000;
+              font-size: 16px;
+              font-weight: 300;
+              -webkit-transition: all 0.4s;
+              -moz-transition: all 0.4s;
+              -o-transition: all 0.4s;
+              transition: all 0.4s;
+              outline: none; }
+              #purchase .purchase-inner .credit-card-info .dropdown .dropdown-menu-wrapper .dropdown-menu li a:hover {
+                color: #4e9afd; }
+            #purchase .purchase-inner .credit-card-info .dropdown .dropdown-menu-wrapper .dropdown-menu .btn-dropdown-close {
+              background: url("../img/arrow-up-2-dropdown.png") no-repeat;
+              background-position: center center;
+              display: block;
+              height: 40px;
+              width: 100%;
+              -webkit-transition: all 0.4s;
+              -moz-transition: all 0.4s;
+              -o-transition: all 0.4s;
+              transition: all 0.4s; }
+              #purchase .purchase-inner .credit-card-info .dropdown .dropdown-menu-wrapper .dropdown-menu .btn-dropdown-close:hover {
+                background-position: center top 10px; }
     #purchase .purchase-inner .confirm-order-box {
       padding: 0 0 0 0;
       text-align: center; }

@@ -41,11 +41,13 @@
             <div class="select-card-box">
                 <div class="dropdown dropdown-select-card">
                     <a href="#" class="btn btn-dropdown">Select a card</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">Orlando</a></li>
-                        <li><a href="#">New York</a></li>
-                        <li><a href="#" class="btn-dropdown-close"></a></li>
-                    </ul>
+                    <div class="dropdown-menu-wrapper">
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Orlando</a></li>
+                            <li><a href="#">New York</a></li>
+                            <li><a href="#" class="btn-dropdown-close"></a></li>
+                        </ul>
+                    </div>
                 </div>
 
                 <input type="text" class="input" name="quantity" value="1"><p>QTY.</p>
@@ -65,13 +67,223 @@
 
                     <div class="dropdown dropdown-select-country">
                         <a href="#" class="btn btn-dropdown">Select Country</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Country 1</a></li>
-                            <li><a href="#">Country 2</a></li>
-                            <li><a href="#">Country 3</a></li>
-                            <li><a href="#" class="btn-dropdown-close"></a></li>
-                        </ul>
-                    </div>
+                        <div class="dropdown-menu-wrapper">
+                            <ul class="dropdown-menu">
+                                <li data-value="US"><a href="#">USA</a></li>
+                                <li data-value="GB"><a href="#">United Kingdom</a></li>
+                                <li data-value="CA"><a href="#">Canada</a></li>
+                                <li data-value="AF"><a href="#">Afghanistan</a></li>
+                                <li data-value="AL"><a href="#">Albania</a></li>
+                                <li data-value="DZ"><a href="#">Algeria</a></li>
+                                <li data-value="AS"><a href="#">American Samoa</a></li>
+                                <li data-value="AD"><a href="#">Andorra</a></li>
+                                <li data-value="AO"><a href="#">Angola</a></li>
+                                <li data-value="AI"><a href="#">Anguilla</a></li>
+                                <li data-value="AG"><a href="#">Antigua</a></li>
+                                <li data-value="AR"><a href="#">Argentina</a></li>
+                                <li data-value="AM"><a href="#">Armenia</a></li>
+                                <li data-value="AW"><a href="#">Aruba</a></li>
+                                <li data-value="AU"><a href="#">Australia</a></li>
+                                <li data-value="AT"><a href="#">Austria</a></li>
+                                <li data-value="AZ"><a href="#">Azerbaijan</a></li>
+                                <li data-value="BS"><a href="#">Bahamas</a></li>
+                                <li data-value="BH"><a href="#">Bahrain</a></li>
+                                <li data-value="BD"><a href="#">Bangladesh</a></li>
+                                <li data-value="BB"><a href="#">Barbados</a></li>
+                                <li data-value="BY"><a href="#">Belarus</a></li>
+                                <li data-value="BE"><a href="#">Belgium</a></li>
+                                <li data-value="BZ"><a href="#">Belize</a></li>
+                                <li data-value="BJ"><a href="#">Benin</a></li>
+                                <li data-value="BM"><a href="#">Bermuda</a></li>
+                                <li data-value="BT"><a href="#">Bhutan</a></li>
+                                <li data-value="BO"><a href="#">Bolivia</a></li>
+                                <li data-value="BA"><a href="#">Bosnia</a></li>
+                                <li data-value="BW"><a href="#">Botswana</a></li>
+                                <li data-value="BR"><a href="#">Brazil</a></li>
+                                <li data-value="BN"><a href="#">Brunei Darussalam</a></li>
+                                <li data-value="BG"><a href="#">Bulgaria</a></li>
+                                <li data-value="BF"><a href="#">Burkina Faso</a></li>
+                                <li data-value="BI"><a href="#">Burundi</a></li>
+                                <li data-value="KH"><a href="#">Cambodia</a></li>
+                                <li data-value="Cameroon"><a href="#">Cameroon</a></li>
+                                <li data-value="CV"><a href="#">Cape Verde</a></li>
+                                <li data-value="CF"><a href="#">Central African Republic</a></li>
+                                <li data-value="TD"><a href="#">Chad</a></li>
+                                <li data-value="CL"><a href="#">Chile</a></li>
+                                <li data-value="CN"><a href="#">China</a></li>
+                                <li data-value="CO"><a href="#">Colombia</a></li>
+                                <li data-value="KM"><a href="#">Comoros</a></li>
+                                <li data-value="CG"><a href="#">Congo</a></li>
+                                <li data-value="CR"><a href="#">Costa Rica</a></li>
+                                <li data-value="HR"><a href="#">Croatia</a></li>
+                                <li data-value="CU"><a href="#">Cuba</a></li>
+                                <li data-value="CY"><a href="#">Cyprus</a></li>
+                                <li data-value="CZ"><a href="#">Czech Republic</a></li>
+                                <li data-value="DK"><a href="#">Denmark</a></li>
+                                <li data-value="DJ"><a href="#">Djibouti</a></li>
+                                <li data-value="DM"><a href="#">Dominica</a></li>
+                                <li data-value="DO"><a href="#">Dominican Republic</a></li>
+                                <li data-value="TL"><a href="#">East Timor</a></li>
+                                <li data-value="EC"><a href="#">Ecuador</a></li>
+                                <li data-value="EG"><a href="#">Egypt</a></li>
+                                <li data-value="SV"><a href="#">El Salvador</a></li>
+                                <li data-value="GQ"><a href="#">Equatorial Guina</a></li>
+                                <li data-value="ER"><a href="#">Eritrea</a></li>
+                                <li data-value="EE"><a href="#">Estonia</a></li>
+                                <li data-value="ET"><a href="#">Ethiopia</a></li>
+                                <li data-value="FO"><a href="#">Faroe Islands</a></li>
+                                <li data-value="FJ"><a href="#">Fiji</a></li>
+                                <li data-value="FI"><a href="#">Finland</a></li>
+                                <li data-value="FR"><a href="#">France</a></li>
+                                <li data-value="GF"><a href="#">Fench Guiana</a></li>
+                                <li data-value="FM"><a href="#">French Metropolitan</a></li>
+                                <li data-value="PF"><a href="#">French Polynesia</a></li>
+                                <li data-value="GA"><a href="#">Gabon</a></li>
+                                <li data-value="GM"><a href="#">Gambia</a></li>
+                                <li data-value="GE"><a href="#">Georgia</a></li>
+                                <li data-value="DE"><a href="#">Germany</a></li>
+                                <li data-value="GH"><a href="#">Ghana</a></li>
+                                <li data-value="GR"><a href="#">Greece</a></li>
+                                <li data-value="GL"><a href="#">Greenland</a></li>
+                                <li data-value="GD"><a href="#">Grenada</a></li>
+                                <li data-value="GP"><a href="#">Guadeloupe</a></li>
+                                <li data-value="GU"><a href="#">Guam</a></li>
+                                <li data-value="GT"><a href="#">Guatemala</a></li>
+                                <li data-value="GN"><a href="#">Guinea</a></li>
+                                <li data-value="GW"><a href="#">Guinea-Bissau</a></li>
+                                <li data-value="GY"><a href="#">Guyana</a></li>
+                                <li data-value="HT"><a href="#">Haiti</a></li>
+                                <li data-value="HS"><a href="#">Holy See</a></li>
+                                <li data-value="HN"><a href="#">Honduras</a></li>
+                                <li data-value="HK"><a href="#">Hong Kong</a></li>
+                                <li data-value="HU"><a href="#">Hungary</a></li>
+                                <li data-value="IS"><a href="#">Iceland</a></li>
+                                <li data-value="IN"><a href="#">India</a></li>
+                                <li data-value="ID"><a href="#">Indonesia</a></li>
+                                <li data-value="IR"><a href="#">Iran</a></li>
+                                <li data-value="IQ"><a href="#">Iraq</a></li>
+                                <li data-value="IE"><a href="#">Ireland</a></li>
+                                <li data-value="IL"><a href="#">Israel</a></li>
+                                <li data-value="IT"><a href="#">Italy</a></li>
+                                <li data-value="JM"><a href="#">Jamaica</a></li>
+                                <li data-value="JP"><a href="#">Japan</a></li>
+                                <li data-value="JO"><a href="#">Jordan</a></li>
+                                <li data-value="KZ"><a href="#">Kazakhstan</a></li>
+                                <li data-value="KE"><a href="#">Kenya</a></li>
+                                <li data-value="KI"><a href="#">Kiribati</a></li>
+                                <li data-value="KR"><a href="#">Korea</a></li>
+                                <li data-value="KW"><a href="#">Kuwait</a></li>
+                                <li data-value="KG"><a href="#">Kyrgyzstan</a></li>
+                                <li data-value="LA"><a href="#">Laos</a></li>
+                                <li data-value="LV"><a href="#">Latvia</a></li>
+                                <li data-value="LB"><a href="#">Lebanon</a></li>
+                                <li data-value="LS"><a href="#">Lesotho</a></li>
+                                <li data-value="LR"><a href="#">Liberia</a></li>
+                                <li data-value="LY"><a href="#">Libya</a></li>
+                                <li data-value="LI"><a href="#">Liechtenstein</a></li>
+                                <li data-value="LT"><a href="#">Lithuania</a></li>
+                                <li data-value="LU"><a href="#">Luxembourg</a></li>
+                                <li data-value="MO"><a href="#">Macau</a></li>
+                                <li data-value="MK"><a href="#">Macedonia</a></li>
+                                <li data-value="MG"><a href="#">Madagascar</a></li>
+                                <li data-value="MW"><a href="#">Malawi</a></li>
+                                <li data-value="MY"><a href="#">Malaysia</a></li>
+                                <li data-value="MV"><a href="#">Maldives</a></li>
+                                <li data-value="ML"><a href="#">Mali</a></li>
+                                <li data-value="MT"><a href="#">Malta</a></li>
+                                <li data-value="MH"><a href="#">Marshall Islands</a></li>
+                                <li data-value="MQ"><a href="#">Martinique</a></li>
+                                <li data-value="MR"><a href="#">Mauritania</a></li>
+                                <li data-value="MU"><a href="#">Mauritius</a></li>
+                                <li data-value="MX"><a href="#">Mexico</a></li>
+                                <li data-value="FM"><a href="#">Micronesia</a></li>
+                                <li data-value="MD"><a href="#">Moldova</a></li>
+                                <li data-value="MC"><a href="#">Monaco</a></li>
+                                <li data-value="MN"><a href="#">Mongolia</a></li>
+                                <li data-value="MS"><a href="#">Montenegro</a></li>
+                                <li data-value="MS"><a href="#">Montserrat</a></li>
+                                <li data-value="MA"><a href="#">Morocco</a></li>
+                                <li data-value="MZ"><a href="#">Mozambique</a></li>
+                                <li data-value="MM"><a href="#">Myanmar</a></li>
+                                <li data-value="NA"><a href="#">Namibia</a></li>
+                                <li data-value="NR"><a href="#">Nauru</a></li>
+                                <li data-value="NP"><a href="#">Nepal</a></li>
+                                <li data-value="NL"><a href="#">Netherlands</a></li>
+                                <li data-value="NC"><a href="#">New Caledonia</a></li>
+                                <li data-value="NZ"><a href="#">New Zealand</a></li>
+                                <li data-value="NI"><a href="#">Nicaragua</a></li>
+                                <li data-value="NE"><a href="#">Niger</a></li>
+                                <li data-value="NG"><a href="#">Nigeria</a></li>
+                                <li data-value="MP"><a href="#">Northern Mariana Islands</a></li>
+                                <li data-value="NO"><a href="#">Norway</a></li>
+                                <li data-value="OM"><a href="#">Oman</a></li>
+                                <li data-value="PK"><a href="#">Pakistan</a></li>
+                                <li data-value="PW"><a href="#">Palau</a></li>
+                                <li data-value="PA"><a href="#">Panama</a></li>
+                                <li data-value="PG"><a href="#">Papua New Guinea</a></li>
+                                <li data-value="PY"><a href="#">Paraguay</a></li>
+                                <li data-value="PE"><a href="#">Peru</a></li>
+                                <li data-value="PH"><a href="#">Philippines</a></li>
+                                <li data-value="PN"><a href="#">Pitcairn Island</a></li>
+                                <li data-value="PL"><a href="#">Poland</a></li>
+                                <li data-value="PT"><a href="#">Portugal</a></li>
+                                <li data-value="PR"><a href="#">Puerto Rico</a></li>
+                                <li data-value="QA"><a href="#">Qatar</a></li>
+                                <li data-value="RE"><a href="#">Reunion Island</a></li>
+                                <li data-value="RO"><a href="#">Romania</a></li>
+                                <li data-value="RU"><a href="#">Russia</a></li>
+                                <li data-value="RW"><a href="#">Rwanda</a></li>
+                                <li data-value="KN"><a href="#">Saint Kitts</a></li>
+                                <li data-value="LC"><a href="#">Saint Lucia</a></li>
+                                <li data-value="VC"><a href="#">Saint Vincent</a></li>
+                                <li data-value="WS"><a href="#">Samoa</a></li>
+                                <li data-value="SM"><a href="#">San Marino</a></li>
+                                <li data-value="ST"><a href="#">Sao Tome</a></li>
+                                <li data-value="SA"><a href="#">Saudi Arabia</a></li>
+                                <li data-value="SN"><a href="#">Senegal</a></li>
+                                <li data-value="CS"><a href="#">Serbia</a></li>
+                                <li data-value="SC"><a href="#">Seychelles</a></li>
+                                <li data-value="SL"><a href="#">Sierra Leone</a></li>
+                                <li data-value="SG"><a href="#">Singapore</a></li>
+                                <li data-value="SK"><a href="#">Slovakia</a></li>
+                                <li data-value="SB"><a href="#">Solomon Islands</a></li>
+                                <li data-value="SO"><a href="#">Somalia</a></li>
+                                <li data-value="ZA"><a href="#">South Africa</a></li>
+                                <li data-value="ES"><a href="#">Spain</a></li>
+                                <li data-value="LK"><a href="#">Sri Lanka</a></li>
+                                <li data-value="SD"><a href="#">Sudan</a></li>
+                                <li data-value="SR"><a href="#">Suriname</a></li>
+                                <li data-value="SZ"><a href="#">Swaziland</a></li>
+                                <li data-value="SE"><a href="#">Sweden</a></li>
+                                <li data-value="CH"><a href="#">Switzerland</a></li>
+                                <li data-value="SY"><a href="#">Syria</a></li>
+                                <li data-value="TW"><a href="#">Taiwan</a></li>
+                                <li data-value="TJ"><a href="#">Tajikistan</a></li>
+                                <li data-value="TZ"><a href="#">Tanzania</a></li>
+                                <li data-value="TH"><a href="#">Thailand</a></li>
+                                <li data-value="TG"><a href="#">Togo</a></li>
+                                <li data-value="TO"><a href="#">Tonga</a></li>
+                                <li data-value="TT"><a href="#">Trinidad</a></li>
+                                <li data-value="TN"><a href="#">Tunisia</a></li>
+                                <li data-value="TR"><a href="#">Turkey</a></li>
+                                <li data-value="TM"><a href="#">Turkmenistan</a></li>
+                                <li data-value="TV"><a href="#">Tuvalu</a></li>
+                                <li data-value="UG"><a href="#">Uganda</a></li>
+                                <li data-value="UA"><a href="#">Ukraine</a></li>
+                                <li data-value="AE"><a href="#">United Arab Emriates</a></li>
+                                <li data-value="UY"><a href="#">Uruguay</a></li>
+                                <li data-value="UZ"><a href="#">Uzbekistan</a></li>
+                                <li data-value="VU"><a href="#">Vanuatu</a></li>
+                                <li data-value="VE"><a href="#">Venezuela</a></li>
+                                <li data-value="VN"><a href="#">Vietnam</a></li>
+                                <li data-value="VG"><a href="#">Virgin Islands(British)</a></li>
+                                <li data-value="VI"><a href="#">Virgin Islands(US)</a></li>
+                                <li data-value="YE"><a href="#">Yemen</a></li>
+                                <li data-value="ZM"><a href="#">Zambia</a></li>
+                                <li data-value="ZW"><a href="#">Zimbabwe</a></li>
+                            </ul>
+                        </div>
+                </div>
                     <input type="text" class="input input-1-3" placeholder="State / Province" />
                     <input type="text" class="input input-1-3 no-margin" placeholder="Zip / Postal" />
 
@@ -131,34 +343,64 @@
                 <div class="credit-card-form">
                     <div class="dropdown dropdown-select-credit-card">
                         <a href="#" class="btn btn-dropdown">Select Credit Card</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Visa</a></li>
-                            <li><a href="#">Master Card</a></li>
-                            <li><a href="#">Card 3</a></li>
-                            <li><a href="#" class="btn-dropdown-close"></a></li>
-                        </ul>
+                        <div class="dropdown-menu-wrapper">
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Visa</a></li>
+                                <li><a href="#">Master Card</a></li>
+<!--                                <li><a href="#" class="btn-dropdown-close"></a></li>-->
+                            </ul>
+                        </div>
                     </div>
 
                     <div class="dropdown dropdown-select-expiry-month">
                         <a href="#" class="btn btn-dropdown">Expiry Month</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">01</a></li>
-                            <li><a href="#">02</a></li>
-                            <li><a href="#">03</a></li>
-                            <li><a href="#">04</a></li>
-                            <li><a href="#" class="btn-dropdown-close"></a></li>
-                        </ul>
+                        <div class="dropdown-menu-wrapper">
+                            <ul class="dropdown-menu">
+                                <li><a href="#">01</a></li>
+                                <li><a href="#">02</a></li>
+                                <li><a href="#">03</a></li>
+                                <li><a href="#">04</a></li>
+                                <li><a href="#">05</a></li>
+                                <li><a href="#">06</a></li>
+                                <li><a href="#">07</a></li>
+                                <li><a href="#">08</a></li>
+                                <li><a href="#">09</a></li>
+                                <li><a href="#">10</a></li>
+                                <li><a href="#">11</a></li>
+                                <li><a href="#">12</a></li>
+<!--                                <li><a href="#" class="btn-dropdown-close"></a></li>-->
+                            </ul>
+                        </div>
                     </div>
 
                     <div class="dropdown dropdown-select-expiry-year no-margin">
                         <a href="#" class="btn btn-dropdown">Expiry Year</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">2017</a></li>
-                            <li><a href="#">2018</a></li>
-                            <li><a href="#">2019</a></li>
-                            <li><a href="#">2020</a></li>
-                            <li><a href="#" class="btn-dropdown-close"></a></li>
-                        </ul>
+                        <div class="dropdown-menu-wrapper">
+                            <ul class="dropdown-menu">
+                                <li><a href="#">2017</a></li>
+                                <li><a href="#">2018</a></li>
+                                <li><a href="#">2019</a></li>
+                                <li><a href="#">2020</a></li>
+                                <li><a href="#">2021</a></li>
+                                <li><a href="#">2022</a></li>
+                                <li><a href="#">2023</a></li>
+                                <li><a href="#">2024</a></li>
+                                <li><a href="#">2025</a></li>
+                                <li><a href="#">2026</a></li>
+                                <li><a href="#">2027</a></li>
+                                <li><a href="#">2028</a></li>
+                                <li><a href="#">2029</a></li>
+                                <li><a href="#">2030</a></li>
+                                <li><a href="#">2031</a></li>
+                                <li><a href="#">2032</a></li>
+                                <li><a href="#">2033</a></li>
+                                <li><a href="#">2034</a></li>
+                                <li><a href="#">2035</a></li>
+                                <li><a href="#">2036</a></li>
+                                <li><a href="#">2037</a></li>
+<!--                                <li><a href="#" class="btn-dropdown-close"></a></li>-->
+                            </ul>
+                        </div>
                     </div>
 
 
