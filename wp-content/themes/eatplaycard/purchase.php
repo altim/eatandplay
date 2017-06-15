@@ -67,7 +67,7 @@
                     <input type="text" name="address2" class="input input-1-3" placeholder="Address #2" />
                     <input type="text" name="city" class="input input-1-3 no-margin" placeholder="City" />
 
-                    <div class="dropdown dropdown-select-country">
+                    <div class="dropdown dropdown-select-country" data-selected="">
                         <a href="#" class="btn btn-dropdown">Select Country</a>
                         <div class="dropdown-menu-wrapper">
                             <ul class="dropdown-menu">
@@ -343,63 +343,63 @@
                 <h2>Credit Card Information</h2>
 
                 <div class="credit-card-form">
-                    <div class="dropdown dropdown-select-credit-card">
+                    <div class="dropdown dropdown-select-credit-card" data-selected="">
                         <a href="#" class="btn btn-dropdown">Select Credit Card</a>
                         <div class="dropdown-menu-wrapper">
                             <ul class="dropdown-menu">
-                                <li><a href="#">Visa</a></li>
-                                <li><a href="#">MasterCard</a></li>
+                                <li data-value="Visa"><a href="#">Visa</a></li>
+                                <li data-value="MasterCard"><a href="#">MasterCard</a></li>
 <!--                                <li><a href="#" class="btn-dropdown-close"></a></li>-->
                             </ul>
                         </div>
                     </div>
 
-                    <div class="dropdown dropdown-select-expiry-month">
+                    <div class="dropdown dropdown-select-expiry-month" data-selected="">
                         <a href="#" class="btn btn-dropdown">Expiry Month</a>
                         <div class="dropdown-menu-wrapper">
                             <ul class="dropdown-menu">
-                                <li><a href="#">01</a></li>
-                                <li><a href="#">02</a></li>
-                                <li><a href="#">03</a></li>
-                                <li><a href="#">04</a></li>
-                                <li><a href="#">05</a></li>
-                                <li><a href="#">06</a></li>
-                                <li><a href="#">07</a></li>
-                                <li><a href="#">08</a></li>
-                                <li><a href="#">09</a></li>
-                                <li><a href="#">10</a></li>
-                                <li><a href="#">11</a></li>
-                                <li><a href="#">12</a></li>
+                                <li data-value="01"><a href="#">01</a></li>
+                                <li data-value="02"><a href="#">02</a></li>
+                                <li data-value="03"><a href="#">03</a></li>
+                                <li data-value="04"><a href="#">04</a></li>
+                                <li data-value="05"><a href="#">05</a></li>
+                                <li data-value="06"><a href="#">06</a></li>
+                                <li data-value="07"><a href="#">07</a></li>
+                                <li data-value="08"><a href="#">08</a></li>
+                                <li data-value="09"><a href="#">09</a></li>
+                                <li data-value="10"><a href="#">10</a></li>
+                                <li data-value="11"><a href="#">11</a></li>
+                                <li data-value="12"><a href="#">12</a></li>
 <!--                                <li><a href="#" class="btn-dropdown-close"></a></li>-->
                             </ul>
                         </div>
                     </div>
 
-                    <div class="dropdown dropdown-select-expiry-year no-margin">
+                    <div class="dropdown dropdown-select-expiry-year no-margin" data-selected="">
                         <a href="#" class="btn btn-dropdown">Expiry Year</a>
                         <div class="dropdown-menu-wrapper">
                             <ul class="dropdown-menu">
-                                <li><a href="#">2017</a></li>
-                                <li><a href="#">2018</a></li>
-                                <li><a href="#">2019</a></li>
-                                <li><a href="#">2020</a></li>
-                                <li><a href="#">2021</a></li>
-                                <li><a href="#">2022</a></li>
-                                <li><a href="#">2023</a></li>
-                                <li><a href="#">2024</a></li>
-                                <li><a href="#">2025</a></li>
-                                <li><a href="#">2026</a></li>
-                                <li><a href="#">2027</a></li>
-                                <li><a href="#">2028</a></li>
-                                <li><a href="#">2029</a></li>
-                                <li><a href="#">2030</a></li>
-                                <li><a href="#">2031</a></li>
-                                <li><a href="#">2032</a></li>
-                                <li><a href="#">2033</a></li>
-                                <li><a href="#">2034</a></li>
-                                <li><a href="#">2035</a></li>
-                                <li><a href="#">2036</a></li>
-                                <li><a href="#">2037</a></li>
+                                <li data-value="2017"><a href="#">2017</a></li>
+                                <li data-value="2018"><a href="#">2018</a></li>
+                                <li data-value="2019"><a href="#">2019</a></li>
+                                <li data-value="2020"><a href="#">2020</a></li>
+                                <li data-value="2021"><a href="#">2021</a></li>
+                                <li data-value="2022"><a href="#">2022</a></li>
+                                <li data-value="2023"><a href="#">2023</a></li>
+                                <li data-value="2024"><a href="#">2024</a></li>
+                                <li data-value="2025"><a href="#">2025</a></li>
+                                <li data-value="2026"><a href="#">2026</a></li>
+                                <li data-value="2027"><a href="#">2027</a></li>
+                                <li data-value="2028"><a href="#">2028</a></li>
+                                <li data-value="2029"><a href="#">2029</a></li>
+                                <li data-value="2030"><a href="#">2030</a></li>
+                                <li data-value="2031"><a href="#">2031</a></li>
+                                <li data-value="2032"><a href="#">2032</a></li>
+                                <li data-value="2033"><a href="#">2033</a></li>
+                                <li data-value="2034"><a href="#">2034</a></li>
+                                <li data-value="2035"><a href="#">2035</a></li>
+                                <li data-value="2036"><a href="#">2036</a></li>
+                                <li data-value="2037"><a href="#">2037</a></li>
 <!--                                <li><a href="#" class="btn-dropdown-close"></a></li>-->
                             </ul>
                         </div>
@@ -421,8 +421,11 @@
                 <h2>Confirm order</h2>
 
                 <a href="#" class="btn btn-important btn-confirm-order">Click To Confirm Order</a><br/>
+                <div class="loader"><img src="<?php echo get_template_directory_uri(); ?>/img/loader.svg" /></div>
 
-                <div class="alert alert-danger"><p></p></div>
+                <div class="alert alert-danger">
+                    <p></p>
+                </div>
 
                 <img src="<?php echo get_template_directory_uri(); ?>/img/payment-methods-list.jpg" alt="payment methods"/>
             </div><!-- end confirm order box -->

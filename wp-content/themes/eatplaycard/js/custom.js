@@ -130,10 +130,12 @@ jQuery(document).ready(function($) {
     $('.dropdown-menu li a').on('click',function(e){
         e.preventDefault();
         var selectedItem = $(this).html();
+        var selectedValue = $(this).parent().data('value');
+
         if(!$(this).hasClass('btn-dropdown-close')) {
             $(this).parent().parent().parent().parent().find('.btn-dropdown').html(selectedItem);
         }
-        $(this).parent().parent().parent().parent().removeClass('open').addClass('selected');
+        $(this).parent().parent().parent().parent().removeClass('open').addClass('selected').attr('data-selected',selectedValue);
         $(this).parent().parent().parent().slideUp(400,'swing');
     });
 
@@ -184,21 +186,19 @@ jQuery(document).ready(function($) {
         $(".alert").removeClass("alert-success");
 
         $(".alert p").empty();
-        $(".alert p").text(message);
+        $(".alert p").html(message);
 
         setTimeout(function(){
             $(".alert").slideDown(400);
         }, 800);
 
 
-        $(component).addClass("inputError");
-        $(component).focus();
+        // $(component).addClass("inputError");
+        // $(component).focus();
 
-
-        $('html, body').animate({
-            scrollTop: $("#step2").offset().top-140
-        }, 1000);
     }
+
+
 
     function clearFieldsError ()
     {
@@ -242,7 +242,7 @@ jQuery(document).ready(function($) {
                             if (verifyFieldEmpty("input[name=city]") == true) {
 
                                 //Country Verification
-                                var selectedCountry = $(".dropdown-select-country .btn-dropdown").html();
+                                var selectedCountry = $(".dropdown-select-country").data('selected');
                                 if ( !(selectedCountry == "Select Country") )
                                 {
                                     //State Verification
@@ -269,7 +269,9 @@ jQuery(document).ready(function($) {
                                                         checkmonth =1;
                                                     }
 
-                                                    if ( $("[name=cc-exp-month]").val() >= currentMonth || checkmonth==0) {
+
+                                                    var ccExpMonth = $(".dropdown-select-expiry-month").data('selected');
+                                                    if ( ccExpMonth >= currentMonth || checkmonth==0) {
 
                                                         //Credit card verification (Name)
                                                         if (verifyFieldEmpty("input[name=cc-name]") == true) {
@@ -385,6 +387,12 @@ jQuery(document).ready(function($) {
         else return false;
     }
 
+
+//New function for verifying new dropdowns
+function verifyDropdownEmpty(value) {
+    if( $(value).data() !== '') return true;
+    else return false;
+}
 
     // $("#step2 .insider").hide(0);
     // $("#step3 .insider").hide(0);
@@ -517,44 +525,68 @@ jQuery(document).ready(function($) {
 
     /*$( .thisToolTip ).tooltip();*/
 
-    $('.btn-confirm-order').on('click',function (e) {
+    $('.btn-confirm-order').click(function (e) {
         e.preventDefault();
 
-        // $( "#submitButton" ).hide();
-        // $('input[type="submit"]').hide();
-        $('.btn-confirm-order').hide();
+        if (checkfields() == true) {
 
-        //$('input[type="submit"]').attr('disabled','disabled');
-        $("#loader-gif").show(100);
+            // $( "#submitButton" ).hide();
+            // $('input[type="submit"]').hide();
+            $('.btn-confirm-order').hide();
 
-        var serializedData = $("form").serialize();
+            //$('input[type="submit"]').attr('disabled','disabled');
+            $(".loader").show(100);
 
-        var selectedCountry = $(".dropdown-select-country .btn-dropdown").html();
-        var selectedCreditCard = $(".dropdown-select-credit-card .btn-dropdown").html();
-        var selectedMonth = $(".dropdown-select-expiry-month .btn-dropdown").html();
-        var selectedYear = $(".dropdown-select-expiry-year .btn-dropdown").html();
+            var serializedForm = $("form").serialize();
 
-        $.post("/formProcessor.php", $("form").serialize(), function(texte) {
+            var selectedCountry = $(".dropdown-select-country").data('selected');
+            var selectedCreditCard = $(".dropdown-select-credit-card").data('selected');
+            var selectedMonth = $(".dropdown-select-expiry-month").data('selected');
+            var selectedYear = $(".dropdown-select-expiry-year").data('selected');
 
-            if (texte.indexOf("work") > 0 )  {
-                $('#stepfail').hide();
-                $("#step3 .insider").slideUp(300);
-                $("#stepwork").slideDown(300);
+            var serializedDropdowns = '&country=' + selectedCountry + '&cc-type=' + selectedCreditCard + '&cc-exp-month=' + selectedMonth + '&cc-exp-year=' + selectedYear;
 
+            var serializedData = serializedForm + serializedDropdowns;
 
-            }
-            else {
+            $.ajax({
+                url : homeUrl + "/forms/formProcessor.php",
+                type : 'POST',
+                data : serializedData,
+                success : function(data){
+                    console.log('Success:',data);
+                },
+                error: function(data, response){
+                    $('.loader').hide();
+                    $('.btn-confirm-order').show();
+                    errorAlert('',data.responseText);
+                }
 
-                $("#step3 .insider").slideUp(300);
-                $("#stepfail").slideDown(300);
-                $("#stepfailInfo p").html("Error Message(s) : " + texte );
-                $('#loader-gif').hide();
+            });
 
-            }
+            // $.post(homeUrl + "/forms/formProcessor.php", serializedData, function (data,status) {
+            //
+            //     console.log(data);
+            //
+            //     if (data.indexOf("work") > 0) {
+            //         console.log('Success');
+            //     }
+            //     else {
+            //
+            //         console.log('showing error:',data);
+            //
+            //         errorAlert("", "<ul>" + data + "</ul>");
+            //
+            //         // $(".alert p").html("<ul>" + data + "</ul>");
+            //         $('.loader').hide();
+            //
+            //     }
+            //
+            // });
+            // return false; //On ne change pas de page
 
-        });
-        return false; //On ne change pas de page
+        }
     });
+
 
 
 

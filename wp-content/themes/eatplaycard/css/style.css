@@ -2363,4 +2363,22 @@ section.advantages {
         -o-transform: translateY(-50%);
         transform: translateY(-50%); }
 
+.alert {
+  padding: 20px;
+  border: 1px solid red;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  margin-bottom: 40px;
+  color: red; }
+  .alert ul {
+    list-style: none; }
+    .alert ul li {
+      line-height: 21px;
+      color: red; }
+
+.loader {
+  display: none;
+  margin-bottom: 40px; }
+
 /*# sourceMappingURL=style.css.map */

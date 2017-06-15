@@ -3213,4 +3213,23 @@ section.advantages {
 
 
 
+.alert {
+  padding:20px;
+  border:1px solid red;
+  @include border-radius(20px);
+  margin-bottom:40px;
+  color:red;
 
+  ul {
+    list-style:none;
+    li {
+      line-height:21px;
+      color:red;
+    }
+  }
+}
+
+.loader {
+  display:none;
+  margin-bottom:40px;
+}
