@@ -553,21 +553,19 @@ function verifyDropdownEmpty(value) {
             //In case of US or Canada, replace the state info from regular input with data from dropdowns
             if(selectedCountry == 'US'){
                 var selectedState = $(".dropdown-us-states").data('selected');
-                console.log('Adding US state:',selectedState);
 
                 //remove old state info
                 serializedForm = serializedForm.replace(/&state=[^&]*/,'');
                 //add new state data from the dropdown
-                serializedForm = serializedForm + '&state='+selectedState;
+                serializedForm = serializedForm + '&stateUS='+selectedState;
             }
             if(selectedCountry == 'CA'){
                 var selectedState = $(".dropdown-canada-states").data('selected');
-                console.log('Adding CA state:',selectedState);
 
                 //remove old state info
                 serializedForm = serializedForm.replace(/&state=[^&]*/,'');
                 //add new state data from the dropdown
-                serializedForm = serializedForm + '&state='+selectedState;
+                serializedForm = serializedForm + '&stateCanada='+selectedState;
             }
 
 
