@@ -166,4 +166,397 @@ jQuery(document).ready(function($) {
         },800,"swing");
     });
 
+
+
+
+
+
+    // ======================= PAYMENT ==========================
+
+
+    $( document ).ready(function() {
+        $(".alert").hide();
+    });
+
+
+    function errorAlert(component, message) {
+        $(".alert").addClass("alert-danger");
+        $(".alert").removeClass("alert-success");
+
+        $(".alert p").empty();
+        $(".alert p").text(message);
+
+        setTimeout(function(){
+            $(".alert").slideDown(400);
+        }, 800);
+
+
+        $(component).addClass("inputError");
+        $(component).focus();
+
+
+        $('html, body').animate({
+            scrollTop: $("#step2").offset().top-140
+        }, 1000);
+    }
+
+    function clearFieldsError ()
+    {
+        $(".alert").slideUp(0);
+        $("input[name=firstname]").removeClass("inputError");
+        $("input[name=lastname]").removeClass("inputError");
+        $("input[name=address]").removeClass("inputError");
+        $("input[name=city]").removeClass("inputError");
+        $("input[name=zip]").removeClass("inputError");
+        $("input[name=phone]").removeClass("inputError");
+        $("input[name=email]").removeClass("inputError");
+        $("input[name=verifyemail]").removeClass("inputError");
+        $("input[name=state]").removeClass("inputError");
+        $("[name=cc-exp-month]").removeClass("inputError");
+        $("[name=cc-name]").removeClass("inputError");
+        $("[name=cc-code]").removeClass("inputError");
+        $("[name=cc-number]").removeClass("inputError");
+
+    }
+
+
+    function checkfields() {
+
+        clearFieldsError();
+        var passing = false;
+
+
+
+        // FirstName verification
+        if (verifyFieldEmpty("input[name=firstname]") == true) {
+            if (verifyFieldNumbers("input[name=firstname]") == true)
+            {
+
+                //LastName Verification
+                if (verifyFieldEmpty("input[name=lastname]") == true) {
+                    if (verifyFieldNumbers("input[name=lastname]") == true)
+                    {
+                        //Address Verification
+                        if (verifyFieldEmpty("input[name=address]") == true) {
+                            //City Verification
+                            if (verifyFieldEmpty("input[name=city]") == true) {
+
+                                //Country Verification
+                                var selectedCountry = $(".dropdown-select-country .btn-dropdown").html();
+                                if ( !(selectedCountry == "Select Country") )
+                                {
+                                    //State Verification
+                                    if (verifyFieldEmpty("input[name=state]") == true || selectedCountry == "CA" || selectedCountry == "US" ) {
+
+                                        //Postal Code Verification
+                                        if (verifyFieldEmpty("input[name=zip]") == true) {
+
+
+
+
+                                            //Email Verification
+                                            if (verifyFieldEmail("input[name=email]") == true) {
+
+                                                //Email Verification Verification
+                                                if ( $("input[name=email]").val() == $("input[name=verifyemail]").val() ) {
+
+                                                    //Credit card verification (Month)
+                                                    var currentMonth = (new Date).getMonth() + 1;
+                                                    var currentYear = (new Date).getFullYear();
+                                                    var checkmonth =0;
+
+                                                    if ( $('[name=cc-exp-year]').val() - currentYear == 0) {
+                                                        checkmonth =1;
+                                                    }
+
+                                                    if ( $("[name=cc-exp-month]").val() >= currentMonth || checkmonth==0) {
+
+                                                        //Credit card verification (Name)
+                                                        if (verifyFieldEmpty("input[name=cc-name]") == true) {
+
+                                                            //Credit card verification (Number)
+                                                            if (verifyFieldNumbers("input[name=cc-number]") == false) {
+
+
+                                                                var pattern = new RegExp("^\\d{16}$");
+                                                                if ( $("input[name=cc-number]").val().match(pattern)) {
+
+                                                                    //Credit card verification (Number)
+                                                                    if (verifyFieldNumbers("input[name=cc-code]") == false) {
+
+                                                                        var pattern2 = new RegExp("^\\d{3}$");
+                                                                        if ( $("input[name=cc-code]").val().match(pattern2)) {
+                                                                            passing = true;
+                                                                        }
+                                                                        else
+                                                                            errorAlert("[name=cc-code]", "Please enter 3 digits for your CVV code.");
+                                                                    }
+                                                                    else
+                                                                        errorAlert("[name=cc-code]", "Your CVV code can only contains digits.");
+                                                                }
+                                                                else
+                                                                    errorAlert("[name=cc-number]", "Please enter 16 digits for your credit card.");
+                                                            }
+                                                            else
+                                                                errorAlert("[name=cc-number]", "Your credit card can only contains digits.");
+                                                        }
+                                                        else
+                                                            errorAlert("[name=cc-name]", "Please enter a name holder for the credit card.");
+                                                    }
+                                                    else
+                                                        errorAlert("[name=cc-exp-month]", "You credit card has expired that month.");
+                                                }
+                                                else
+                                                    errorAlert("input[name=verifyemail]", "Make sure you verify your email properly, this is where we will send your voucher !");
+                                            }
+                                            else
+                                                errorAlert("input[name=email]", "Please enter a valid email.  hello@example.com");
+                                            //End of Email Verification
+
+
+
+                                        }
+                                        else
+                                            errorAlert("input[name=zip]", "Your postal code cannot be emtpy.");
+                                        //End of Postal Code Verification
+                                    }
+                                    else
+                                        errorAlert("input[name=state]", "State field cannot be empty.");
+                                }
+                                else
+                                    errorAlert("[name=country]", "Please select a country.");
+                            }
+                            else
+                                errorAlert("input[name=city]", "Your city cannot be emtpy.");
+
+                            //End of City Verification
+
+                        }
+                        else
+                            errorAlert("input[name=address]", "Your address cannot be emtpy.");
+                        //End of Address Verification
+                    }
+                    else
+                        errorAlert("input[name=lastname]", "Your first name cannot contain numbers.");
+                }
+                else
+                    errorAlert("input[name=lastname]", "Your last name cannot be emtpy.");
+
+                //End of LastName Verification
+            }
+            else
+                errorAlert("input[name=firstname]", "Your first name cannot contain numbers.");
+        }
+        else
+            errorAlert("input[name=firstname]", "Your first name cannot be emtpy.");
+
+        //End of First name Verification
+
+        return passing;
+
+    }
+
+
+//This function will verify if the User has a valid email
+    function verifyFieldEmail(value) {
+        var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+        if ($(value).val().match(mailformat)) return true;
+        else return false;
+    }
+
+//This function will verify if the user has a valid phone number
+    function verifyFieldPhone(value) {
+        var phoneno = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+        if ($(value).val().match(phoneno)) return true;
+        else return false;
+    }
+
+//This function will verify if the field is not empty
+    function verifyFieldEmpty(value) {
+        if( $(value).val().length > 0) return true;
+        else return false;
+    }
+
+
+//This function will verify if  there is a digit in the field
+    function verifyFieldNumbers(value) {
+        var matches = $(value).val().match(/\d+/g);
+        if (matches == null) return true;
+        else return false;
+    }
+
+
+    // $("#step2 .insider").hide(0);
+    // $("#step3 .insider").hide(0);
+    // $("#stepfail").hide(0);
+    // $("#stepwork").hide(0);
+    // $("#loader-gif").hide(0);
+    // $("#usa-selector").hide();
+    // $("#canada-selector").hide();
+    // $('input[type="submit"]').removeAttr('disabled');
+
+
+    //TODO:Create html for this
+    $('#country-selector').on('change', function() {
+        if ( this.value == "CA" ) {
+            $("#state-province-text").hide();
+            $("#usa-selector").hide();
+            $("#canada-selector").slideDown(300);
+        }
+        else if ( this.value == "US") {
+            $("#state-province-text").hide();
+            $("#canada-selector").hide();
+            $("#usa-selector").slideDown(300);
+        }
+        else {
+            $("#usa-selector").hide();
+            $("#canada-selector").hide();
+            $("#state-province-text").slideDown(300);
+        }
+
+
+    });
+
+
+    // $("#btn1").on( "click", function() {
+    //     $("#step1 .insider").slideUp(300);
+    //     $("#step2 .insider").slideDown(300);
+    // });
+
+    $(".btn2").on( "click", function() {
+        if (checkfields() == true) {
+
+            // $("#step2 .insider").slideUp(300);
+
+            var total = $("[name=quantity]").val() * 25;
+            var discount = false;
+            if ($("[name=promo-code]").val().toUpperCase() == "14EPTW20")
+            {
+                total = $("[name=quantity]").val() * 20;
+                discount = true;
+                $("discount").val("1");
+            }
+            else if ($("[name=promo-code]").val().toUpperCase() == "14EAPC20")
+            {
+                total = $("[name=quantity]").val() * 20;
+                discount = true;
+                $("discount").val("1");
+            }
+            else if ($("[name=promo-code]").val().toUpperCase() == "14EPFB20")
+            {
+                total = $("[name=quantity]").val() * 20;
+                discount = true;
+                $("discount").val("1");
+            }
+            else if ($("[name=promo-code]").val().toUpperCase() == "VFEAPC20")
+            {
+
+                total = $("[name=quantity]").val() * 25;
+                total = total - (total * 0.2)
+                discount = true;
+                $("discount").val("1");
+            }
+            else if ($("[name=promo-code]").val().toUpperCase() == "FBEAPC20")
+            {
+
+                total = $("[name=quantity]").val() * 25;
+                total = total - (total * 0.2);
+                discount = true;
+                $("discount").val("1");
+            }
+
+            var last4 = $( "[name=cc-number]" ).val().slice(-4);
+
+            // $("#clientReceive").empty();
+            // if( $("#sendcardby").val() == "Post" )
+            // {
+            //     $("#clientReceive").append( "The card will be delivered to your billing address" );
+            //     //total = total + 5;
+            // } else {
+            //     $("#clientReceive").append( "A email will be sent with the voucher." );
+            // }
+
+
+            // $("#clientinfo").empty();
+            // $("#clientinfo").append( $("[name=firstname]").val() + " " + $("[name=lastname]").val() + "<br />" + $("[name=email]").val() +  "<br />" + $("[name=address]").val() + "<br />" + $("[name=city]").val() + ", " + $("[name=state]").val() + ", " + $("[name=zip]").val() + "<br />" + $("[name=country]").val() );
+            //
+            // $("#paymentinfo").empty();
+            // $("#paymentinfo").append("Credit Card Type : "  + $("[name=cc-type]").val() + "<br />" + "Card Holder Name : " + $("[name=cc-name]").val() + "<br />" + "Credit Card Number : XXXX-XXXX-XXXX-" + last4 + "<br />CVV : " + $("[name=cc-code]").val()  + "<br />" + "Expiry Date : " + $("[name=cc-exp-month]").val() + "/" + $("[name=cc-exp-year]").val() );
+            //
+            // $("#billingamount").empty();
+            // $("#billingamount").append("Number of cards : " + $("[name=quantity]").val() + "<br />Destination : " + $("[name=destination]").val() );
+            //
+            // $("#totalprice").empty();
+            //
+            // if (discount)
+            //     $("#totalprice").append("Total : $" + total + "    <span style='color:#ED1C24;'>Promotional price applied !<span>" );
+            // else
+            //     $("#totalprice").append("Total : $" + total);
+
+            //[name=tcol1]
+
+
+            // $("#step3 .insider").slideDown(300);
+        }
+    });
+
+    // $("#btn3").on( "click", function() {
+    //     $("#step3 .insider").slideUp(300);
+    //     $("#step2 .insider").slideDown(300);
+    //     $('#loader-gif').hide();
+    // });
+    // $("#btn3R").on( "click", function() {
+    //
+    //     $("#step2 .insider").slideUp(300);
+    //     $("#stepfail ").slideUp(300);
+    //     $("#step1 .insider").slideDown(300);
+    //     $('#loader-gif').hide();
+    // });
+
+
+
+    /*$( .thisToolTip ).tooltip();*/
+
+    $('.btn-confirm-order').on('click',function (e) {
+        e.preventDefault();
+
+        // $( "#submitButton" ).hide();
+        // $('input[type="submit"]').hide();
+        $('.btn-confirm-order').hide();
+
+        //$('input[type="submit"]').attr('disabled','disabled');
+        $("#loader-gif").show(100);
+
+        var serializedData = $("form").serialize();
+
+        var selectedCountry = $(".dropdown-select-country .btn-dropdown").html();
+        var selectedCreditCard = $(".dropdown-select-credit-card .btn-dropdown").html();
+        var selectedMonth = $(".dropdown-select-expiry-month .btn-dropdown").html();
+        var selectedYear = $(".dropdown-select-expiry-year .btn-dropdown").html();
+
+        $.post("/formProcessor.php", $("form").serialize(), function(texte) {
+
+            if (texte.indexOf("work") > 0 )  {
+                $('#stepfail').hide();
+                $("#step3 .insider").slideUp(300);
+                $("#stepwork").slideDown(300);
+
+
+            }
+            else {
+
+                $("#step3 .insider").slideUp(300);
+                $("#stepfail").slideDown(300);
+                $("#stepfailInfo p").html("Error Message(s) : " + texte );
+                $('#loader-gif').hide();
+
+            }
+
+        });
+        return false; //On ne change pas de page
+    });
+
+
+
+
 });

@@ -24,6 +24,8 @@
     <section id="purchase">
         <div class="purchase-inner">
 
+            <form>
+
             <div class="cards">
 
                 <div class="card card-left">
@@ -58,12 +60,12 @@
                 <h2>Customer Information</h2>
 
                 <div class="customer-info-form">
-                    <input type="text" class="input input-1-2" placeholder="First Name" />
-                    <input type="text" class="input input-1-2 no-margin" placeholder="Last Name" />
+                    <input type="text" name="firstname" class="input input-1-2" placeholder="First Name" />
+                    <input type="text" name="lastname" class="input input-1-2 no-margin" placeholder="Last Name" />
 
-                    <input type="text" class="input input-1-3" placeholder="Address" />
-                    <input type="text" class="input input-1-3" placeholder="Address #2" />
-                    <input type="text" class="input input-1-3 no-margin" placeholder="City" />
+                    <input type="text" name="address" class="input input-1-3" placeholder="Address" />
+                    <input type="text" name="address2" class="input input-1-3" placeholder="Address #2" />
+                    <input type="text" name="city" class="input input-1-3 no-margin" placeholder="City" />
 
                     <div class="dropdown dropdown-select-country">
                         <a href="#" class="btn btn-dropdown">Select Country</a>
@@ -284,12 +286,12 @@
                             </ul>
                         </div>
                 </div>
-                    <input type="text" class="input input-1-3" placeholder="State / Province" />
-                    <input type="text" class="input input-1-3 no-margin" placeholder="Zip / Postal" />
+                    <input type="text" name="state" class="input input-1-3" placeholder="State / Province" />
+                    <input type="text" name="zip" class="input input-1-3 no-margin" placeholder="Zip / Postal" />
 
-                    <input type="text" class="input input-1-3" placeholder="Daytime Phone" />
-                    <input type="text" class="input input-1-3" placeholder="Email Address" />
-                    <input type="text" class="input input-1-3 no-margin" placeholder="(Verify) Email Address" />
+                    <input type="text" name="phone" class="input input-1-3" placeholder="Daytime Phone" />
+                    <input type="text" name="email" class="input input-1-3" placeholder="Email Address" />
+                    <input type="text" name="verifyemail" class="input input-1-3 no-margin" placeholder="(Verify) Email Address" />
 
                 </div>
             </div><!-- end customer info -->
@@ -346,7 +348,7 @@
                         <div class="dropdown-menu-wrapper">
                             <ul class="dropdown-menu">
                                 <li><a href="#">Visa</a></li>
-                                <li><a href="#">Master Card</a></li>
+                                <li><a href="#">MasterCard</a></li>
 <!--                                <li><a href="#" class="btn-dropdown-close"></a></li>-->
                             </ul>
                         </div>
@@ -404,11 +406,11 @@
                     </div>
 
 
-                    <input type="text" class="input input-1-3" placeholder="Name on Card" />
-                    <input type="text" class="input input-1-3" placeholder="Credit Card Number" />
-                    <input type="text" class="input input-1-3 no-margin" placeholder="Security Code" />
+                    <input type="text" name="cc-name" class="input input-1-3" placeholder="Name on Card" />
+                    <input type="text" name="cc-number" class="input input-1-3" placeholder="Credit Card Number" />
+                    <input type="text" name="cc-code" class="input input-1-3 no-margin" placeholder="Security Code" />
 
-                    <input type="text" class="input input-1-3 no-margin centered promo" placeholder="Promo Code (option)" />
+                    <input type="text" name="promo-code" class="input input-1-3 no-margin centered promo" placeholder="Promo Code (option)" />
 
                 </div>
 
@@ -418,13 +420,19 @@
             <div class="confirm-order-box">
                 <h2>Confirm order</h2>
 
-                <a href="#" class="btn btn-important">Click To Confirm Order</a><br/>
+                <a href="#" class="btn btn-important btn-confirm-order">Click To Confirm Order</a><br/>
+
+                <div class="alert alert-danger"><p></p></div>
 
                 <img src="<?php echo get_template_directory_uri(); ?>/img/payment-methods-list.jpg" alt="payment methods"/>
             </div><!-- end confirm order box -->
 
-
+            </form>
         </div>
     </section>
 
+
+
 <?php get_footer(); ?>
+
+

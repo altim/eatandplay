@@ -37,7 +37,7 @@
 
                 <p><strong>Orlando</strong> can be expensive and dining is often a visitor’s single biggest expense. There’s no better or easier way to save in Orlando than Eat and Play Card – especially if you’re staying in an off-Disney property hotel, it’s your answer to a family dining plan…  <a href="#">Learn More</a></p>
 
-                <a href="" class="btn">Get this card</a>
+                <a href="<?php echo home_url(); ?>/buy-card-now/" class="btn">Get this card</a>
             </div>
 
             <div class="card card-right">
@@ -46,7 +46,7 @@
 
                 <p><strong>New York City</strong>. No matter what you call it, now you can have it all right in the palm of your hand. New York can be expensive with dining often a visitor’s single biggest expense – and there’s no better or easier way to save in New York than Eat and Play Card...  <a href="#">Learn More</a></p>
 
-                <a href="#" class="btn">Get this card</a>
+                <a href="<?php echo home_url(); ?>/buy-card-now/" class="btn">Get this card</a>
             </div>
 
 
@@ -95,10 +95,10 @@
             </div>
 
             <div class="logos-controls">
-                <a href="#" class="btn">ORLANDO&nbsp;&nbsp;-&nbsp;&nbsp;<span>View all partners</span></a>
+                <a href="<?php echo home_url(); ?>/orlando" class="btn">ORLANDO&nbsp;&nbsp;-&nbsp;&nbsp;<span>View all partners</span></a>
                 <div class="slider-controls">
                 </div>
-                <a href="#" class="btn">NEW YORK&nbsp;&nbsp;-&nbsp;&nbsp;<span>View all partners</span></a>
+                <a href="<?php echo home_url(); ?>/new-york" class="btn">NEW YORK&nbsp;&nbsp;-&nbsp;&nbsp;<span>View all partners</span></a>
             </div>
 
         </div>
@@ -196,7 +196,7 @@
                 </div>
             </div>
 
-            <a href="#" class="btn">View all our reviews</a>
+            <a href="<?php echo home_url(); ?>/reviews" class="btn">View all our reviews</a>
         </div>
     </section>
 
