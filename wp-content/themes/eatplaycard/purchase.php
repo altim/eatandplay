@@ -386,7 +386,7 @@
 
                 <div class="option">
 
-                    <a href="#" class="btn btn-delivery btn-traditional-mail" data-trigger="traditional-email-box">Traditional mail</a>
+                    <a href="#" class="btn btn-delivery btn-traditional-mail selected" data-trigger="traditional-email-box">Traditional mail</a>
 
                     <div class="option-box traditional-email-box">
                         <div class="option-box-inner">

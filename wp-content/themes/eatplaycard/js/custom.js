@@ -157,6 +157,7 @@ jQuery(document).ready(function($) {
 
     $('.option .btn-choose').on('click',function(e){
        e.preventDefault();
+       $('.btn-delivery').removeClass('selected');
        $(this).parent().parent().slideUp(400,'swing');
        $(this).parent().parent().parent().find('.btn-delivery').removeClass('open').addClass('selected');
     });
@@ -407,8 +408,6 @@ function verifyDropdownEmpty(value) {
     $('.dropdown-select-country .dropdown-menu a').on('click', function() {
         var selectedValue = $(this).parent().data('value');
 
-        console.log('Selected value:',selectedValue);
-
         if ( selectedValue == "CA" ) {
             $(".state").hide();
             $(".dropdown-us-states").hide();
@@ -547,9 +546,42 @@ function verifyDropdownEmpty(value) {
             var selectedMonth = $(".dropdown-select-expiry-month").data('selected');
             var selectedYear = $(".dropdown-select-expiry-year").data('selected');
 
+
+
             var serializedDropdowns = '&country=' + selectedCountry + '&cc-type=' + selectedCreditCard + '&cc-exp-month=' + selectedMonth + '&cc-exp-year=' + selectedYear;
 
-            var serializedData = serializedForm + serializedDropdowns;
+            //In case of US or Canada, replace the state info from regular input with data from dropdowns
+            if(selectedCountry == 'US'){
+                var selectedState = $(".dropdown-us-states").data('selected');
+                console.log('Adding US state:',selectedState);
+
+                //remove old state info
+                serializedForm = serializedForm.replace(/&state=[^&]*/,'');
+                //add new state data from the dropdown
+                serializedForm = serializedForm + '&state='+selectedState;
+            }
+            if(selectedCountry == 'CA'){
+                var selectedState = $(".dropdown-canada-states").data('selected');
+                console.log('Adding CA state:',selectedState);
+
+                //remove old state info
+                serializedForm = serializedForm.replace(/&state=[^&]*/,'');
+                //add new state data from the dropdown
+                serializedForm = serializedForm + '&state='+selectedState;
+            }
+
+
+            //Delivery option buttons, sendcardby
+            if($('.btn-email').hasClass('selected')){
+                serializedDeliveryOption = '&sendcardby=Email';
+            }
+
+            if($('.btn-traditional-mail').hasClass('selected')){
+                serializedDeliveryOption = '&sendcardby=Post';
+            }
+
+
+            var serializedData = serializedForm + serializedDropdowns + serializedDeliveryOption;
 
             $.ajax({
                 url : homeUrl + "/forms/formProcessor.php",
