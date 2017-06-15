@@ -286,12 +286,96 @@
                             </ul>
                         </div>
                 </div>
-                    <input type="text" name="state" class="input input-1-3" placeholder="State / Province" />
-                    <input type="text" name="zip" class="input input-1-3 no-margin" placeholder="Zip / Postal" />
 
-                    <input type="text" name="phone" class="input input-1-3" placeholder="Daytime Phone" />
-                    <input type="text" name="email" class="input input-1-3" placeholder="Email Address" />
-                    <input type="text" name="verifyemail" class="input input-1-3 no-margin" placeholder="(Verify) Email Address" />
+                <input type="text" name="state" class="input input-1-3 state" placeholder="State / Province" />
+
+                    <div class="dropdown dropdown-us-states" data-selected="">
+                    <a href="#" class="btn btn-dropdown">Select State</a>
+                    <div class="dropdown-menu-wrapper">
+                        <ul class="dropdown-menu">
+                            <li data-value="AL"><a href="#">Alabama</a></li>
+                            <li data-value="AK"><a href="#">Alaska</a></li>
+                            <li data-value="AZ"><a href="#">Arizona</a></li>
+                            <li data-value="AR"><a href="#">Arkansas</a></li>
+                            <li data-value="CA"><a href="#">California</a></li>
+                            <li data-value="CO"><a href="#">Colorado</a></li>
+                            <li data-value="CT"><a href="#">Connecticut</a></li>
+                            <li data-value="DE"><a href="#">Delaware</a></li>
+                            <li data-value="DC"><a href="#">District Of Columbia</a></li>
+                            <li data-value="FL"><a href="#">Florida</a></li>
+                            <li data-value="GA"><a href="#">Georgia</a></li>
+                            <li data-value="HI"><a href="#">Hawaii</a></li>
+                            <li data-value="ID"><a href="#">Idaho</a></li>
+                            <li data-value="IL"><a href="#">Illinois</a></li>
+                            <li data-value="IN"><a href="#">Indiana</a></li>
+                            <li data-value="IA"><a href="#">Iowa</a></li>
+                            <li data-value="KS"><a href="#">Kansas</a></li>
+                            <li data-value="KY"><a href="#">Kentucky</a></li>
+                            <li data-value="LA"><a href="#">Louisiana</a></li>
+                            <li data-value="ME"><a href="#">Maine</a></li>
+                            <li data-value="MD"><a href="#">Maryland</a></li>
+                            <li data-value="MA"><a href="#">Massachusetts</a></li>
+                            <li data-value="MI"><a href="#">Michigan</a></li>
+                            <li data-value="MN"><a href="#">Minnesota</a></li>
+                            <li data-value="MS"><a href="#">Mississippi</a></li>
+                            <li data-value="MO"><a href="#">Missouri</a></li>
+                            <li data-value="MT"><a href="#">Montana</a></li>
+                            <li data-value="NE"><a href="#">Nebraska</a></li>
+                            <li data-value="NV"><a href="#">Nevada</a></li>
+                            <li data-value="NH"><a href="#">New Hampshire</a></li>
+                            <li data-value="NJ"><a href="#">New Jersey</a></li>
+                            <li data-value="NM"><a href="#">New Mexico</a></li>
+                            <li data-value="NY"><a href="#">New York</a></li>
+                            <li data-value="NC"><a href="#">North Carolina</a></li>
+                            <li data-value="ND"><a href="#">North Dakota</a></li>
+                            <li data-value="OH"><a href="#">Ohio</a></li>
+                            <li data-value="OK"><a href="#">Oklahoma</a></li>
+                            <li data-value="OR"><a href="#">Oregon</a></li>
+                            <li data-value="PA"><a href="#">Pennsylvania</a></li>
+                            <li data-value="RI"><a href="#">Rhode Island</a></li>
+                            <li data-value="SC"><a href="#">South Carolina</a></li>
+                            <li data-value="SD"><a href="#">South Dakota</a></li>
+                            <li data-value="TN"><a href="#">Tennessee</a></li>
+                            <li data-value="TX"><a href="#">Texas</a></li>
+                            <li data-value="UT"><a href="#">Utah</a></li>
+                            <li data-value="VT"><a href="#">Vermont</a></li>
+                            <li data-value="VA"><a href="#">Virginia</a></li>
+                            <li data-value="WA"><a href="#">Washington</a></li>
+                            <li data-value="WV"><a href="#">West Virginia</a></li>
+                            <li data-value="WI"><a href="#">Wisconsin</a></li>
+                            <li data-value="WY"><a href="#">Wyoming</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="dropdown dropdown-canada-states" data-selected="">
+                    <a href="#" class="btn btn-dropdown">Select State</a>
+                    <div class="dropdown-menu-wrapper">
+                        <ul class="dropdown-menu">
+                            <li data-value="AB"><a href="#">Alberta</a></li>
+                            <li data-value="BC"><a href="#">British Columbia</a></li>
+                            <li data-value="MB"><a href="#">Manitoba</a></li>
+                            <li data-value="NB"><a href="#">New Brunswick</a></li>
+                            <li data-value="NL"><a href="#">Newfoundland and Labrador</a></li>
+                            <li data-value="NS"><a href="#">Nova Scotia</a></li>
+                            <li data-value="ON"><a href="#">Ontario</a></li>
+                            <li data-value="PE"><a href="#">Prince Edward Island</a></li>
+                            <li data-value="QC"><a href="#">Quebec</a></li>
+                            <li data-value="SK"><a href="#">Saskatchewan</a></li>
+                            <li data-value="NT"><a href="#">Northwest Territories</a></li>
+                            <li data-value="NU"><a href="#">Nunavut</a></li>
+                            <li data-value="YT"><a href="#">Yukon</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+
+
+                <input type="text" name="zip" class="input input-1-3 no-margin" placeholder="Zip / Postal" />
+
+                <input type="text" name="phone" class="input input-1-3" placeholder="Daytime Phone" />
+                <input type="text" name="email" class="input input-1-3" placeholder="Email Address" />
+                <input type="text" name="verifyemail" class="input input-1-3 no-margin" placeholder="(Verify) Email Address" />
 
                 </div>
             </div><!-- end customer info -->

@@ -2551,10 +2551,16 @@ footer {
         color: #000;
       }
 
-      .dropdown-select-country {
+
+
+      .dropdown {
         width:314px;
         display:inline-block;
         margin-right:10px;
+
+        &.dropdown-us-states, &.dropdown-canada-states {
+          display:none;
+        }
 
         @media(max-width:1000px){
           width:476px;
@@ -2636,8 +2642,6 @@ footer {
 
       }
     }
-
-
 
     .delivery-box {
       h2 {

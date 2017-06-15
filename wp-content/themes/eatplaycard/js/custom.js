@@ -404,22 +404,25 @@ function verifyDropdownEmpty(value) {
     // $('input[type="submit"]').removeAttr('disabled');
 
 
-    //TODO:Create html for this
-    $('#country-selector').on('change', function() {
-        if ( this.value == "CA" ) {
-            $("#state-province-text").hide();
-            $("#usa-selector").hide();
-            $("#canada-selector").slideDown(300);
+    $('.dropdown-select-country .dropdown-menu a').on('click', function() {
+        var selectedValue = $(this).parent().data('value');
+
+        console.log('Selected value:',selectedValue);
+
+        if ( selectedValue == "CA" ) {
+            $(".state").hide();
+            $(".dropdown-us-states").hide();
+            $(".dropdown-canada-states").css({'display' : 'inline-block'});
         }
-        else if ( this.value == "US") {
-            $("#state-province-text").hide();
-            $("#canada-selector").hide();
-            $("#usa-selector").slideDown(300);
+        else if ( selectedValue == "US") {
+            $(".state").hide();
+            $(".dropdown-canada-states").hide();
+            $(".dropdown-us-states").css({'display' : 'inline-block'});
         }
         else {
-            $("#usa-selector").hide();
-            $("#canada-selector").hide();
-            $("#state-province-text").slideDown(300);
+            $(".state").css({'display' : 'inline-block'});
+            $(".dropdown-canada-states").hide();
+            $(".dropdown-us-states").hide();
         }
 
 

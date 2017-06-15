@@ -1879,21 +1879,23 @@ footer {
       #purchase .purchase-inner .customer-info-box :-moz-placeholder {
         /* Firefox 18- */
         color: #000; }
-      #purchase .purchase-inner .customer-info-box .dropdown-select-country {
+      #purchase .purchase-inner .customer-info-box .dropdown {
         width: 314px;
         display: inline-block;
         margin-right: 10px; }
+        #purchase .purchase-inner .customer-info-box .dropdown.dropdown-us-states, #purchase .purchase-inner .customer-info-box .dropdown.dropdown-canada-states {
+          display: none; }
         @media (max-width: 1000px) {
-          #purchase .purchase-inner .customer-info-box .dropdown-select-country {
+          #purchase .purchase-inner .customer-info-box .dropdown {
             width: 476px;
             display: block !important;
             margin: 0 auto 22px auto !important; } }
         @media (max-width: 600px) {
-          #purchase .purchase-inner .customer-info-box .dropdown-select-country {
+          #purchase .purchase-inner .customer-info-box .dropdown {
             width: 100%;
             display: block !important;
             margin: 0 auto 22px auto !important; } }
-        #purchase .purchase-inner .customer-info-box .dropdown-select-country .btn {
+        #purchase .purchase-inner .customer-info-box .dropdown .btn {
           font-family: 'Montserrat', sans-serif;
           font-weight: 300;
           -webkit-border-radius: 28px;
@@ -1911,20 +1913,20 @@ footer {
           text-decoration: none;
           background: #efefef url("../img/arrow-down-2-dropdown.png") no-repeat;
           background-position: right 25px center; }
-          #purchase .purchase-inner .customer-info-box .dropdown-select-country .btn:hover {
+          #purchase .purchase-inner .customer-info-box .dropdown .btn:hover {
             background: #cdcdcd url("../img/arrow-down-2-dropdown.png") no-repeat;
             background-position: right 25px center; }
-        #purchase .purchase-inner .customer-info-box .dropdown-select-country .dropdown-menu-wrapper {
+        #purchase .purchase-inner .customer-info-box .dropdown .dropdown-menu-wrapper {
           background: #f3f2f2;
           padding: 0 20px 20px 20px;
           -webkit-box-sizing: border-box;
           -moz-box-sizing: border-box;
           box-sizing: border-box; }
-          #purchase .purchase-inner .customer-info-box .dropdown-select-country .dropdown-menu-wrapper .dropdown-menu {
+          #purchase .purchase-inner .customer-info-box .dropdown .dropdown-menu-wrapper .dropdown-menu {
             background: #f3f2f2;
             max-height: 200px;
             overflow-x: auto; }
-            #purchase .purchase-inner .customer-info-box .dropdown-select-country .dropdown-menu-wrapper .dropdown-menu li a {
+            #purchase .purchase-inner .customer-info-box .dropdown .dropdown-menu-wrapper .dropdown-menu li a {
               color: #000;
               font-size: 16px;
               font-weight: 300;
@@ -1933,9 +1935,9 @@ footer {
               -o-transition: all 0.4s;
               transition: all 0.4s;
               outline: none; }
-              #purchase .purchase-inner .customer-info-box .dropdown-select-country .dropdown-menu-wrapper .dropdown-menu li a:hover {
+              #purchase .purchase-inner .customer-info-box .dropdown .dropdown-menu-wrapper .dropdown-menu li a:hover {
                 color: #4e9afd; }
-            #purchase .purchase-inner .customer-info-box .dropdown-select-country .dropdown-menu-wrapper .dropdown-menu .btn-dropdown-close {
+            #purchase .purchase-inner .customer-info-box .dropdown .dropdown-menu-wrapper .dropdown-menu .btn-dropdown-close {
               background: url("../img/arrow-up-2-dropdown.png") no-repeat;
               background-position: center center;
               display: block;
@@ -1945,7 +1947,7 @@ footer {
               -moz-transition: all 0.4s;
               -o-transition: all 0.4s;
               transition: all 0.4s; }
-              #purchase .purchase-inner .customer-info-box .dropdown-select-country .dropdown-menu-wrapper .dropdown-menu .btn-dropdown-close:hover {
+              #purchase .purchase-inner .customer-info-box .dropdown .dropdown-menu-wrapper .dropdown-menu .btn-dropdown-close:hover {
                 background-position: center top 10px; }
     #purchase .purchase-inner .delivery-box h2 {
       font-size: 40px;
