@@ -585,16 +585,23 @@ function verifyDropdownEmpty(value) {
                 url : homeUrl + "/forms/formProcessor.php",
                 type : 'POST',
                 data : serializedData,
+                dataType: "text",
                 success : function(data){
                     console.log('Success');
-                    if(data.indexOf("work") > 0 )  {
+                    if(data.indexOf("work") != -1 )  {
                         window.location.href="/thank-you"
                     }
                 },
                 error: function(data, response){
                     $('.loader').hide();
                     $('.btn-confirm-order').show();
-                    errorAlert('',data.responseText);
+
+                    if(data.responseText.indexOf("work") != -1 )  {
+                        window.location.href="/thank-you"
+                    }
+                    else {
+                        errorAlert('', data.responseText);
+                    }
                 }
 
             });

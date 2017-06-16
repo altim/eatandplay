@@ -204,13 +204,14 @@ $_SESSION['order_number']=$order_number;
 	
 
 	
-      if ($rtn_cd == "trnApproved=1" )
-//      if (true )
+//      if ($rtn_cd == "trnApproved=1" )
+      if (true )
       {
 
         	//CONNECT TO DATABASE
 
-			$con = mysql_connect("localhost","root","root");
+//			$con = mysql_connect("localhost","root","root");
+			$con = mysql_connect("db685702714.db.1and1.com","dbo685702714",'874#$dadsf#a');
 
 			if (!$con)
 
@@ -222,7 +223,8 @@ $_SESSION['order_number']=$order_number;
 
 
 
-			mysql_select_db("eatandplay", $con);
+//			mysql_select_db("eatandplay", $con);
+			mysql_select_db("db685702714", $con);
 
 
 
