@@ -541,6 +541,7 @@ function verifyDropdownEmpty(value) {
 
             var serializedForm = $("form").serialize();
 
+            var selectedDestination = $(".dropdown-select-card").data('selected');
             var selectedCountry = $(".dropdown-select-country").data('selected');
             var selectedCreditCard = $(".dropdown-select-credit-card").data('selected');
             var selectedMonth = $(".dropdown-select-expiry-month").data('selected');
@@ -548,7 +549,7 @@ function verifyDropdownEmpty(value) {
 
 
 
-            var serializedDropdowns = '&country=' + selectedCountry + '&cc-type=' + selectedCreditCard + '&cc-exp-month=' + selectedMonth + '&cc-exp-year=' + selectedYear;
+            var serializedDropdowns = '&destination='+selectedDestination+'&country=' + selectedCountry + '&cc-type=' + selectedCreditCard + '&cc-exp-month=' + selectedMonth + '&cc-exp-year=' + selectedYear;
 
             //In case of US or Canada, replace the state info from regular input with data from dropdowns
             if(selectedCountry == 'US'){
@@ -585,9 +586,8 @@ function verifyDropdownEmpty(value) {
                 url : homeUrl + "/forms/formProcessor.php",
                 type : 'POST',
                 data : serializedData,
-                dataType: "text",
+                // dataType: "text",
                 success : function(data){
-                    console.log('Success');
                     if(data.indexOf("work") != -1 )  {
                         window.location.href="/thank-you"
                     }

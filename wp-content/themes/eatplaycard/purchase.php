@@ -41,13 +41,12 @@
             </div>
 
             <div class="select-card-box">
-                <div class="dropdown dropdown-select-card">
+                <div class="dropdown dropdown-select-card" data-selected="Orlando">
                     <a href="#" class="btn btn-dropdown">Select a card</a>
                     <div class="dropdown-menu-wrapper">
                         <ul class="dropdown-menu">
-                            <li><a href="#">Orlando</a></li>
-                            <li><a href="#">New York</a></li>
-                            <li><a href="#" class="btn-dropdown-close"></a></li>
+                            <li data-value="Orlando"><a href="#">Orlando</a></li>
+                            <li data-value="New York City"><a href="#">New York</a></li>
                         </ul>
                     </div>
                 </div>

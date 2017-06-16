@@ -1,18 +1,23 @@
 <?php  
 header('Cache-Control: no-cache, must-revalidate');
 header('Expires: Mon, 26 Jul 1997 05:00:00 GMT');
-header('Content-type: application/json');
- 
-//	require 'PHPMailer-master/PHPMailerAutoload.php';
+header('Content-type: application/json'); 
  
 
+//	require 'PHPMailer-master/PHPMailerAutoload.php';
+session_start();
+
+
+
+error_log("in file");
+	
 $comingfrom = "sales@eatandplaycard.com";
- 
+   
+$sendcardby = $_POST["sendcardby"];
+
+error_log("sendcardby: ".$sendcardby);
 
 //GET POST AND SESSION INFO
-
-$sendcardby = $_POST[ "sendcardby"];
-$ship_option = $_POST[ "sendcardby"];
 
 $buy_location = $_POST[ "destination"];
 
@@ -38,13 +43,10 @@ $telephone = $_POST[ "phone"];
 
 $uEmail = $_POST[ "email"];
 
-$promo =  $_POST[ "promo-code"];
+$promo =  strtoupper($_POST[ "promo-code"]);
 
 $price = 25;
 
-foreach ($_POST as $key => $value) {
-    error_log("Key: ".$key." Value: ".$value."");
-}
 
 
 //VERIFY IF CANADIAN OR US
@@ -68,24 +70,26 @@ if ( $promo == "14EPTW20" || $promo == "14EAPC20" || $promo == "14EPFB20") {
 $total_amount = $buy_quantity * $price;
 $total_amount_text = "";
 
+
 if($promo == "VFEAPC20" )
 {
 	$total_amount = $total_amount - ($total_amount * 0.2);
 }
- 
+if($promo == "FBEAPC20" ) 
+{
+	$total_amount = $total_amount - ($total_amount * 0.2);
+}
 if($buy_country=="CA"){
 
 	$total_amount=(float)($total_amount);			
 
 }
 
-
 $total_amount = number_format($total_amount,2);
 
 $total_amount_text = $total_amount;
 
-error_log("total_amount_text: ".$total_amount_text );
-error_log("total_amount: ".$total_amount );
+
 
 
 session_start();
@@ -137,9 +141,19 @@ if ($buy_location=="New York City")
 $t=time();
 $curdate = date("Ymd");
 $order_number = $curdate . $t;
+
+if($sendcardby == "Email") 
+{
+	$order_number = "V".$order_number;
+}
+else 
+{
+	$order_number = "H".$order_number;
+}
+ 
 $_SESSION['order_number']=$order_number;
 
-
+ 
 
     //BEAN STREAM REQUIRED INFO
 
@@ -169,9 +183,7 @@ $_SESSION['order_number']=$order_number;
 	if(strlen($cc_expires_month)<2){
 		$cc_expires_month="0".cc_expires_month;
 	}
-
-	error_log("total_amount: ".$total_amount);
-	
+	error_log($total_amount);
 	$tranString = "requestType=BACKEND&merchant_id=" . $merchantID . "&trnOrderNumber=" . $order_number . "&trnCardOwner=" . $firstnameoncard . "&trnCardNumber=" . $noofcard . "&trnExpMonth=" . $cc_expires_month . "&trnExpYear=" . $cc_expires_year . "&trnCardCvd=" . $cvvofcard . "&trnAmount=" . $total_amount . "&ordName=" . $firstnameoncard . "&ordEmailAddress=" . $uEmail . "&ordPhoneNumber=" . $telephone . "&ordAddress1=" . $billingaddress . "&ordAddress2=" . $billingaddress2 . "&ordCity=" . $billingcity . "&ordProvince=" . $userProvince . "&ordPostalCode=" . $billingpcode . "&ordCountry=".$buy_country. "&ref1=".$product_number."";
 
 
@@ -203,15 +215,20 @@ $_SESSION['order_number']=$order_number;
     $errorMessage = "SUCCESS";
 	
 
-	
-      if ($rtn_cd == "trnApproved=1" )
-//      if (true )
+	error_log("in file 2 ");
+//	$rtn_cd = "trnApproved=1";
+		
+		
+      if ($rtn_cd == "trnApproved=1"  )
       {
+		$_SESSION['Paid'] = "1";
 
+		error_log("in file approved 2 ");
         	//CONNECT TO DATABASE
 
-//			$con = mysql_connect("localhost","root","root");
-			$con = mysql_connect("db685702714.db.1and1.com","dbo685702714",'874#$dadsf#a');
+
+			
+			$con = mysql_connect("127.0.0.1","eatandplaycard","3b91bIwORUmlyqzoVqmg");
 
 			if (!$con)
 
@@ -223,8 +240,7 @@ $_SESSION['order_number']=$order_number;
 
 
 
-//			mysql_select_db("eatandplay", $con);
-			mysql_select_db("db685702714", $con);
+			mysql_select_db("wp_eatandplaycard", $con);
 
 
 
@@ -333,7 +349,7 @@ $_SESSION['order_number']=$order_number;
 		    //$headerUrl = "Location: http://www.eatandplaycard.com/vpayment_success.php";
 			
 			// AJax way to do stuff
-			echo "work";
+			//echo "work";
 
 		   
 			$to = "sales@eatandplaycard.com ,  larryraubach@hotmail.com";
@@ -383,15 +399,36 @@ $_SESSION['order_number']=$order_number;
 			*/
 			$to = "sales@eatandplaycard.com";
 			$curl = curl_init();
-			curl_setopt ($curl, CURLOPT_URL, "http://nouveauexisto.ca/eatAndPlayCard_form/formEmailSender.php?sendType=signer&toEmail=".urlencode($to)."&fullMessage=".urlencode($full_message)."");
+			curl_setopt ($curl, CURLOPT_URL, "http://nouveauexisto.ca/eatAndPlayCard_form/formEmailSender.php?sendType=signer&toEmail=".urlencode($to)."&fullMessage=".urlencode($full_message)."&sendcardby=".urlencode($sendcardby)."");
 			curl_exec ($curl);
 			curl_close ($curl);
-			
+			error_log("in file approved 3 ");
 
 		//	$to = $uEmail;
  
 				$subject = "Transaction Successful: Your Voucher";
-
+			if($sendcardby == "Post")
+			{ 
+				$full_message = "<span style='font-family:tahoma;font-size:12px;color:#000000;'>Please do not respond to this email.<br /><br />" .
+								"Thank you for your Eat and Play Card order. This email is a confirmation of your purchase. <br /><br /><strong>Please allow the following time for shipping and handling</strong><br>US/Canada - 2 weeks<br>UK - 3 weeks<br>Rest of World - 4 weeks <br><br>" .
+								"<b>Order Confirmation</b><br /><br />" .
+								"<b>Quantity:</b>". $buy_quantity ."<br />" .
+								"<b>Product:</b> Eat and Play Card" . $buy_location . "<br />" .
+								"<b>Product Number:</b>" . $product_number. "<br />" .
+								"<b>Total: $</b> $total_amount USD<br />" .
+								"<b>Status:</b> Confirmed<br /><br />" .
+								
+								"<b>Order Details</b><br /><br />" .
+								"<b>Name:</b> " . $buy_firstname . " " . $buy_lastname . "<br />" .
+								"<b>Email:</b> " . $uEmail . "<br /><br /><br/>" .
+								"<b>Date of Order:</b> " . date("Y-m-d") . "<br />" .
+								"<b>Credit Card Number:</b> " . $hide_no . "<br /><br />" .
+								
+								"Thank you for your business. Have a wonderful time in " . $buy_location. ".<br /><br />" .
+								"<b>The Team at Eat and Play Card</b></span><br /><br />";
+			}
+			else
+			{
 				$full_message = "<span style='font-family:tahoma;font-size:12px;color:#000000;'>Please do not respond to this email.<br /><br />" .
 								"Thank you for your Eat and Play Card order. This email is a confirmation of your purchase. Please read it carefully and be sure to print your Voucher.<br /><br />" .
 								"<b>Order Confirmation</b><br /><br />" .
@@ -409,7 +446,7 @@ $_SESSION['order_number']=$order_number;
 								"<b>Don't forget to print your Voucher.</b> You MUST print your Voucher and present it in " . $buy_location . " to receive your Eat and Play Card. <br /><br />" .
 								"Thank you for your business. Have a wonderful time in " . $buy_location. ".<br /><br />" .
 								"<b>The Team at Eat and Play Card</b></span><br /><br />";
-
+			}
 
 			// To send HTML mail, the Content-type header must be set
 			/*
@@ -418,6 +455,15 @@ $_SESSION['order_number']=$order_number;
 			$headers .= 'From: sales@eatandplaycard.com' . "\r\n";
 
 
+			error_log("sending to client");
+			mail($uEmail,$subject,$full_message,$headers);
+			error_log("sending to kevin");
+			mail('kevin.lanthier@existo.ca',$subject,$full_message,$headers);
+			
+			error_log("sending to Chris");
+			mail('chris@eatandplaycard.com',$subject,$full_message,$headers);
+			error_log("sending to Larry");
+			mail('larry@eatandplaycard.com',$subject,$full_message,$headers);
 		
 			
 			$mailClient = new PHPMailer;
@@ -455,39 +501,43 @@ $_SESSION['order_number']=$order_number;
 			$toName = $buy_firstname.' '.$buy_lastname;
 			
 			$curl = curl_init();
-			curl_setopt ($curl, CURLOPT_URL, "http://nouveauexisto.ca/eatAndPlayCard_form/formEmailSender.php?sendType=teamEatAndPlay&toEmail=".urlencode($uEmail)."&toName=".urlencode($toName)."&sendcardby=".urlencode($sendcardby)."&fullMessage=".urlencode($full_message)."");
+			if($sendcardby == "Post") 
+			{ 
+				curl_setopt ($curl, CURLOPT_URL, "http://nouveauexisto.ca/eatAndPlayCard_form/formEmailSender.php?sendType=teamEatAndPlayPOST&toEmail=".urlencode($uEmail)."&toName=".urlencode($toName)."&fullMessage=".urlencode($full_message)."");
+			}
+			else
+			{
+				curl_setopt ($curl, CURLOPT_URL, "http://nouveauexisto.ca/eatAndPlayCard_form/formEmailSender.php?sendType=teamEatAndPlay&toEmail=".urlencode($uEmail)."&toName=".urlencode($toName)."&fullMessage=".urlencode($full_message)."");
+			}
 			curl_exec ($curl);
 			curl_close ($curl);	
-
-      }
-
-    else
-
-      {
-
+		
+			error_log("in file approved 4 ");
+	
+			$arr = "11work11";  
+			echo json_encode($arr); 
+			exit(); 
+      }  else {
+	
  
-
+ 
 		  //GET THE BEANSTREAM ERROR MESSAGE
 		  
 		  //Get &messageText
-		   $pos1 = stripos($txResult,"&messageText");
+		  $pos1 = stripos($txResult,"&messageText");
 		   $pos2 = stripos($txResult,"&trnOrderNumber");
 		   $errorMessage = substr($txResult,($pos1+13),($pos2-$pos1));
 		   $errorMessage = str_replace("&trnOrderNumb","", $errorMessage);
-			
-			
-		   //Old way to show error message
-		   //$headerUrl = "Location: http://www.eatandplaycard.com/vpayment_nosuccess.php?errorMessage=" . $errorMessage;
-		  
-		   // AJax way to do stuff
-		   echo urldecode($errorMessage) ;
-		  
+		   
+			//$errorMessage = "11work11";  
 
+			echo json_encode($errorMessage); 
+			exit();
       }
+	//	error_log("end file ".urldecode($errorMessage));
 
 
-
-
+ 
 
 function getProvinceText($tmp)
 
