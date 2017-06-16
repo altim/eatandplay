@@ -205,11 +205,12 @@ $_SESSION['order_number']=$order_number;
 
 	
       if ($rtn_cd == "trnApproved=1" )
+//      if (true )
       {
 
         	//CONNECT TO DATABASE
 
-			$con = mysql_connect("localhost","eatandpl_wp",",sV^=iiVE!*~");
+			$con = mysql_connect("localhost","root","root");
 
 			if (!$con)
 
@@ -221,7 +222,7 @@ $_SESSION['order_number']=$order_number;
 
 
 
-			mysql_select_db("eatandpl_maindbeap", $con);
+			mysql_select_db("eatandplay", $con);
 
 
 

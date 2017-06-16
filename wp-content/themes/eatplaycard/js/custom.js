@@ -586,7 +586,10 @@ function verifyDropdownEmpty(value) {
                 type : 'POST',
                 data : serializedData,
                 success : function(data){
-                    console.log('Success:',data);
+                    console.log('Success');
+                    if(data.indexOf("work") > 0 )  {
+                        window.location.href="/thank-you"
+                    }
                 },
                 error: function(data, response){
                     $('.loader').hide();
