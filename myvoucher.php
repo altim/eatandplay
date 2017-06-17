@@ -18,14 +18,16 @@ $voucherid = $_GET[ "voucherid"];
 	 
 	   
 		//CONNECT TO DATABASE
-		$con = mysql_connect("127.0.0.1","eatandplaycard","3b91bIwORUmlyqzoVqmg");
+//		$con = mysql_connect("127.0.0.1","eatandplaycard","3b91bIwORUmlyqzoVqmg");
+		$con = mysql_connect("db685702714.db.1and1.com","dbo685702714",'874#$dadsf#a');
 		//$con = mysql_connect("localhost","cercae_admin2","7f2a?B");
 		if (!$con)
 		  {
 		  die('ici Could not connect: ' . mysql_error());
 		  }
 
-		mysql_select_db("wp_eatandplaycard", $con);
+//		mysql_select_db("wp_eatandplaycard", $con);
+		mysql_select_db("db685702714", $con);
 
         //GET THE TRANSACTION FROM THE DB
 	    $query  = "SELECT * FROM transactions WHERE order_num='" . $voucherid . "'";

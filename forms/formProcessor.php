@@ -143,7 +143,11 @@ $_SESSION['order_number']=$order_number;
 
     //BEAN STREAM REQUIRED INFO
 
-    $merchantID = '196850000';
+	//Production MerchantId
+//    $merchantID = '196850000';
+
+	//Test MerchantID
+    $merchantID = '300210944';
 
 
 
