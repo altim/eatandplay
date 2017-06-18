@@ -246,8 +246,10 @@ jQuery(document).ready(function($) {
                                 var selectedCountry = $(".dropdown-select-country").data('selected');
                                 if ( !(selectedCountry == "Select Country") )
                                 {
+                                    var selectedUSState = $('.dropdown-us-states').data('selected');
+                                    var selectedCAState = $('.dropdown-canada-states').data('selected');
                                     //State Verification
-                                    if (verifyFieldEmpty("input[name=state]") == true || selectedCountry == "CA" || selectedCountry == "US" ) {
+                                    if ((verifyFieldEmpty("input[name=state]") == true) || (selectedUSState != "") || (selectedCAState != "") ) {
 
                                         //Postal Code Verification
                                         if (verifyFieldEmpty("input[name=zip]") == true) {
@@ -261,6 +263,10 @@ jQuery(document).ready(function($) {
                                                 //Email Verification Verification
                                                 if ( $("input[name=email]").val() == $("input[name=verifyemail]").val() ) {
 
+
+                                                    //Delivery options
+                                                    if(($('.btn-email').hasClass('selected') || $('.btn-traditional-mail').hasClass('selected'))){
+
                                                     //Credit card verification (Month)
                                                     var currentMonth = (new Date).getMonth() + 1;
                                                     var currentYear = (new Date).getFullYear();
@@ -269,7 +275,6 @@ jQuery(document).ready(function($) {
                                                     if ( $('[name=cc-exp-year]').val() - currentYear == 0) {
                                                         checkmonth =1;
                                                     }
-
 
                                                     var ccExpMonth = $(".dropdown-select-expiry-month").data('selected');
                                                     if ( ccExpMonth >= currentMonth || checkmonth==0) {
@@ -306,8 +311,12 @@ jQuery(document).ready(function($) {
                                                         else
                                                             errorAlert("[name=cc-name]", "Please enter a name holder for the credit card.");
                                                     }
+
                                                     else
                                                         errorAlert("[name=cc-exp-month]", "You credit card has expired that month.");
+                                                    }
+                                                    else
+                                                        errorAlert("", "Please select delivery option");
                                                 }
                                                 else
                                                     errorAlert("input[name=verifyemail]", "Make sure you verify your email properly, this is where we will send your voucher !");
@@ -433,49 +442,49 @@ function verifyDropdownEmpty(value) {
     //     $("#step2 .insider").slideDown(300);
     // });
 
-    $(".btn2").on( "click", function() {
-        if (checkfields() == true) {
-
-            // $("#step2 .insider").slideUp(300);
-
-            var total = $("[name=quantity]").val() * 25;
-            var discount = false;
-            if ($("[name=promo-code]").val().toUpperCase() == "14EPTW20")
-            {
-                total = $("[name=quantity]").val() * 20;
-                discount = true;
-                $("discount").val("1");
-            }
-            else if ($("[name=promo-code]").val().toUpperCase() == "14EAPC20")
-            {
-                total = $("[name=quantity]").val() * 20;
-                discount = true;
-                $("discount").val("1");
-            }
-            else if ($("[name=promo-code]").val().toUpperCase() == "14EPFB20")
-            {
-                total = $("[name=quantity]").val() * 20;
-                discount = true;
-                $("discount").val("1");
-            }
-            else if ($("[name=promo-code]").val().toUpperCase() == "VFEAPC20")
-            {
-
-                total = $("[name=quantity]").val() * 25;
-                total = total - (total * 0.2)
-                discount = true;
-                $("discount").val("1");
-            }
-            else if ($("[name=promo-code]").val().toUpperCase() == "FBEAPC20")
-            {
-
-                total = $("[name=quantity]").val() * 25;
-                total = total - (total * 0.2);
-                discount = true;
-                $("discount").val("1");
-            }
-
-            var last4 = $( "[name=cc-number]" ).val().slice(-4);
+    // $(".btn2").on( "click", function() {
+    //     if (checkfields() == true) {
+    //
+    //         // $("#step2 .insider").slideUp(300);
+    //
+    //         var total = $("[name=quantity]").val() * 25;
+    //         var discount = false;
+    //         if ($("[name=promo-code]").val().toUpperCase() == "14EPTW20")
+    //         {
+    //             total = $("[name=quantity]").val() * 20;
+    //             discount = true;
+    //             $("discount").val("1");
+    //         }
+    //         else if ($("[name=promo-code]").val().toUpperCase() == "14EAPC20")
+    //         {
+    //             total = $("[name=quantity]").val() * 20;
+    //             discount = true;
+    //             $("discount").val("1");
+    //         }
+    //         else if ($("[name=promo-code]").val().toUpperCase() == "14EPFB20")
+    //         {
+    //             total = $("[name=quantity]").val() * 20;
+    //             discount = true;
+    //             $("discount").val("1");
+    //         }
+    //         else if ($("[name=promo-code]").val().toUpperCase() == "VFEAPC20")
+    //         {
+    //
+    //             total = $("[name=quantity]").val() * 25;
+    //             total = total - (total * 0.2)
+    //             discount = true;
+    //             $("discount").val("1");
+    //         }
+    //         else if ($("[name=promo-code]").val().toUpperCase() == "FBEAPC20")
+    //         {
+    //
+    //             total = $("[name=quantity]").val() * 25;
+    //             total = total - (total * 0.2);
+    //             discount = true;
+    //             $("discount").val("1");
+    //         }
+    //
+    //         var last4 = $( "[name=cc-number]" ).val().slice(-4);
 
             // $("#clientReceive").empty();
             // if( $("#sendcardby").val() == "Post" )
@@ -507,8 +516,8 @@ function verifyDropdownEmpty(value) {
 
 
             // $("#step3 .insider").slideDown(300);
-        }
-    });
+        // }
+    // });
 
     // $("#btn3").on( "click", function() {
     //     $("#step3 .insider").slideUp(300);

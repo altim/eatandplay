@@ -12,7 +12,7 @@
 	<section id="page-header" class="bg-new-york" style="background-image: url('<?php echo $thumb_url; ?>');">
         <div class="page-header-inner">
             <h1><?php the_title(); ?></h1>
-            <a href="#" class="btn header-image-btn btn-view-all-partners">View All Partners</a>
+            <a href="#" class="btn header-image-btn btn-view-all-partners">Places to Save</a>
         </div>
     </section>
 
@@ -32,7 +32,7 @@
                 <li><a href="#" class="btn" data-type="play">Play</a></li>
                 <li><a href="#" class="btn" data-type="shop">Shop</a></li>
                 <li><a href="#" class="btn" data-type="show">Show</a></li>
-                <li><a href="#" class="btn btn-white" data-type="pdf">.PDF</a></li>
+                <li><a href="#" class="btn btn-white" data-type="pdf">Print</a></li>
             </ul>
         </div>
     </section>

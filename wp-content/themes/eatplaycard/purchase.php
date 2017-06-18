@@ -385,7 +385,7 @@
 
                 <div class="option">
 
-                    <a href="#" class="btn btn-delivery btn-traditional-mail selected" data-trigger="traditional-email-box">Traditional mail</a>
+                    <a href="#" class="btn btn-delivery btn-traditional-mail" data-trigger="traditional-email-box">Traditional mail</a>
 
                     <div class="option-box traditional-email-box">
                         <div class="option-box-inner">
@@ -407,8 +407,8 @@
                         <div class="option-box-inner">
                             <p>You will immediately receive a voucher by email<br/>
                                 Print voucher and exchange for your card at:<br/>
-                                <a href="#">- 2 convenient locations in Orlando</a><br/>
-                                <a href="#">- 4 convenient locations in New York</a><br/>
+                                <a href="#">Orlando: International Drive, Lake Buena Vista Factory Stores and Davenport</a><br/>
+                                <a href="#">NYC: 8th Avenue between 47th and 48th Streets, Madame Tussauds/Time Square, Grand Central and the Port Authority</a><br/>
                                 Complete address, phone and hours of operation will be on your voucher</p>
 
                             <a href="#" class="btn btn-choose">Choose this option</a>

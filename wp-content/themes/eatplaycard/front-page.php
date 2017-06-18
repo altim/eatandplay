@@ -13,7 +13,7 @@
 
             <div class="hero-image-content">
                 <div class="hero-image-content-inner">
-                    <h2>Are you traveling to</h2>
+                    <h2>Vacationing in</h2>
                     <h1>Orlando or New York?</h1>
                     <h2>One card saves a fortune on restaurants,<br/>
                         attractions, entertainment and shopping.</h2>
@@ -35,18 +35,18 @@
                 <h2>Orlando</h2>
                 <img src="<?php echo get_template_directory_uri(); ?>/img/card-orlando.png" alt="Orlando card" />
 
-                <p><strong>Orlando</strong> can be expensive and dining is often a visitor’s single biggest expense. There’s no better or easier way to save in Orlando than Eat and Play Card – especially if you’re staying in an off-Disney property hotel, it’s your answer to a family dining plan…  <a href="#">Learn More</a></p>
+                <p><strong>Orlando</strong> can be expensive and dining is often a visitor’s single biggest expense. There’s no better or easier way to save in Orlando than Eat and Play Card – especially if you’re staying in an off-Disney property hotel, it’s your answer to a family dining plan.</p>
 
-                <a href="<?php echo home_url(); ?>/buy-card-now/" class="btn">Get this card</a>
+                <a href="<?php echo home_url(); ?>/orlando/" class="btn">Where to save</a>
             </div>
 
             <div class="card card-right">
                 <h2>New York</h2>
                 <img src="<?php echo get_template_directory_uri(); ?>/img/card-new-york.png" alt="Orlando card" />
 
-                <p><strong>New York City</strong>. No matter what you call it, now you can have it all right in the palm of your hand. New York can be expensive with dining often a visitor’s single biggest expense – and there’s no better or easier way to save in New York than Eat and Play Card...  <a href="#">Learn More</a></p>
+                <p><strong>New York City</strong>. No matter what you call it, now you can have it all right in the palm of your hand. New York can be expensive with dining often a visitor’s single biggest expense – and there’s no better or easier way to save in New York than Eat and Play Card.</p>
 
-                <a href="<?php echo home_url(); ?>/buy-card-now/" class="btn">Get this card</a>
+                <a href="<?php echo home_url(); ?>/new-york/" class="btn">Get this card</a>
             </div>
 
 
@@ -95,10 +95,10 @@
             </div>
 
             <div class="logos-controls">
-                <a href="<?php echo home_url(); ?>/orlando" class="btn">ORLANDO&nbsp;&nbsp;-&nbsp;&nbsp;<span>View all partners</span></a>
+                <a href="<?php echo home_url(); ?>/orlando" class="btn">ORLANDO&nbsp;&nbsp;-&nbsp;&nbsp;<span>View all locations</span></a>
                 <div class="slider-controls">
                 </div>
-                <a href="<?php echo home_url(); ?>/new-york" class="btn">NEW YORK&nbsp;&nbsp;-&nbsp;&nbsp;<span>View all partners</span></a>
+                <a href="<?php echo home_url(); ?>/new-york" class="btn">NEW YORK&nbsp;&nbsp;-&nbsp;&nbsp;<span>View all locations</span></a>
             </div>
 
         </div>
