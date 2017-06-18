@@ -51,7 +51,7 @@ jQuery(document).ready(function($) {
     $('.btn-scroll-down').click(function(e){
         e.preventDefault();
         $('html,body').animate({
-            scrollTop: $('#hero-image').height()+"px"
+            scrollTop: $('#hero-image').height()+28+"px"
         },800,"swing");
     });
 
