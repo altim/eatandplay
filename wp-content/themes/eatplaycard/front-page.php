@@ -157,7 +157,7 @@
 
             </div>
 
-            <a href="/how-were-different/" class="btn">How we are different</a>
+            <a href="/how-were-different/" class="btn">How it's different</a>
 
         </div>
     </section>

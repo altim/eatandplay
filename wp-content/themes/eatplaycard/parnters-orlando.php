@@ -30,7 +30,7 @@
                 <li><a href="#" class="btn" data-type="eat">Eat</a></li>
                 <li><a href="#" class="btn" data-type="play">Play</a></li>
                 <li><a href="#" class="btn" data-type="shop">Shop</a></li>
-                <li><a href="#" class="btn" data-type="show">Show</a></li>
+<!--                <li><a href="#" class="btn" data-type="show">Show</a></li>-->
                 <li><a href="#" class="btn btn-white" data-type="pdf">Print</a></li>
             </ul>
         </div>
