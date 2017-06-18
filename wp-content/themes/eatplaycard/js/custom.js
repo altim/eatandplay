@@ -1,5 +1,16 @@
 jQuery(document).ready(function($) {
 
+    // ========= Sticky menu ===========
+    $(window).on('scroll', function () {
+        if ($(window).scrollTop() > 10) {
+            $('header').addClass('fixed');
+        } else {
+            $('header').removeClass('fixed');
+        }
+    });
+
+
+
     // Lightbox
     $("body").magnificPopup({
         delegate: '.video',
