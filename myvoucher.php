@@ -40,7 +40,7 @@ $voucherid = $_GET[ "voucherid"];
 <table border="1" cellpadding="10px"><tr><td>
 <table width="600px" border="0" cellpadding="2" cellspacing="0" style="font-size:12px;">
 <!-- <tr><td colspan="2" width="100%" align="center"><img src="images/logo1.png" border="0" width="100"><h3>PREPAID VOUCHER</h3></td></tr> -->
-<tr><td colspan="2" width="100%" align="center"><img src="images/logo2.jpg" border="0" width="298"><h3>PREPAID VOUCHER</h3></td></tr>
+<tr><td colspan="2" width="100%" align="center"><img src="/images/logo2.jpg" border="0" width="298"><h3>PREPAID VOUCHER</h3></td></tr>
 
   <tr>
     <td width="33%" align="left"><b>Product: </b></td>

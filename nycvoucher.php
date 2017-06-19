@@ -15,14 +15,16 @@ $voucherid = $_GET[ "voucherid"];
     if (!($voucherid==""))
       {
 		//CONNECT TO DATABASE
-		$con = mysql_connect("127.0.0.1","eatandplaycard","3b91bIwORUmlyqzoVqmg");
-		//$con = mysql_connect("localhost","cercae_admin2","7f2a?B");
-		if (!$con)
-		  {
-		  die('ici Could not connect: ' . mysql_error());
-		  }
+//    $con = mysql_connect("127.0.0.1","eatandplaycard","3b91bIwORUmlyqzoVqmg");
+    $con = mysql_connect("db685702714.db.1and1.com","dbo685702714",'874#$dadsf#a');
+    //$con = mysql_connect("localhost","cercae_admin2","7f2a?B");
+    if (!$con)
+      {
+      die('ici Could not connect: ' . mysql_error());
+      }
 
-		mysql_select_db("wp_eatandplaycard", $con);
+//    mysql_select_db("wp_eatandplaycard", $con);
+    mysql_select_db("db685702714", $con);
 
         //GET THE TRANSACTION FROM THE DB
 	    $query  = "SELECT * FROM transactions WHERE order_num='" . $voucherid . "'";
@@ -35,7 +37,7 @@ $voucherid = $_GET[ "voucherid"];
 <table border="1" cellpadding="10px"><tr><td>
 <table width="600px" border="0" cellpadding="2" cellspacing="0" style="font-size:12px;">
 <!-- <tr><td colspan="2" width="100%" align="center"><img src="images/logo1.png" border="0" width="100"><h3>PREPAID VOUCHER</h3></td></tr> -->
-<tr><td colspan="2" width="100%" align="center"><img src="images/logo2.jpg" border="0" width="298"><h3>PREPAID VOUCHER</h3></td></tr>
+<tr><td colspan="2" width="100%" align="center"><img src="/images/logo2.jpg" border="0" width="298"><h3>PREPAID VOUCHER</h3></td></tr>
 
   <tr>
     <td width="33%" align="left"><b>Product: </b></td>
