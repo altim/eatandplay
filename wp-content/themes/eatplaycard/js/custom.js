@@ -105,18 +105,25 @@ jQuery(document).ready(function($) {
 
         var selectedValue = $(this).data('type');
 
-        //hide all
-        $('.merchant-item').hide();
-        if(selectedValue === 'all'){
-            $('.merchant-item').fadeIn(400,'swing');
+        if(selectedValue!=="pdf") {
+
+            //hide all
+            $('.merchant-item').hide();
+            if (selectedValue === 'all') {
+                $('.merchant-item').fadeIn(400, 'swing');
+            }
+            else {
+                $('.merchant-item.' + selectedValue).fadeIn(400, 'swing');
+            }
+
+            $('html,body').animate({
+                scrollTop: $('#filter-bar').offset().top - 122
+            }, 800, "swing");
         }
         else {
-            $('.merchant-item.' + selectedValue).fadeIn(400, 'swing');
+            console.log('Printing the page');
+            window.print();
         }
-
-         $('html,body').animate({
-            scrollTop:  $('#filter-bar').offset().top -122
-        },800,"swing");
 
     });
 

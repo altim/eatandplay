@@ -4,7 +4,7 @@
 // Add styles and scripts to the header/footer
 function epc_scripts() {
 	wp_enqueue_style( 'Google-Fonts', 'https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
-	wp_enqueue_style( 'Main', get_stylesheet_uri(), array(), '1.00' );
+	wp_enqueue_style( 'Main', get_stylesheet_uri(), array(), '1.00' , 'all');
 	wp_enqueue_style( 'owl-css', get_template_directory_uri() . '/lib/owl/owl.carousel.min.css', array(), '1.00');
 	wp_enqueue_script( 'owl-js', get_template_directory_uri() . '/lib/owl/owl.carousel.min.js', array('jquery'), '1.00', true );
 	wp_enqueue_script( 'magnificpopup-js', get_template_directory_uri() . '/lib/magnificpopup/jquery.magnific-popup.min.js', array('jquery'), '1.00', true );
