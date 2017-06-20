@@ -254,7 +254,7 @@ header {
               left:50%;
               @include transform(translateX(-50%));
               padding:27px 0;
-              background:#509cfd;
+              background:#4181d3;
               @include transition(all 0.4s);
               &.buy-card-menu-parent {
                 padding-bottom: 0;
@@ -1927,14 +1927,15 @@ footer {
   margin-top:122px;
   background-size:cover;
   background-position:center center;
+  background: #4b99fd;
 
-  &.bg-new-york {
-    background:url('../img/header-image-new-york.jpg') no-repeat;
-  }
+  // &.bg-new-york {
+  //   background:url('../img/header-image-new-york.jpg') no-repeat;
+  // }
 
-  &.bg-purchase {
-    background:url('../img/header-image-purchase.jpg') no-repeat;
-  }
+  // &.bg-purchase {
+  //   background:url('../img/header-image-purchase.jpg') no-repeat;
+  // }
 
   @media(max-width:580px){
     margin-top:68px;
@@ -1955,8 +1956,16 @@ footer {
     h1 {
       font-size:90px;
       font-weight:500;
-      line-height:279px;
-      text-shadow:7px 7px 21px rgba(0,0,0,0.29);
+      position: absolute;
+      left: 20px;
+      right: 20px;
+      top: 50%;
+      line-height: 1.2;
+      -ms-transform: translateY(-50%);
+      -webkit-transform: translateY(-50%);
+      -moz-transform: translateY(-50%);
+      transform: translateY(-50%);
+      // text-shadow:7px 7px 21px rgba(0,0,0,0.29);
       color:#fff;
       &.smaller-headline {
         font-size: 60px;
@@ -1993,7 +2002,6 @@ footer {
         max-width:350px;
         margin:auto;
         font-size:32px;
-        line-height:200px;
       }
     }
 
@@ -2005,7 +2013,11 @@ footer {
       @include box-sizing();
       @include border-radius(40px);
       padding:21px 55px;
-      @include transform(translateY(-35px));
+      @include transform(translate(-50%, -50%));
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      margin-right: -50%;
       text-transform: uppercase;
       font-size:14px;
       font-weight: 400;

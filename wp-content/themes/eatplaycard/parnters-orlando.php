@@ -9,7 +9,7 @@
 			$thumb_url = get_template_directory_uri() . '/img/gen-banner.jpg';
 		}
 	?>
-	<section id="page-header" class="bg-new-york" style="background-image: url('<?php echo $thumb_url; ?>');">
+	<section id="page-header">
         <div class="page-header-inner">
             <h1><?php the_title(); ?></h1>
             <a href="#" class="btn header-image-btn btn-view-all-partners">Places to Save</a>
@@ -99,7 +99,7 @@
             <div class="card">
                 <img src="<?php echo get_template_directory_uri(); ?>/img/card-orlando.png" alt="Orlando card" />
 
-                <a href="#" class="btn">Buy this card</a>
+                <a href="/buy-the-card/" class="btn">Buy this card</a>
             </div>
 
         </div>

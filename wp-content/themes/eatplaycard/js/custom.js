@@ -99,13 +99,14 @@ jQuery(document).ready(function($) {
 
     //Filter bar
     $('.filter-menu li a').on('click',function(e){
-        e.preventDefault();
-        $('.filter-menu li a.active').removeClass('active');
-        $(this).addClass('active');
 
         var selectedValue = $(this).data('type');
 
         if(selectedValue!=="pdf") {
+
+            e.preventDefault();
+            $('.filter-menu li a.active').removeClass('active');
+            $(this).addClass('active');
 
             //hide all
             $('.merchant-item').hide();
@@ -121,8 +122,7 @@ jQuery(document).ready(function($) {
             }, 800, "swing");
         }
         else {
-            console.log('Printing the page');
-            window.print();
+            
         }
 
     });

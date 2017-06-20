@@ -8,14 +8,14 @@
         $thumb_url_array = wp_get_attachment_image_src($thumb_id, 'page-banner', true);
         $thumb_url = $thumb_url_array[0];
     } else {
-        $thumb_url = get_template_directory_uri() . '/img/gen-banner.jpg';
-    }
+            $thumb_url = '';
+        }
     ?>
 
     <?php endwhile; endif; ?>
 
 
-    <div id="page-header" style="background-image: url('<?php echo $thumb_url; ?>');">
+    <div id="page-header" <?php if($thumb_url!='') { ?> style="background-image: url('<?php echo $thumb_url; ?>');" <?php } ?> >
 	        <div class="page-header-inner">
 	            <h1 class="smaller-headline"><?php the_title(); ?></h1>
 	        </div>
@@ -407,8 +407,8 @@
                         <div class="option-box-inner">
                             <p>You will immediately receive a voucher by email<br/>
                                 Print voucher and exchange for your card at:<br/>
-                                <a href="#">Orlando: International Drive, Lake Buena Vista Factory Stores and Davenport</a><br/>
-                                <a href="#">NYC: 8th Avenue between 47th and 48th Streets, Madame Tussauds/Time Square, Grand Central and the Port Authority</a><br/>
+                                <strong style="font-weight: 400">Orlando: International Drive, Lake Buena Vista Factory Stores and Davenport</strong><br/>
+                                <strong style="font-weight: 400">NYC: 8th Avenue between 47th and 48th Streets, Madame Tussauds/Time Square, Grand Central and the Port Authority</strong><br/>
                                 Complete address, phone and hours of operation will be on your voucher</p>
 
                             <a href="#" class="btn btn-choose">Choose this option</a>

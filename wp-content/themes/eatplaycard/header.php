@@ -31,8 +31,8 @@
 				?>
 
                 <ul class="social-menu">
-                    <li><a href="#" class="btn_facebook"></a></li>
-                    <li><a href="#" class="btn_twitter"></a></li>
+                    <li><a href="https://www.facebook.com/EatandPlayCard" target="_blank" class="btn_facebook"></a></li>
+                    <li><a href="https://twitter.com/EatandPlayCard" target="_blank" class="btn_twitter"></a></li>
                 </ul>
             </nav>
 

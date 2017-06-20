@@ -37,7 +37,7 @@
 
                 <p><strong>Orlando</strong> can be expensive and dining is often a visitor’s single biggest expense. There’s no better or easier way to save in Orlando than Eat and Play Card – especially if you’re staying in an off-Disney property hotel, it’s your answer to a family dining plan.</p>
 
-                <a href="<?php echo home_url(); ?>/orlando/" class="btn">Where to save</a>
+                <a href="<?php echo home_url(); ?>/destination-orlando/" class="btn">Where to Save</a>
             </div>
 
             <div class="card card-right">
@@ -46,7 +46,7 @@
 
                 <p><strong>New York City</strong>. No matter what you call it, now you can have it all right in the palm of your hand. New York can be expensive with dining often a visitor’s single biggest expense – and there’s no better or easier way to save in New York than Eat and Play Card.</p>
 
-                <a href="<?php echo home_url(); ?>/new-york/" class="btn">Get this card</a>
+                <a href="<?php echo home_url(); ?>/destination-new-york-city/" class="btn">Where to Save</a>
             </div>
 
 

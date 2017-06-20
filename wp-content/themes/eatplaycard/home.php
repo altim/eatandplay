@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-		<div id="page-header" style="background-image: url('<?php echo get_template_directory_uri() ?>/img/gen-banner.jpg');">
+		<div id="page-header" style="background:#4b99fd;">
 	        <div class="page-header-inner">
 	            <h1 class="smaller-headline">Blog</h1>
 	        </div>

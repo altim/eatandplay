@@ -55,7 +55,7 @@
     <section id="copyright">
         <div class="copyright-inner">
             <div class="copyright-info">
-                <p>&copy; Copyright 2014-2017 Eat and Play Card - All Rights Reserved
+                <p>&copy; Copyright &copy; Eat and Play Card - All Rights Reserved
                 Website Development - <a href="http://strongvine.com" target="_blank">Strongvine</a></p>
             </div>
 

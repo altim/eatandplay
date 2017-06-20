@@ -6,25 +6,25 @@
 			$thumb_url_array = wp_get_attachment_image_src($thumb_id, 'page-banner', true);
 			$thumb_url = $thumb_url_array[0];
 		} else {
-			$thumb_url = get_template_directory_uri() . '/img/gen-banner.jpg';
+			$thumb_url = '';
 		}
 	?>
-	<section id="page-header" class="bg-new-york" style="background-image: url('<?php echo $thumb_url; ?>');">
+	<div id="page-header" <?php if($thumb_url!='') { ?> style="background-image: url('<?php echo $thumb_url; ?>');" <?php } ?> >
         <div class="page-header-inner">
             <h1><?php the_title(); ?></h1>
             <a href="#" class="btn header-image-btn btn-view-all-partners">Places to Save</a>
         </div>
-    </section>
+    </div>
 
-    <section class="inner-page-content">
+    <div class="inner-page-content">
         <div class="wc">
 
 	        <?php the_content(); endwhile; endif;  ?>
 
         </div>
-    </section>
+    </div>
 
-    <section id="filter-bar">
+    <div id="filter-bar">
         <div class="filter-bar-inner">
             <ul class="filter-menu">
                 <li><a href="#" class="btn btn-white active" data-type="all">All</a></li>
@@ -35,9 +35,9 @@
                 <li><a href="#" class="btn btn-white" data-type="pdf">Print</a></li>
             </ul>
         </div>
-    </section>
+    </div>
 
-    <section id="merchants">
+    <div id="merchants">
         <div class="merchants-inner">
             <h2>Places to Save</h2>
 
@@ -100,14 +100,14 @@
             <div class="card">
                 <img src="<?php echo get_template_directory_uri(); ?>/img/card-new-york.png" alt="New York card" />
 
-                <a href="#" class="btn">Buy this card</a>
+                <a href="/buy-the-card/" class="btn">Buy this card</a>
             </div>
 
         </div>
-    </section>
+    </div>
 
 
-    <section class="blank-2">
+    <div class="blank-2">
         <div class="blank-2-inner">
             <h2>How much can I save</h2>
 
@@ -115,6 +115,6 @@
                 <br/><br/>
                 Given people’s spending patterns and frequency of use vary, so too will savings. Over 7 days in New York, for example, one card can easily save a group of four, $500 and likely even more. In fact, more than doubling your cost of the card back in one use is common.</p>
         </div>
-    </section>
+    </div>
 
 <?php get_footer(); ?>
