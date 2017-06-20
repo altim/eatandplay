@@ -92,7 +92,7 @@ jQuery(document).ready(function($) {
     $('.btn-view-all-partners').click(function(e){
         e.preventDefault();
         $('html,body').animate({
-            scrollTop:  $('#filter-bar').offset().top - 94
+            scrollTop:  $('#filter-bar').offset().top - $('header').height()
         },800,"swing");
     });
 
