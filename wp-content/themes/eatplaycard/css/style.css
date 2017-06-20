@@ -2601,11 +2601,9 @@ footer {
         padding-top: 30px; }
       .inner-page-content .wc p strong {
         font-weight: 400; }
-    .inner-page-content .wc ul,
-    .inner-page-content .wc ol {
+    .inner-page-content .wc ul, .inner-page-content .wc ol {
       padding-bottom: 29px; }
-      .inner-page-content .wc ul li,
-      .inner-page-content .wc ol li {
+      .inner-page-content .wc ul li, .inner-page-content .wc ol li {
         font-size: 15px;
         line-height: 31px;
         font-weight: 300; }
@@ -2644,15 +2642,13 @@ footer {
     .single-blog-pagination {
       margin-bottom: 51px;
       margin-top: 41px; } }
-  .single-blog-pagination .previous-post,
-  .single-blog-pagination .next-post {
+  .single-blog-pagination .previous-post, .single-blog-pagination .next-post {
     position: absolute;
     font-size: 14.5px;
     display: inline-block;
     vertical-align: middle; }
     @media screen and (max-width: 600px) {
-      .single-blog-pagination .previous-post,
-      .single-blog-pagination .next-post {
+      .single-blog-pagination .previous-post, .single-blog-pagination .next-post {
         position: static;
         display: block; } }
   .single-blog-pagination .previous-post {
@@ -2833,7 +2829,6 @@ section.advantages {
   @media screen and (max-width: 500px) {
     .page-template-reviews .reviews-desktop-graphic {
       display: none; } }
-
 .page-template-reviews .reviews-mobile-graphic {
   display: none;
   margin: 0 auto; }
@@ -2873,3 +2868,5 @@ section.advantages {
         .app-btns a + a {
           margin-left: 0;
           margin-top: 15px; } }
+
+/*# sourceMappingURL=style.css.map */
