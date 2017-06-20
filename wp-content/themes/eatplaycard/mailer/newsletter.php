@@ -18,7 +18,7 @@ function cleanupentries($entry) {
 	return $entry;
 }
 
-$message = "This person would like to join your mailing list:" . $email;
+$message = "This person would like to join your mailing list: " . $email;
 
 $headers = "From: " . $send_to . "\r\n" .
     "Reply-To: " . $email . "\r\n" .
