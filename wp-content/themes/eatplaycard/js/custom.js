@@ -188,6 +188,51 @@ jQuery(document).ready(function($) {
     });
 
 
+    // newsletter submission
+      $( "#newsletter-form" ).prepend( "<input type='text' name='allow' value='allow' class='genisys' autocomplete='off' tabindex='-1'>");
+
+    $('#newsletter-submit').click(function () { 
+      $(this).prop('disabled', true);
+      $('#newsletter-email').removeClass('incorrect');
+      var error = false; // we will set this true if the form isn't valid
+      var email_compare = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/; // Syntax to compare against input
+      var email = $('#newsletter-email').val(); // get the value of the input field
+        if (email === "" || email === " " || email === "Your Email:") { // check if the field is empty
+          $('#newsletter-email').addClass('incorrect'); // error - empty
+          error = true;
+        }
+        else if (!email_compare.test(email)) { // if it's not empty check the format against our email_compare variable
+          $('#newsletter-email').addClass('incorrect'); // error - not right format
+          error = true;
+        }
+
+      if (error === true) {
+        $(this).prop('disabled', false);
+        return false;
+      }
+
+      var data_string = $('#newsletter-form').serialize(); // Collect data from form
+      $.ajax({
+        type: "POST",
+        url: $('#newsletter-form').attr('action'),
+        data: data_string,
+        timeout: 6000,
+        error: function (request, error) {
+            if (error === "timeout") {
+              $('.form-error-msg').slideDown('slow');
+            }
+            else {
+              $('.form-error-msg').slideDown('slow');
+            }
+        },
+        success: function () {
+          $('#newsletter-form').slideUp('slow');
+            $('.form-msg').show('slow');
+        }
+      });
+
+      return false; // stops user browser being directed to the php file
+    }); // end click function
 
 
 

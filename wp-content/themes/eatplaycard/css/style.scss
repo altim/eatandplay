@@ -1846,6 +1846,17 @@ footer {
         padding:0;
       }
 
+      & .form-msg {
+        display: none;
+        color: white;
+        font-size: 15px;
+      }
+
+      & .form-error-msg {
+        display: none;
+        color: white;
+        font-size: 15px;
+      }
 
       input[type=email]{
         @include border-radius(28px);
@@ -1861,6 +1872,10 @@ footer {
         width:100%;
         outline:none;
         font-size: 15px;
+        &.incorrect {
+          background: red;
+          color: white;
+        }
 
         @media(max-width:1200px){
           margin:auto;
@@ -3801,4 +3816,16 @@ section.advantages {
       }
     }
   }
+}
+
+.genisys {
+  position: absolute !important;
+  z-index: -1;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  word-wrap: normal;
+  color: white;
+  opacity: 0;
 }

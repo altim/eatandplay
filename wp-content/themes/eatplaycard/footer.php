@@ -42,10 +42,13 @@
             <div class="newsletter">
                 <h3>Newsletter</h3>
 
-                <div class="newsletter-form">
+                <form id="newsletter-form" action="<?php echo get_template_directory_uri(); ?>/mailer/newsletter.php" method="post">
                     <input type="email" id="newsletter-email" name="newsletter-email" placeholder="Your Email Address" />
-                    <a href="#" class="btn">Subscribe Now</a>
-                </div>
+                    <input type="text" name="comments" class="genisys" autocomplete="off" tabindex="-1">
+                    <a href="#" class="btn" id="newsletter-submit">Subscribe Now</a>
+                </form>
+                <p class="form-msg">Thank you for joining.</p>
+                <p class="form-error-msg">Sorry something went wrong, try again later.</p>
             </div>
 
 
