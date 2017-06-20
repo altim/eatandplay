@@ -6,11 +6,11 @@
 			$thumb_url_array = wp_get_attachment_image_src($thumb_id, 'page-banner', true);
 			$thumb_url = $thumb_url_array[0];
 		} else {
-			$thumb_url = get_template_directory_uri() . '/img/gen-banner.jpg';
+			$thumb_url = '';;
 		}
 		?>
 
-		<div id="page-header" style="background-image: url('<?php echo $thumb_url; ?>');">
+		<div id="page-header" <?php if($thumb_url!='') { ?> style="background-image: url('<?php echo $thumb_url; ?>');" <?php } ?> >
 	        <div class="page-header-inner">
 	            <h1 class="smaller-headline"><?php the_title(); ?></h1>
 	        </div>

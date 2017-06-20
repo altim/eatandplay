@@ -95,10 +95,10 @@
             </div>
 
             <div class="logos-controls">
-                <a href="<?php echo home_url(); ?>/orlando" class="btn">ORLANDO&nbsp;&nbsp;-&nbsp;&nbsp;<span>View all locations</span></a>
+                <a href="<?php echo home_url(); ?>/destination-orlando/" class="btn">ORLANDO&nbsp;&nbsp;-&nbsp;&nbsp;<span>View all locations</span></a>
                 <div class="slider-controls">
                 </div>
-                <a href="<?php echo home_url(); ?>/new-york" class="btn">NEW YORK&nbsp;&nbsp;-&nbsp;&nbsp;<span>View all locations</span></a>
+                <a href="<?php echo home_url(); ?>/destination-new-york-city/" class="btn">NEW YORK&nbsp;&nbsp;-&nbsp;&nbsp;<span>View all locations</span></a>
             </div>
 
         </div>

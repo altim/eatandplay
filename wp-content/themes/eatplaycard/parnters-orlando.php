@@ -31,7 +31,7 @@
                 <li><a href="#" class="btn" data-type="play">Play</a></li>
                 <li><a href="#" class="btn" data-type="shop">Shop</a></li>
 <!--                <li><a href="#" class="btn" data-type="show">Show</a></li>-->
-                <li><a href="#" class="btn btn-white" data-type="pdf">Print</a></li>
+                <li><a target="_blank" href="<?php echo get_template_directory_uri(); ?>/pdf/2016-17-Card_Destination-Partners_Orlando.pdf" class="btn btn-white" data-type="pdf">Print</a></li>
             </ul>
         </div>
     </section>

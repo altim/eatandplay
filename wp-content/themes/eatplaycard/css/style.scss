@@ -73,20 +73,23 @@ header {
   top:0;
   left:0;
   z-index:999;
+  box-shadow: 0 0 1px rgba(0,0,0,.3);
   @include transition(all .4s ease-in-out);
 
-
+  @media(max-width:1491px){
+    height: 94px;
+  }
 
   @media(max-width:580px){
-    height:68px;
+    height:68px !important;
   }
 
   .header-inner {
     position:relative;
 
     a.logo {
-      width:394px;
-      height:176px;
+      // width:394px;
+      // height:176px;
       //background:url('../img/logo.png') no-repeat;
       background-size:contain;
       outline:none;
@@ -96,10 +99,16 @@ header {
       top:7px;
       @include transition(all .4s ease-in-out);
 
+      @media (max-width:1350px){
+        left: 41px;
+      }
+
       @media(max-width:580px){
-        width:200px;
+        // width:200px;
         left:20px;
       }
+
+
 
       img {
         vertical-align: top;
@@ -108,34 +117,61 @@ header {
 
         &.logo-img {
           width:149px;
+          @media screen and (max-width:1491px){
+            width:99px;
+          }
+          @media(max-width:580px){
+            width: 47px !important;
+          }
         }
 
         &.logo-text {
           width:224px;
           padding:18px 0 0 20px;
+          @media screen and (max-width:1491px){
+            width:164px;
+            padding:11px 0 0 13px;
+          }
+          @media(max-width:580px){
+            width: 109px !important;
+            padding:11px 0 0 8px !important;
+          }
         }
 
       }
     }
 
-
     nav {
       float:right;
       margin:33px 97px 0 0 ;
       @include transition(all .4s ease-in-out);
+      
+      @media(max-width:1491px) { 
+        margin: 19px 97px 0 0; 
+      }
 
       @media (max-width:1350px){
         float:none;
         position:fixed;
-        right:-250px;
-        top:122px;
+        right: 0;
+        -moz-transform: translateX(100%);
+        -ms-transform: translateX(100%);
+        -webkit-transform: translateX(100%);
+        transform: translateX(100%);
+        width: 250px;
+        top:94px;
+        border-top: 1px solid #ececec;
+        border-left: 1px solid #ececec;
         bottom:0;
         margin:0;
         background:#fff;
         @include transition(all 1s);
 
         &.active {
-          right:0;
+          -moz-transform: none;
+          -ms-transform: none;
+          -webkit-transform: none;
+          transform: none;
         }
       }
 
@@ -197,6 +233,7 @@ header {
               color: #fff;
               text-transform: uppercase;
               height:auto;
+              text-align: center;
 
               @media (max-width:1350px){
                 display:block;
@@ -341,6 +378,9 @@ header {
                 pointer-events: auto;
                 top:69px;
                 opacity:1;
+                @media (max-width:1491px){
+                  top:55px;
+                }
                 @media (max-width:1350px){
                   top:0;
                   max-height:200px;
@@ -431,7 +471,7 @@ header {
       display:none;
       width:40px;
       height:40px;
-      margin:41px 41px 0 0;
+      margin:29px 41px 0 0;
       float:right;
 
       @media (max-width:1350px){
@@ -441,7 +481,7 @@ header {
       @media(max-width:580px){
         width:20px;
         height:20px;
-        margin:20px 20px 0 0;
+        margin:25px 20px 0 0 !important;
       }
 
       img {
@@ -460,8 +500,8 @@ header {
 
       a.logo {
         @include transition(all .4s ease-in-out);
-        width:394px;
-        height:80px;
+        // width:394px;
+        // height:80px;
 
         img {
           &.logo-img {
@@ -786,7 +826,7 @@ header {
 
 
       .btn-mobile-menu {
-        margin:30px 41px 0 0;
+        margin:29px 41px 0 0;
       }
 
 
@@ -808,6 +848,10 @@ header {
 
   @media(max-width:600px){
     height:650px;
+  }
+
+  @media(max-width:1491px){
+    margin-top: 94px;
   }
 
   @media(max-width:580px){
@@ -1153,8 +1197,12 @@ header {
 
 #partner-banner {
   width:100%;
-  background:#509cfd;
   padding:72px 0 82px 0;
+  background: rgb(46,159,255); /* Old browsers */
+  background: -moz-linear-gradient(top,  rgba(46,159,255,1) 0%, rgba(0,117,210,1) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  rgba(46,159,255,1) 0%,rgba(0,117,210,1) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  rgba(46,159,255,1) 0%,rgba(0,117,210,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2e9fff', endColorstr='#0075d2',GradientType=0 ); /* IE6-9 */
 
   @media(max-width:600px){
     padding:40px 0 45px 0;
@@ -1690,8 +1738,12 @@ header {
 
 footer {
   width:100%;
-  background:#4b99fd;
   padding:80px 0 78px 0;
+  background: rgb(46,159,255); /* Old browsers */
+  background: -moz-linear-gradient(top,  rgba(46,159,255,1) 0%, rgba(0,117,210,1) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  rgba(46,159,255,1) 0%,rgba(0,117,210,1) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  rgba(46,159,255,1) 0%,rgba(0,117,210,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2e9fff', endColorstr='#0075d2',GradientType=0 ); /* IE6-9 */
 
   @media(max-width:600px){
     padding:45px 0 45px 0;
@@ -1952,9 +2004,15 @@ footer {
 #page-header {
   width:100%;
   margin-top:122px;
-  background-size:cover;
-  background-position:center center;
-  background: #4b99fd;
+  // background-size:cover;
+  // background-position:center center;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#2e9fff+0,0075d2+100 */
+  background: rgb(46,159,255); /* Old browsers */
+  background: -moz-linear-gradient(top,  rgba(46,159,255,1) 0%, rgba(0,117,210,1) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  rgba(46,159,255,1) 0%,rgba(0,117,210,1) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  rgba(46,159,255,1) 0%,rgba(0,117,210,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2e9fff', endColorstr='#0075d2',GradientType=0 ); /* IE6-9 */
+
 
   // &.bg-new-york {
   //   background:url('../img/header-image-new-york.jpg') no-repeat;
@@ -1963,6 +2021,10 @@ footer {
   // &.bg-purchase {
   //   background:url('../img/header-image-purchase.jpg') no-repeat;
   // }
+
+  @media(max-width:1491px){
+    margin-top: 94px;
+  }
 
   @media(max-width:580px){
     margin-top:68px;
@@ -2091,8 +2153,12 @@ footer {
 
 #filter-bar {
   width:100%;
-  background:#509cfd;
   padding:55px 0;
+  background: rgb(46,159,255); /* Old browsers */
+  background: -moz-linear-gradient(top,  rgba(46,159,255,1) 0%, rgba(0,117,210,1) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  rgba(46,159,255,1) 0%,rgba(0,117,210,1) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  rgba(46,159,255,1) 0%,rgba(0,117,210,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2e9fff', endColorstr='#0075d2',GradientType=0 ); /* IE6-9 */
 
   @media(max-width:1060px){
     padding:55px 0 35px 0;
@@ -3530,6 +3596,10 @@ section.advantages {
 
   .checkmark-table {
     margin-bottom:80px;
+    @media screen and (max-width: 700px) {
+      display: block;
+      width: 100%;
+    }
 
     th {
       text-align:center;
@@ -3537,6 +3607,14 @@ section.advantages {
       font-style: italic;
       color:#4b99fd;
       padding:0 20px 55px 20px;
+      @media screen and (max-width: 700px) {
+        // display: block;
+        display: none;
+        width: 100%;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+      }
     }
 
     tbody {
@@ -3558,17 +3636,48 @@ section.advantages {
           vertical-align: middle;
           padding:34px 30px 34px 110px;
           width:50%;
+          @media screen and (max-width: 700px) {
+            display: block;
+            width: 100%;
+            height: auto;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            position: relative;
+            padding: 57px 30px 23px 62px;
+          }
         }
 
         td:nth-child(odd){
           background:url('../img/icon-cancel-lg.png') no-repeat;
           background-position:left 27px center;
+          @media screen and (max-width: 700px) {
+            background-size: 23px auto;
+            background-position: left 20px top calc(50% + 15px);
+            &:after {
+              content: 'Coupons & Other Savings';
+              position: absolute;
+              top: 0;
+              left: 0;
+              right: 0;
+              text-align: center;
+              background: #4b99fd;
+              color: white;
+              font-weight: 400;
+              padding: 5px;
+              display: block;
+            }
+          }
         }
 
         td:nth-child(even){
           background:url('../img/icon-ok-lg.png') no-repeat;
           background-position:left 27px center;
           position:relative;
+          @media screen and (max-width: 700px) {
+            background-size: 24px auto;
+            background-position: left 20px top calc(50% + 15px);
+          }
 
           &:before {
             content:"";
@@ -3580,8 +3689,25 @@ section.advantages {
             left:0;
             top:50%;
             @include transform(translateY(-50%));
+            @media screen and (max-width: 700px) {
+              display: none;
+            }
           }
-
+          @media screen and (max-width: 700px) {
+            &:after {
+              content: 'Eat and Play Card™';
+              position: absolute;
+              top: 0;
+              left: 0;
+              right: 0;
+              text-align: center;
+              background: #4b99fd;
+              color: white;
+              font-weight: 400;
+              padding: 5px;
+              display: block;
+            }
+          }
         }
       }
     }
@@ -3611,4 +3737,68 @@ section.advantages {
 .loader {
   display:none;
   margin-bottom:40px;
+}
+
+// ===================== Reviews Page =====================
+
+.page-template-reviews {
+  & .reviews-desktop-graphic {
+    display: block;
+    margin: 0 auto;
+    @media screen and (max-width:500px) {
+      display: none;
+    }
+  }
+  & .reviews-mobile-graphic {
+    display: none;
+    margin: 0 auto;
+     @media screen and (max-width:500px) {
+      display: block;
+    }
+  }
+}
+
+// ===================== Mobile Page =====================
+
+.page-template-mobile-app {
+  & .inner-page-content .wc {
+    & ul li {
+      padding-left:34px;
+      background:url('../img/icon-ok.png') no-repeat;
+      background-position:left center;
+    }
+  }
+}
+
+.app-btns {
+  text-align: center;
+  margin: 51px 0 62px;
+  @media screen and (max-width: 600px) {
+    margin: 20px 0 48px;
+  }
+  & a {
+    display: inline-block;
+    transition: .3s opacity !important;
+    @media screen and (max-width: 600px) {
+      display: block;
+    }
+    & img {
+      display: block;
+      @media screen and (max-width: 600px) {
+        margin: 0 auto;
+        max-height: 47px;
+        width: auto;
+      }
+    }
+    &:hover {
+      opacity: .7;
+    }
+    & + a {
+      margin-left: 15px;
+       @media screen and (max-width: 600px) {
+        margin-left: 0;
+        margin-top: 15px;
+      }
+    }
+  }
 }

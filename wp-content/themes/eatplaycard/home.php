@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-		<div id="page-header" style="background:#4b99fd;">
+		<div id="page-header">
 	        <div class="page-header-inner">
 	            <h1 class="smaller-headline">Blog</h1>
 	        </div>
