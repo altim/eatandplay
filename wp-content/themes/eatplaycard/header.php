@@ -15,7 +15,7 @@
 
     <header>
         <div class="header-inner">
-            <a href="<?php echo home_url(); ?>" class="logo"></a>
+            <a href="<?php echo home_url(); ?>" class="logo"><img class="logo-img" src="<?php echo get_template_directory_uri(); ?>/img/logo.png" /><img class="logo-text" src="<?php echo get_template_directory_uri(); ?>/img/logo-text.png" /></a>
 
             <nav>
             	<?php

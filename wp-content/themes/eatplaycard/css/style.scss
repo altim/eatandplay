@@ -87,10 +87,10 @@ header {
     a.logo {
       width:394px;
       height:176px;
-      background:url('../img/logo.png') no-repeat;
+      //background:url('../img/logo.png') no-repeat;
       background-size:contain;
       outline:none;
-      display:block;
+      display:inline-block;
       position:absolute;
       left:72px;
       top:7px;
@@ -99,6 +99,22 @@ header {
       @media(max-width:580px){
         width:200px;
         left:20px;
+      }
+
+      img {
+        vertical-align: top;
+        max-width:100%;
+        @include transition(all .4s ease-in-out);
+
+        &.logo-img {
+          width:149px;
+        }
+
+        &.logo-text {
+          width:224px;
+          padding:18px 0 0 20px;
+        }
+
       }
     }
 
@@ -444,8 +460,19 @@ header {
 
       a.logo {
         @include transition(all .4s ease-in-out);
-        width:179px;
+        width:394px;
         height:80px;
+
+        img {
+          &.logo-img {
+            width:66px;
+          }
+
+          &.logo-text {
+            width:164px;
+            padding:11px 0 0 13px;
+          }
+        }
       }
 
 
