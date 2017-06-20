@@ -98,7 +98,7 @@
 
 
             <div class="card">
-                <img src="<?php echo get_template_directory_uri(); ?>/img/card-new-york.png" alt="Orlando card" />
+                <img src="<?php echo get_template_directory_uri(); ?>/img/card-new-york.png" alt="New York card" />
 
                 <a href="#" class="btn">Buy this card</a>
             </div>

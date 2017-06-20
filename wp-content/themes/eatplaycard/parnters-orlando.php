@@ -97,7 +97,7 @@
 
 
             <div class="card">
-                <img src="<?php echo get_template_directory_uri(); ?>/img/card-new-york.png" alt="Orlando card" />
+                <img src="<?php echo get_template_directory_uri(); ?>/img/card-orlando.png" alt="Orlando card" />
 
                 <a href="#" class="btn">Buy this card</a>
             </div>
@@ -110,9 +110,9 @@
         <div class="blank-2-inner">
             <h2>How much can I save</h2>
 
-            <p>Coupons are virtually non-existent in New York City. But if you’re lucky enough to find one in New York, why settle for a piddly fixed discount like “free appetizer,” generally available with coupons? With Eat and Play Card, every discount is a % off the TOTAL bill (often including alcohol), so your savings are unlimited – the more you spend the more you’ll save – even on that extra beer or bottle of wine.
+            <p>Why settle for piddly fixed discounts like “save $1.50″ or a “free appetizer” so often available with coupons? With Eat and Play Card, every discount is a % off the TOTAL bill, so your savings are unlimited – the more you spend the more you’ll save.
                 <br/><br/>
-                Given people’s spending patterns and frequency of use vary, so too will savings. Over 7 days in New York, for example, one card can easily save a group of four, $500 and likely even more. In fact, more than doubling your cost of the card back in one use is common.</p>
+                Given people’s spending patterns and frequency of use vary, so too will savings. Over 10 days in Orlando, for example, one card can easily save a family of four, $500 and likely even more.</p>
         </div>
     </section>
 
