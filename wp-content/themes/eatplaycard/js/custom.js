@@ -611,7 +611,7 @@ function verifyDropdownEmpty(value) {
             //$('input[type="submit"]').attr('disabled','disabled');
             $(".loader").show(100);
 
-            var serializedForm = $("form").serialize();
+            var serializedForm = $("form#purchase-form").serialize();
 
             var selectedDestination = $(".dropdown-select-card").data('selected');
             var selectedCountry = $(".dropdown-select-country").data('selected');
@@ -660,8 +660,14 @@ function verifyDropdownEmpty(value) {
                 data : serializedData,
                 // dataType: "text",
                 success : function(data){
+                    $('.loader').hide();
+                    $('.btn-confirm-order').show();
+
                     if(data.indexOf("work") != -1 )  {
                         window.location.href="/thank-you"
+                    }
+                    else {
+                        errorAlert('', data);
                     }
                 },
                 error: function(data, response){
